@@ -11,7 +11,7 @@ int main(void){
 	printf("Insira seu nome: "); // Requisita ao usuário digitar seu nome
 	scanf("%s", &nome); // Registra e armazena o nome do usuário na variavel "nome"
 	
-	printf("Insira seu salario do mes anterior: "); // Requisita ao usuário inserir um valor
+	printf("Insira a seu salario: "); // Requisita ao usuário inserir um valor
 	scanf("%f", &salario); // Registra e armazena o valor na variável "salário"
 	
 	printf("Insira o reajuste (%%): "); // Requisita ao usuário inserir um valor
@@ -19,6 +19,6 @@ int main(void){
 	
 	salario2 = (salario*(reajuste+100))/100; // Faz a conta "(salario*(reajuste+100))/100" e a armazena na variavel "salario2"
 	
-	printf("Ola, %s. \nSeu novo salario e: %d%%", nome, salario2); // Imprime na tela o nome do usuário e o indice salarial (%)
+	printf("Ola, %s. \nSeu novo salario e: %d", nome, salario2); // Imprime na tela o nome do usuário e o indice salarial (%)
 	return 0;
 }
