@@ -58,3 +58,5 @@ git add . (Seleciona a pasta .git para referenciar o repositório a ser atualiza
 git commit -m " " (Escreva algo entre as aspas para que seja mostrando e atualizado em seu repositório)
 git push (Confirma e executa o envio de arquivos ao repositório)
 ```
+
+![Git-push-command](https://github.com/IgorHenriqueG/Senai-2023/assets/111847209/6dba709c-7bcd-4832-9e1b-702316a07a18)
