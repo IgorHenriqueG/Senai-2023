@@ -47,7 +47,7 @@ git config --global user.email " " (Entre as aspas escreva o seu endereço de em
 
 ### Baixar e atualizar seu repositório git
 ```
-git clone URL (Subistitua URL pela URL de seu repositório git, isso fará um clone do repositório em sua maquina)
+git clone URL (Subistitua URL pela URL de seu repositório git, isso fará um clone do repositório em seu computador)
 git pull (Baixa qualquer arquivo do repositório que tenha alguma alteração)
 ```
 
