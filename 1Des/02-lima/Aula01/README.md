@@ -14,6 +14,7 @@
 <title></title> -- É utilizada dentro da <head></head>, altera o titulo da aba.
 <body></body> -- Corpo da página, informações visiveis ao usuário.
 <hr> -- Cria uma linha horizontal para separação.
+<center></center> -- centraliza objetos ao centro da página. Exemplo: <center><h1>Este texto ficará centralizado</h1></center>
 <h1></h1> -- É utilizado como titulo de sua página, deixa o texto em negrito. <h1> sendo a maior fonte, e <h6> a menor.
 <h2></h2>
 <h3></h3>
@@ -23,6 +24,10 @@
 <p></p> -- Cria um parágrafo.
 <br> -- Quebra de linha.
 ```
+
+## Atividade
+### Criação de curriculo
+- Crie um curriculo utilizando as tags apresentadas a cima
 
 <hr>
 
