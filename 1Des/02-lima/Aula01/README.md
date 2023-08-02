@@ -54,6 +54,6 @@ git pull (Baixa qualquer arquivo do repositório que tenha alguma alteração)
 ### Comandos para enviar arquivos ao git
 ```
 git add . (Seleciona a pasta .git para referenciar o repositório a ser atualizado)
-git commit -m "" (Escreva algo entre as aspas para que seja mostrando e atualizado em seu repositório)
+git commit -m " " (Escreva algo entre as aspas para que seja mostrando e atualizado em seu repositório)
 git push (Confirma e executa o envio de arquivos ao repositório)
 ```
