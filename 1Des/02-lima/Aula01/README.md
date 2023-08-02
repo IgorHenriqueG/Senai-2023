@@ -11,7 +11,7 @@
 - Tags
 
 
-//<head></head> -- Informações de instrução para o Browser são colocadas aqui.
+<!--<head></head> -- Informações de instrução para o Browser são colocadas aqui.
 <title></title> -- É utilizada dentro da <head></head>, altera o titulo da aba.
 <body></body> -- Corpo da página, informações visiveis ao usuário.
 <hr> -- Cria uma linha horizontal para separação.
@@ -22,6 +22,6 @@
 <h5></h5>
 <h6></h6>
 <p></p> -- Cria um parágrafo.
-<br> -- Quebra de linha.
+<br> -- Quebra de linha.-->
 
 
