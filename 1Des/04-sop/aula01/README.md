@@ -61,4 +61,16 @@ mkdir aula$x - Crie uma pasta chamada aula + número
 done - Finaliza
 
 O código a cima irá criar 5 pastas chamadas aula de 1 a 5
+
+for x in Jaguariuna Campinas Pedreira - Para cada x
+do - Faça
+	echo "$x é uma cidade!" - Escreve na tela
+done - Finaliza
+
+O código a cima irá escrever 3 vezes na tela para cada nome de cidade.
+
+Exemplo
+Jaguariuna é uma cidade!
+Campinas é uma cidade!
+Pedreira é uma cidade!
 ```
