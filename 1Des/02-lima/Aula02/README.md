@@ -15,20 +15,20 @@
 
     <b></b> -- Utilizado para deixar o texto em negrito.
     <i></i> -- Utilizado para deixar o texto em italico.
-    <sup></sup> -- Utilizado para deixar o texto superior.
-    <sub></sub> -- Utilizado para deixar o texto inferior.
-    <ins></ins> -- Utilizado para deixar o texto com linha inferior.
-    <del></del> -- Utilizado para deixar o texto com linha de cancelamento.
+    <sup></sup> -- Utilizado para deixar o texto sobrescrito.
+    <sub></sub> -- Utilizado para deixar o texto subscrito.
+    <ins></ins> -- Utilizado para deixar o texto inserido.
+    <del></del> -- Utilizado para deixar o texto deletado.
     <small><small> -- Utilizado para deixar o texto pequeno.
-    <mark></mark> -- Utilizado para marcar o texto.
+    <mark></mark> -- Utilizado para deixar o texto destacado.
 
 ```
     Tag de imagem e ancora:
 
-    <img src="NomedaImagem.extenção"> -- Utilizado para colocar uma imagem na página.
+    <img src="NomedaImagem.extenção"> -- Utilizado para importar imagens.
     Exemplo: <img src="Moon.png">
 
-    <a href"Link de referencia">Clique aqui</a> -- Utilizado para colocar um link na página.
+    <a href"Link de referencia">Clique aqui</a> -- Utilizado para colocar links em uma página.
     Exemplo: <a href="https://w3schools.com">w3schools</a>
 
 ```
@@ -58,15 +58,21 @@
         <li>Item05</li>
     </ol>
 
+    1 - Números (padrão)
+    i - Números romanos minúsculos
+    I - Números romanos maiúsculos
+    a - Letras minúsculas
+    A - Letras maiúsculas
+
 ```
     Tags de table:
 
-    <table></table> -- Cria uma tabela.
-    <thead></thead> -- Cria a "cabeça" da tabela.
-    <tbody></tbody> -- Cria o corpo da tabela.
-    <tr></tr> -- Cria uma coluna a tabela.
-    <th></th> -- Cria um item cabeçalho para a tabela.
-    <td></td> -- Cria um item para a tabela.
+    <table></table> -- table é utilizada para a criação de tabelas, marcando o inicio e o fim de uma.
+    <thead></thead> -- thead é utilizada para a criação do cabeçalho da tabela.
+    <tbody></tbody> -- tbody é utilizada para criar e demarcar todo o corpo da tabela.
+    <tr></tr> -- tr é utlizada para a criação de uma linha.
+    <th></th> --  th é utilizada para a criação de uma coluna com o texto em negrito, semelhante a tag h1-h6.
+    <td></td> -- td é utizada para a criação de uma coluna.
 
     Exemplo de table:
 
