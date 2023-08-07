@@ -1,4 +1,4 @@
-# Resumo de aula 1 LIMA
+# Resumo da aula 1 LIMA
 
 ## HTML
 
