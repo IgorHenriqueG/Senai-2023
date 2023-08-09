@@ -1,4 +1,4 @@
-# Resumo da aula 1 LIMA
+# Resumo da aula 2 LIMA
 
 ## HTML
 
@@ -10,9 +10,8 @@
 
 - Tags
 
-```
-    Tags de escrita:
-
+Tags de escrita:
+```html
     <b></b> -- Utilizado para deixar o texto em negrito.
     <i></i> -- Utilizado para deixar o texto em italico.
     <sup></sup> -- Utilizado para deixar o texto sobrescrito.
@@ -21,19 +20,17 @@
     <del></del> -- Utilizado para deixar o texto deletado.
     <small><small> -- Utilizado para deixar o texto pequeno.
     <mark></mark> -- Utilizado para deixar o texto destacado.
-
 ```
-    Tag de imagem e ancora:
-
+Tag de imagem e ancora:
+```html
     <img src="NomedaImagem.extenção"> -- Utilizado para importar imagens.
     Exemplo: <img src="Moon.png">
 
     <a href"Link de referencia">Clique aqui</a> -- Utilizado para colocar links em uma página.
     Exemplo: <a href="https://w3schools.com">w3schools</a>
-
 ```
-    Tags de lista:
-
+Tags de lista:
+```html
     <ul></ul> -- cria uma lista não ordenada.
     <ol></ol> -- Cria uma lista ordenada.
     <li></li> -- Cria um item para a lista.
@@ -63,19 +60,18 @@
     I - Números romanos maiúsculos
     a - Letras minúsculas
     A - Letras maiúsculas
-
 ```
-    Tags de table:
-
+Tags de table:
+```html
     <table></table> -- table é utilizada para a criação de tabelas, marcando o inicio e o fim de uma.
     <thead></thead> -- thead é utilizada para a criação do cabeçalho da tabela.
     <tbody></tbody> -- tbody é utilizada para criar e demarcar todo o corpo da tabela.
     <tr></tr> -- tr é utlizada para a criação de uma linha.
     <th></th> --  th é utilizada para a criação de uma coluna com o texto em negrito, semelhante a tag h1-h6.
     <td></td> -- td é utizada para a criação de uma coluna.
-
-    Exemplo de table:
-
+```
+Exemplo de table:
+```html
     <table border="1"> -- Comando border="1" necessário para que a tabela tenha bordas
         <thead>
             <tr>
@@ -97,4 +93,4 @@
             </tr>
         </tbody>
     </table>
-
+```

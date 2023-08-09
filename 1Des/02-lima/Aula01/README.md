@@ -9,7 +9,7 @@
  |Browser|
 
 - Tags
-```
+```html
 <head></head> -- Informações de instrução para o Browser são colocadas aqui.
 <title></title> -- É utilizada dentro da <head></head>, altera o titulo da aba.
 <body></body> -- Corpo da página, informações visiveis ao usuário.
