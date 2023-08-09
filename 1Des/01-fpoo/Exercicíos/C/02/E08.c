@@ -8,8 +8,10 @@ int main(void){
 	
 	if(a > b){
 		printf("O maior numero e %d e o menor %d", a, b);
-	}else{
+	}else if( a < b){
 		printf("O maior numero e %d e o menor %d", b, a);
+	}else {
+		printf("Ambos dos numeros sao iguais");
 	}
 	return 0;
 }
