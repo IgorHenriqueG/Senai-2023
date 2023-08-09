@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 02</title>
+</head>
+<body>
+    <form>
+        <h1>Manutenção de usuários do sistema interno</h1>
+        <label style="margin-right: 50px;">Login</label>
+        <input type="text"><br>
+        <label style="margin-right: 50px;">Senha</label>
+        <input type="password"><br>
+        <label style="margin-right: 50px;">Status</label>
+        <select>
+            <option value="0">Inativo</option>
+            <option value="1">Ativo</option>
+        </select><br>
+        <label style="margin-right: 50px;">Tipo</label>
+        <input type="radio" name="tipo">Técnico
+        <input type="radio" name="tipo">Professor
+        <input type="radio" name="tipo">Aluno<br>
+        <label style="margin-right: 50px;">Data de criação</label>
+        <input type="date"><br>
+        <label style="margin-right: 50px;">Perfil</label>
+        <input type="radio" name="tipo2">Convidado
+        <input type="radio" name="tipo2">Administrador<br>
+        <div style="align-items: center; display: flex;">
+            <label style="margin-right: 50px;">Observações</label>
+            <textarea rows="10" cols="20"></textarea><br>
+        </div>
+        <div>
+            <label style="margin-right: 50px;">Módulos</label>
+            <input type="checkbox">Compras
+            <input type="checkbox">Biblioteca
+            <input type="checkbox">Acadêmico
+            <br>
+            <input type="checkbox"  style="margin-left: 115px;">Documentação
+            <input type="checkbox">Recursos humanos
+        </div><br>
+        <input type="submit" value="Cadastrar">
+        <input type="reset" value="Excluir">
+    </form>
+</body>
+</html>
