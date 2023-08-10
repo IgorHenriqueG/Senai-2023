@@ -12,10 +12,10 @@
 ```c
 
 // Incrementar
-i = i + 1; ou i++; // Aumenta a variavel "i" em 1.
+i = i + 1; ou i++; ou i+=1; // Aumenta a variavel "i" em 1.
 
 // Decrementar
- i = i - 1; ou i--; // Reduz a variavel "i" em 1.
+ i = i - 1; ou i--; ou i-=1; // Reduz a variavel "i" em 1.
 ```
 - Enquanto
 ```c
