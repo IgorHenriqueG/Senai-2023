@@ -27,6 +27,9 @@ int main(void) {
         num4 = num5;
         num5 = temp;
     }
+    
+    
+    
     if(num1 > num2){
         temp = num1;
         num1 = num2;
