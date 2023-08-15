@@ -218,6 +218,8 @@ body{ /* Referencia a tag body */
 
 ### Background Image CSS Externo
 
+
+HTML
 ```html
 <head>
     <meta charset="UTF-8">
@@ -232,6 +234,8 @@ body{ /* Referencia a tag body */
 </body>
 ```
 
+
+CSS
 ```css
 
 body{
