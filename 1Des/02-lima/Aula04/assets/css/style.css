@@ -1,0 +1,17 @@
+body {
+    background-image: url(/assets/img/Background_Image.avif);
+    background-size: cover;
+}
+
+h1{
+    text-align: center;
+    font-size: 4em;
+}
+
+.t1{
+    color: red;
+}
+
+#t2{
+    color: blue;
+}
