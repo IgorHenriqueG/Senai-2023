@@ -26,8 +26,13 @@ int main(void){
 			float peso, altura, imc;
 			system("cls"); 
 			printf("\n\tCalculadora IMC");
+			printf("\n\nDigite voltar para retornar ao menu");
 			printf("\n\nInsira o nome do paciente: ");
 			scanf("%s", &nome);
+			if(strcmp(nome,"voltar") == 0){
+				printf("TESE");
+				break;
+			}
 			
 			printf("Insira o peso do paciente %s: ", nome);
 			scanf("%f", &peso);
@@ -68,8 +73,13 @@ int main(void){
 			float mediasis, mediadia, sis, dia;
 			system("cls");
 			printf("\n\tMédia de pressão");
+			printf("\n\nDigite voltar para retornar ao menu");
 			printf("\n\nInsira o nome do paciente: ");
 			scanf("%s", &nome);
+			if(strcmp(nome,"voltar") == 0){
+				printf("TESE");
+				break;
+			}
 			
 			printf("Insira quantos dias foram anotados: ");
 			scanf("%d", &dias);

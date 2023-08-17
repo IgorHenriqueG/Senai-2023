@@ -1,0 +1,38 @@
+body {
+    background-color: aqua;
+}
+
+table {
+    background-color: whitesmoke;
+}
+
+thead {
+   max-width: 30px;
+}
+
+td {
+    width: 100px;
+    height: 40px;
+}
+
+th {
+    width: 100px;
+}
+
+.h-image {
+    background-image: url(/assets/img/ceu.jpg);
+    width: 250px;
+    height: 150px;
+}
+
+.center {
+    text-align: center;
+}
+
+.max {
+    color: red;
+}
+
+.min {
+    color: blue;
+}

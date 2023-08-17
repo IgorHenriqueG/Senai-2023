@@ -1,0 +1,51 @@
+body {
+    background-color: orange;
+}
+
+table {
+    background-color: white;
+    margin-top: 300px;
+}
+
+form {
+    width: 350px;
+    text-align: left;
+    padding: 50px;
+}
+
+input {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.email-input, .senha-input {
+    margin-left: 88px;
+}
+
+.date-input {
+    margin-left: 25px;
+}
+
+.button {
+    padding: 8px;
+    background-color: lightgreen;
+    border: none;
+    margin-left: 54%;
+}
+
+.border-line {
+    border-right: 1px solid black;
+}
+
+.email-input2, .senha-input2 {
+    margin-left: 60px;
+}
+
+.button2 {
+    padding: 8px;
+    background-color: lightgreen;
+    border: none;
+    margin-left: 45%;
+}
