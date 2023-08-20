@@ -3,7 +3,7 @@
 #include <string.h>
 
 int main(void){
-	setlocale(LC_ALL,"");
+	setlocale(LC_ALL,"Portuguese");
 	int menu = 1, escolha;
 	while(menu == 1){
 		char continuar[3] = "sim";
