@@ -9,12 +9,16 @@ main {
 
 table {
     height: 15vh;
+    border-collapse: collapse;
+}
+  
+tr {
+    border-bottom: 1pt solid black;
+    display: flex;
+    margin: 20px;
 }
 
-th {
-    border-bottom: 1px solid black;
-}
-
-td {
-    border-bottom: 1px solid black;
+tr {
+    display: flex;  
+    margin: 10px;
 }

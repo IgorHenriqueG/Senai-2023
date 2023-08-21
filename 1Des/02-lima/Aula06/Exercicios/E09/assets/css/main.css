@@ -4,7 +4,7 @@
 }
 
 body {
-    background-image: url(/assets/img/img_bg.jpg);
+    background-image: url(/assets/img//bg.jpeg);
     background-size: 100vw;
 }
 
@@ -13,7 +13,7 @@ body {
     align-items: center;
     background-color: gray;
     color: white;
-    opacity: 0.8;
+    opacity: 0.9;
     justify-content: space-between;
 }
 
@@ -35,6 +35,7 @@ body {
 header img {
     width: 30px;
     margin-inline: 20px;
+    filter: invert(100%);
 }
 
 .time {
