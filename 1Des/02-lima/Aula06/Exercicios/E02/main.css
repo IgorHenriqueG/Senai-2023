@@ -1,0 +1,20 @@
+h1 {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    height: 15vh;
+}
+
+th {
+    border-bottom: 1px solid black;
+}
+
+td {
+    border-bottom: 1px solid black;
+}
