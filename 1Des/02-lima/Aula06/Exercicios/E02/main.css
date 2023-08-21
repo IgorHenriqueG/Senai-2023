@@ -11,6 +11,19 @@ table {
     height: 15vh;
     border-collapse: collapse;
 }
+
+th {
+    width: 100px;
+    text-align: left;
+}
+
+td {
+    width: 100px;
+}
+
+.curso {
+    width: 240px;
+}
   
 tr {
     border-bottom: 1pt solid black;

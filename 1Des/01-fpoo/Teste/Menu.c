@@ -101,8 +101,6 @@ int main(void){
 			printf("\n\nDeseja continuar? Sim ou Não: ");
 			scanf("%s", &continuar);
 		}
-		
 	}
-	
 	return 0;
 }
