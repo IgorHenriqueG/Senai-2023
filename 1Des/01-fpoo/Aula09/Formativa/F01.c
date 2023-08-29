@@ -5,7 +5,7 @@
 int main(void){
 	setlocale(LC_ALL,"Portuguese");
 	int doadores, idade[20], dias[20], i;
-	char nome[20][20], sexo[20][20];
+	char nome[20][20], sexo[1][20];
 	
 		
 	printf("Número total de doadores: ");
