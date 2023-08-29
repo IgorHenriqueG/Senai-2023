@@ -17,11 +17,11 @@ int main(void){
 	for(i = 1; i <= numCandidatos; i++){
 		printf("\nNome do candidato %d: ", i);
 		scanf("%s", &candidato[i]);
-		candidato[i] + i;
 		
 		printf("Quantos votos o candidato %s possui: ", candidato[i]);
 		scanf("%d", &votos[i]);
-		votos[i] + i;
+		
+		totalVotos = totalVotos + votos[i];
 	}
 	
 	printf("\nQuantos votos em branco houveram: ");
@@ -32,17 +32,11 @@ int main(void){
 	scanf("%d", &nulos);
 	
 	for(i = 1; i <= numCandidatos; i++){
-		totalVotos = totalVotos + votos[i];
-		votos[i] + i;
-	}
-	
-	for(i = 1; i <= numCandidatos; i++){
 		porcentagem[i] = (votos[i] / totalVotos) * 100;
-		porcentagem[i] + i;
 	}
 	
 	printf("\nVotos válidos %d\nVotos inválidos %d\n\n", totalVotos, nulos);
-	printf("Candidato\t\tPorcentagem\n");
+	printf("Candidato\tPorcentagem\n");
 	
 	for(i = 1; i <= numCandidatos; i++){
 		printf("%s\t\t%.1f%%\n", candidato[i], porcentagem[i]);
