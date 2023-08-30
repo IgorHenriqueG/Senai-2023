@@ -32,29 +32,24 @@ int main(void){
 	scanf("%f", &nulos);
 	
 	for(i = 1; i <= numCandidatos; i++){
-		totalVotos = totalVotos + votos[i];	
+		totalVotos += votos[i];
 	}
 	
-	totalVotos = totalVotos + brancos;
-	
-	for(i = 1; i <= numCandidatos; i++){
-		porcentagem[i] = (votos[i] / totalVotos) * 100;
-	}
+	totalVotos += brancos;
 		
 	if(totalVotos > nulos){
 		printf("\n\nVotos válidos: %.0f\nVotos Inválidos: %.0f", totalVotos, nulos);
 		printf("\n\nCandidatos\tPorcentagem");
 		for(i = 1; i <= numCandidatos; i++){
-			printf("\n%s\t\t\t%.1f%%", candidato[i], porcentagem[i]);
+			porcentagem[i] = (votos[i] / totalVotos) * 100;
+			printf("\n%s\t\t%.1f%%", candidato[i], porcentagem[i]);
 		}
 		brancos = (brancos / totalVotos) * 100;
-		printf("\nBrancos\t\t\t%.1f%%", brancos);
+		printf("\nBrancos\t\t%.1f%%", brancos);
 		
 		if(totalVotos > 200000){
 			
-		}
-		
-			
+		}	
 		
 	}else{
 		printf("Votação inválida");
