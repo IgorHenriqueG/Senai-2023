@@ -1,13 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Phudu&family=Roboto&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    user-select: none;
 }
 
 :root {
     --bg-color-1: #171717;
     --bg-color-2: #202020;
-    --font-color: whitesmoke
+    --bg-color-3: #303030;
+
+    --font-color-primary: whitesmoke;
+    --font-color-dea: #8e8a8a;
+    --color-dea-r: red;
+
+    --font-fam-primary: 'Phudu', cursive;
+    --font-fam-secundary: 'Roboto', sans-serif;
+    --font-fam-tertiary:  'Oswald', sans-serif;
 }
 
 a {
@@ -16,7 +28,7 @@ a {
 }
 
 body {
-    color: var(--font-color);
+    color: var(--font-color-primary);
     background-color: var(--bg-color-1);
 }
 
@@ -46,6 +58,7 @@ nav .search input {
     padding: 15px;
 
     border-radius: 100px;
+    outline: none;
 }
 
 nav .search img {
@@ -60,6 +73,8 @@ nav .log {
     gap: 20px;
     font-size: 1.7rem;
     margin-left: 30vw;
+
+    font-family: var(--font-fam-primary);
 }
 
 nav .log img {
@@ -67,4 +82,148 @@ nav .log img {
     filter: invert(100%);
 
     cursor: pointer;
+}
+
+
+main .categorias {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    height: 4rem;
+    background-color: var(--bg-color-3);
+}
+
+main .categorias p {
+    font-size: 1.5rem;
+    font-family: var(--font-fam-primary);
+
+    text-transform: uppercase;
+}
+
+.main-page {
+    display: flex;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+main .filter {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+
+    margin: 0 0 0 3rem;
+    padding: 2rem 5rem 3rem 1rem;
+    
+    gap: 1.3rem;
+    border: 3px solid var(--bg-color-3);
+}
+
+main .filter .filter-p {
+    color: var(--font-color-dea);
+    margin-bottom: 1.5rem;
+}
+
+main .filter p {
+    font-size: 1.5rem;
+    font-family: var(--font-fam-primary);
+
+    text-transform: uppercase;
+}
+
+.product-container {
+    display: flex;
+
+    width: 80vw;
+    height: 60vh;
+
+    font-family: var(--font-fam-secundary);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 15vw 15vw 15vw;
+
+    width: 100%;
+
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* width: fit-content; */
+    height: fit-content;
+
+    background-color: var(--bg-color-2);
+}
+
+.product-img img {
+    height: 20vh;
+
+    border-bottom: 3px solid var(--bg-color-3);
+}
+
+.product-info {
+    text-align: left;
+    font-size: 1.7rem;
+
+    padding: 1rem 0 1rem 0;
+}
+
+/* Desconto */
+
+.discount {
+    background-image: url(../img/Icons/desconto.png);
+    background-size: 4.3rem;
+    background-repeat: no-repeat;
+}
+
+.discount p:nth-child(2)::before {
+    position: absolute;
+    margin-left: 1rem;
+    content: '------------';
+    color: var(--color-dea-r);
+
+    transform: translateX(6vw);
+}
+
+.discount p:nth-child(2)::after {
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    content: 'R$199.99';
+    color: var(--font-color-dea);
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    background-color: var(--bg-color-2);
+    width: 100vw;
+    height: 6rem;
+}
+
+footer .contact {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer .contact-1, .contact-2 {
+    display: flex;
+    gap: 20px;
+}
+
+footer p {
+    font-size: 1.7rem;
+    color: var(--font-color-dea);
 }
