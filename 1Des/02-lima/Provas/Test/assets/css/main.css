@@ -1,0 +1,88 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #171717;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.c1 {
+    display: flex;
+}
+
+.c2 {
+    display: flex;
+}
+
+.card {
+    width: 10vw;
+    height: 20vh;
+
+    border: 2px solid #202020;
+    border-radius: 10px;
+    background-color: #303030;
+
+    transition: 0.5s;
+}
+
+.card {
+    position: relative;
+    left: 0px;
+
+    cursor: pointer;
+}
+
+.card:nth-child(1) {
+    background-color: white;
+}
+
+.card:nth-child(2) {
+    background-color: wheat;
+}
+
+.card:nth-child(3) {
+    background-color: rgb(175, 175, 175);
+}
+
+.card:nth-child(5) {
+    background-color: rgb(175, 175, 175);
+}
+
+
+.card:nth-child(6) {
+    background-color: wheat;
+}
+
+
+.card:nth-child(7) {
+    background-color: whitesmoke;
+}
+
+
+.card:not(:first-child) {
+    margin-left: -50px;
+}
+
+.card:hover {
+    transform: translateY(-20px);
+}
+
+.c1 .card:hover + .card {
+    left: 50px;
+}
+
+.c2 .card:hover ~ .card {
+    left: 50px;
+}
