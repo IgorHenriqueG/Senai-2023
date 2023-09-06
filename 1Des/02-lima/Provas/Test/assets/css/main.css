@@ -18,11 +18,7 @@ body {
     height: 100vh;
 }
 
-.c1 {
-    display: flex;
-}
-
-.c2 {
+.c1, .c2, .c3 {
     display: flex;
 }
 
@@ -84,5 +80,9 @@ body {
 }
 
 .c2 .card:hover ~ .card {
+    left: 50px;
+}
+
+.c3 .card:hover ~ .card {
     left: 50px;
 }
