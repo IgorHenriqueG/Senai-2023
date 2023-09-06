@@ -23,6 +23,6 @@ int main(void){
 		}	
 	}
 	
-	printf("Tempo em horas = %d:%d:%d", horas, minutos, segundos);	
+	printf("Tempo em horas = %02d:%02d:%02d", horas, minutos, segundos);	
 	return 0;
 }
