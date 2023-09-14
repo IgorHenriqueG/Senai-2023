@@ -144,6 +144,7 @@ main .filter .filter-p {
 
 main .filter p {
     font-size: 1.5rem;
+    width: 13vw;
     font-family: var(--font-fam-primary);
 
     text-transform: uppercase;
@@ -152,7 +153,6 @@ main .filter p {
 .product-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
 
     margin: 0px 5rem 0px 5rem;
     gap: 1.70rem 1.70rem;

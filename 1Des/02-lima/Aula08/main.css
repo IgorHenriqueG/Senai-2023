@@ -1,0 +1,26 @@
+body {
+    height: 100vh;
+}
+
+.grid {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    grid-template-columns: repeat(4, 200px);
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.box {
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+}
+
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wrap .box {
+    margin: 20px;
+}
