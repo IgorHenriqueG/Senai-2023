@@ -1,0 +1,99 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-Color-01: #171717;
+    --bg-Color-02: #272727;
+    
+
+    --font-color-01: white;
+    --font-color-02: #575757;
+}
+
+body {
+    background-color: var(--bg-Color-01);
+
+    overflow-x: hidden;
+}
+
+/* Global */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+ 
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.Ex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: min-content;
+    width: 100vw;
+}
+
+.TitleBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+}
+
+.Title {
+    color: var(--font-Color-01);
+
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+.SubTitle {
+    width: 80%;
+    color: var(--font-color-02);
+}
+
+input[type="submit"]{
+    
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{
+    background-color: var(--bg-Color-02);
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+
+}
+
+.inputs input {
+    border: 0;
+    outline: 0;
+
+    height: 3vh;
+    padding: 5px;
+
+    margin-block: 5px;
+}
+
+.resultado {
+    display: flex;
+    margin-top: 10px;
+}
+
+.resultadoh2R {
+    margin-left: 10px;
+    color: aqua;
+}
+
+/* Exercicio 01 */
+
