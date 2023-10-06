@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #8b5722;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    justify-content: center;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 200px 200px 200px 200px;
+    margin-top: 30px;
+}
+
+div {
+    padding: 20px;
+    background-color: #7e4e1e;
+    box-shadow: 1px 1px 10px 2px black;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+p {
+    margin-block: 5px;
+}
