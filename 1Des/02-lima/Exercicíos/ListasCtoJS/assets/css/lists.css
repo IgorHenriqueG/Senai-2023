@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* INFINITY */
+
+.infinity{
+    animation: infinity 2.5s linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes infinity{
+    100%,0%{
+        color: rgb(255,0,0);
+    }
+    8%{
+        color: rgb(255,127,0);
+    }
+    16%{
+        color: rgb(255,255,0);
+    }
+    25%{
+        color: rgb(127,255,0);
+    }
+    33%{
+        color: rgb(0,255,0);
+    }
+    41%{
+        color: rgb(0,255,127);
+    }
+    50%{
+        color: rgb(0,255,255);
+    }
+    58%{
+        color: rgb(0,127,255);
+    }
+    66%{
+        color: rgb(0,0,255);
+    }
+    75%{
+        color: rgb(127,0,255);
+    }
+    83%{
+        color: rgb(255,0,255);
+    }
+    91%{
+        color: rgb(255,0,127);
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+ 
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+#hrefTarget {
+    display: none;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+:root {
+    --bg-01: #171717;
+    --bg-02: #272727;
+
+    --font-01: white;
+    --font-02: rgba(255, 255, 255, 0.747);
+    --font-03: aqua;
+
+    --ff-o1: 'Teko', sans-serif;
+}
+
+body {
+    background-color: var(--bg-01);
+
+    color: var(--font-01);
+    font-family: var(--ff-o1);
+
+    cursor: default;
+    text-transform: uppercase;
+}
+
+header {
+    position: sticky;
+    top: 0px;
+
+    height: 4rem;
+
+    background-color: #000;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+header div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-inline: 1rem;
+}
+
+header p {
+    font-size: 1.5rem;
+
+    cursor: pointer;
+}
+
+header nav {
+    display: flex;
+}
+
+.link {
+    width: fit-content;
+}
+
+header div h1:hover, header p:hover {
+    color: var(--font-02);
+}
+
+/* LIST */
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputs input {
+    margin-top: 15px;
+    outline: none;
+    background-color: var(--bg-02);
+    color: var(--font-01);
+
+    border: 3px solid #505050;
+    border-radius: 15px;
+
+    padding: 8px;
+}
+
+.inputs input[type="submit"] {
+    cursor: pointer;
+    padding-inline: 25px;
+}
+
+.resultado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.resultado h2 {
+    color: var(--font-03);
+}
+
+.exAll {
+    display: flex;
+    flex-direction: column;
+    padding-block: 1.5rem;
+
+    align-items: center;
+}
+
+.resumo {
+    width: 75%;
+    color: var(--font-02);
+    text-align: center;
+}
+
+/* EX 02 */
+
+.ex02, .ex04, .ex06, .ex08, .ex10 {
+    background-color: var(--bg-02);
+}
+
+.ex070 {
+    background-color: rgb(102, 1, 1);
+}
