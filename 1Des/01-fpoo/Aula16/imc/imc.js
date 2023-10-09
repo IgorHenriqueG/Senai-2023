@@ -29,9 +29,15 @@ class Paciente{
     showHTML(){
         let str = `<h2>${this.nome}</h2>`
         str += `<hr>`
+        str += `<div class="espaco">`
         str += `<p>Peso:</p><p>${this.peso}</p>`
+        str += `</div>`
+        str += `<div class="espaco">`
         str += `<p>Altura:</p><p>${this.altura}</p>`
+        str += `</div>`
+        str += `<div class="espaco">`
         str += `<p>IMC:</p><p>${this.imc().toFixed(1)}</p>`
+        str += `</div>`
         str += `<hr>`
         str += `<h3>Diagnóstico</h3>`
         str += `<h3>${this.diagnosticar()}</h3>`
@@ -51,6 +57,7 @@ pacientes.push(new Paciente('Pedro de Souza', 110, 1.85))
 const main = document.getElementById("pacientes")
 pacientes.forEach(pce => {
     const div = document.createElement('div')
+    div.classList.add("card")
     div.innerHTML = pce.showHTML()
     main.appendChild(div)
 })

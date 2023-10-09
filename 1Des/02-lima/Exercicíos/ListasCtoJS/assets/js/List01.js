@@ -77,9 +77,7 @@ function ex04(){
     let empates = ValorC
     let resultado = `${ValorA} Total de pontos ${vitorias + empates}`
 
-    console.log(ValorAEx04)
-
-    if(ValorAEx04 == 'São Paulo'){
+    if(ValorA == 'São Paulo'){
         resultadoEx.innerHTML = resultado
         resultadoEx.classList.add('infinity')
     }else{
