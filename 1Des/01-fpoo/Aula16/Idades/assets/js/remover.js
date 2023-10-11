@@ -19,8 +19,11 @@ tabelaBody.addEventListener("contextmenu", function(event){
         event.target.parentNode.classList.add('fadeout')
 
         setTimeout(function(){
-            console.log(pessoas)
             event.target.parentNode.remove();
+            pessoas.splice(pessoa, 1)
+            console.log(pessoas)
+            console.log(event.target.parentNode)
+            console.log(pessoa)
         }, 400);
 
         alertD.classList.add('notActive')
