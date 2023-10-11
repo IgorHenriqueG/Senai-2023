@@ -7,9 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orientação a Objetos</title>
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/deleteAlert.css">
 </head>
 
 <body onload="atualizaTabela()">
+
+    <div id="deleteAlert" class="notActive">
+        <div class="delete-box">
+            <div class="title">
+                <h3 id="TEST">Deseja excluir o objeto selecionado?</h3>
+            </div>
+            <div class="buttons">
+                <input id="excluir" type="submit" value="EXCLUIR">
+                <input id="cancelar" type="submit" value="CANCELAR">
+            </div>
+        </div>
+        <div class="delete-bg"></div>
+    </div>
 
     <header>
         <h1>Inserindo e processando dados em uma tabela</h1>
@@ -23,7 +37,10 @@
             </select>
             <input type="submit" value="Inserir">
         </form>
+        <input type="text" id="a">
+        <button onclick="teste()">Exclude</button>
         <h3 id="alert" style="color: red;"></h3>
+        <h3 style="color: #171717; opacity: 0.7;">Clique com o botão direito em algum paciente para exclui-lo</h3>
     </header>
     <main>
         <table>
@@ -41,4 +58,5 @@
     </main>
 </body>
 <script src="assets/js/script.js"></script>
+<script src="assets/js/remover.js"></script>
 </html>

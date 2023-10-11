@@ -85,21 +85,3 @@ table tr td {
     opacity: 0;
     transition: all 0.9s;
 }
-
-/* .tdRemover {
-    display: none;
-} */
-
-.remover {
-    padding: 10px;
-    background-color: red;
-    color: white;
-    text-transform: uppercase;
-    border-radius: 10px;
-
-    cursor: pointer;
-}
-
-.remover:hover {
-    background-color: rgb(156, 0, 0);
-}

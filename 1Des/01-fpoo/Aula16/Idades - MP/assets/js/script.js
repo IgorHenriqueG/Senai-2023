@@ -20,9 +20,9 @@ class Pessoa {
     }
 
     classificar(){
-        if(this.idade < 11){
+        if(this.idade < 10){
             return 'Criança'
-        }else if(this.idade > 10 && this.idade < 18){
+        }else if(this.idade > 9 && this.idade < 18){
             return 'Adolescente'
         }else if(this.idade > 17){
             return 'Adulto'
@@ -36,7 +36,7 @@ class Pessoa {
                     <td>${this.sexo}</td>
                     <td>${this.idade}</td>
                     <td>${this.classificacao}</td>
-                    <td class="tdRemover"><button class="remover" onclick='remover(this)'>Excluir</button></td>
+                    <td><button onclick='teste2(this)'>Excluir</button></td>
                 </tr>`;
     }
 }
@@ -66,7 +66,22 @@ form.addEventListener("submit", (event) => {
     }
 });
 
-function remover(id){
+function teste(){
+    let nome = document.querySelector('#a').value;
+
+    if(nome == ''){
+        pessoas.pop();
+    }else{
+        pessoas.forEach(pessoa => {
+            if(pessoa.nome == nome){
+                pessoas.splice(pessoa, 1);
+            }
+        })  
+    }
+    atualizaTabela();
+}
+
+function teste2(id){
     pessoas.splice(id, 1);
     atualizaTabela();
 }
