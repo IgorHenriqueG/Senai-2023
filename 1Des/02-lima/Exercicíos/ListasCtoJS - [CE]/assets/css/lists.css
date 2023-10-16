@@ -123,15 +123,14 @@ header p {
 
 header nav {
     display: flex;
-    gap: 20px;
+}
+
+.link {
+    width: fit-content;
 }
 
 header div h1:hover, header p:hover {
     color: var(--font-02);
-}
-
-.headerCenter {
-    transform: translateX(80%);
 }
 
 /* LIST */
@@ -193,10 +192,4 @@ header div h1:hover, header p:hover {
 
 .ex070 {
     background-color: rgb(102, 1, 1);
-}
-
-/**/
-
-.notR {
-    background-color: rgb(109, 0, 0);
 }

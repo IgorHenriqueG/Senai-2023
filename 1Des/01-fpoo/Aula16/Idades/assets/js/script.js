@@ -43,11 +43,11 @@ class Pessoa {
 
 const pessoas = [];
 
-pessoas.push(new Pessoa("João Silva", new Date(1990, 8, 10), "M"));
-pessoas.push(new Pessoa("Maria Santos", new Date(2018, 13, 10), "F"));
-pessoas.push(new Pessoa("José Oliveira", new Date(2007, 9, 16), "M"));
-pessoas.push(new Pessoa("Joana Gimenes", new Date(2002, 7, 21), "F"));
-pessoas.push(new Pessoa("Pedro Martins", new Date(1998, 4, 1), "M"));
+pessoas.push(new Pessoa("João Silva 1", new Date(1990, 8, 10), "M"));
+pessoas.push(new Pessoa("Maria Santos 2", new Date(2018, 13, 10), "F"));
+pessoas.push(new Pessoa("José Oliveira 3", new Date(2007, 9, 16), "M"));
+pessoas.push(new Pessoa("Joana Gimenes 4", new Date(2002, 7, 21), "F"));
+pessoas.push(new Pessoa("Pedro Martins 5", new Date(1998, 4, 1), "M"));
 
 const form = document.getElementById("novaPessoa");
 const corpo = document.getElementById("corpoTabela");
@@ -61,13 +61,37 @@ form.addEventListener("submit", (event) => {
     }else{
         alert.innerHTML = ''
         pessoas.push(pessoa);
-        form.reset();
+        // form.reset();
         atualizaTabela();
     }
 });
 
+function exclude(){
+    let nome = document.getElementById("fodase").value;
+
+    if(nome == ''){
+        pessoas.pop();
+    }else{
+        pessoas.forEach(pessoa => {
+            if(pessoa.nome == nome){
+                pessoas.splice(pessoas.indexOf(pessoa), 1);
+            }else{
+                console.log("Não existe ninguém com esse nome");
+            }
+        })
+    }
+    atualizaTabela();
+}
+
 function remover(id){
-    pessoas.splice(id, 1);
+    pessoas.forEach(pessoa => {
+        if(pessoa == id){
+            pessoas.splice(pessoas.indexOf(id), 1);
+        }else{
+            console.log("Não existe ninguém com esse nome");
+            console.log(pessoa, pessoas.indexOf(id));
+        }
+    })
     atualizaTabela();
 }
 

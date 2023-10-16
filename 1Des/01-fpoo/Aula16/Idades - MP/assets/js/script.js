@@ -36,7 +36,7 @@ class Pessoa {
                     <td>${this.sexo}</td>
                     <td>${this.idade}</td>
                     <td>${this.classificacao}</td>
-                    <td><button onclick='teste2(this)'>Excluir</button></td>
+                    <td><button onclick='teste2(this.parentNode.parentNode)'>Excluir</button></td>
                 </tr>`;
     }
 }

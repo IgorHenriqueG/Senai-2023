@@ -7,11 +7,6 @@
     box-sizing: border-box;
 }
 
-a {
-    color: currentColor;
-    text-decoration: none;
-}
-
 body {
     display: flex;
     background-color: #171717;
@@ -23,8 +18,6 @@ body {
     text-align: center;
     justify-content: center;
     align-items: center;
-
-    user-select: none;
 }
 
 body div {
@@ -47,10 +40,6 @@ h2 {
     text-shadow: 4px 10px 1px #303030;
 }
 
-.trans {
-    transform: translateY(-10rem);
-}
-
 .link {
     background-color: red;
     width: fit-content;
@@ -67,26 +56,4 @@ h2 {
 
 .link:hover {
     transform: translateY(-10%);
-}
-
-img {
-    /* position: absolute; */
-    top: 2rem;
-    width: 450px;
-}
-
-.images {
-    position: relative;
-}
-
-.img1 {
-    filter: invert(90%);
-}
-
-.img2 {
-    position: absolute;
-    left: 1rem;
-    top: 1rem;
-    z-index: -1;
-    filter: invert(20%);
 }

@@ -3,9 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lista 02</title>
+    <link rel="stylesheet" href="../css/lists.css">
+    <link rel="stylesheet" href="../css/transitions.css">
+    <link rel="icon" href="../imgs/dev.svg">
 </head>
 <body>
-    
+
+    <div class="transition transition-2 is-active"></div>
+
+    <header>
+        <div>
+            <a href="../../index.html">
+                <h1 class="logo">C to JavaScript</h1>
+            </a>
+            <div class="headerCenter">
+                <h2>Lista 02</h2>
+            </div>
+            <nav>
+                <a href="list01.html">
+                    <p>Lista 01</p>
+                </a>
+                <a href="list02.html">
+                    <p>Lista 02</p>
+                </a>
+                <a href="list03.html">
+                    <p>Lista 03</p>
+                </a>
+                <a href="list04.html">
+                    <p>Lista 04</p>
+                </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="exAll ex01">
+            <h2>Exercício 01</h2>
+            <p class="resumo">Desenvolva um programa que leia o preço de um produto e se o preço for maior do que 1000 reais aplique um desconto de 8%. Mostre o preço final.</p>
+            <div class="inputs">
+                <input id="ValorAEx01" type="number" placeholder="Insira o preço do produto">
+                <input type="submit" value="Enviar" onclick="ex01()">
+            </div>
+            <div class="resultado">
+                <h3>Resultado: </h3>
+                <h2 id="resultadoEx01"></h2>
+            </div>
+        </div>
+
+        <div class="exAll ex02">
+            <h2>Exercício 02</h2>
+            <p class="resumo">Desenvolva um programa que leia o salário de um funcionário e o número de filhos. Se o salário for menor do que 2000 o funcionário receberá um salário família equivalente a 45 reais por filho. Apresente o salário final.</p>
+            <div class="inputs">
+                <input id="ValorAEx02" type="number" placeholder="Insira seu salário">
+                <input id="ValorBEx02" type="number" placeholder="Insira a quantidade de filhos que possue">
+                <input type="submit" value="Enviar" onclick="ex02()">
+            </div>
+            <div class="resultado">
+                <h3>Resultado: </h3>
+                <h2 id="resultadoEx02"></h2>
+            </div>
+        </div>
+
+        <div class="exAll ex03">
+            <h2>Exercício 03</h2>
+            <p class="resumo">Desenvolva um programa que calcule desconto de INSS de um funcionário, se o salário for menor ou igual a do que R$ 1212,00 reais será de 7,5%, se estiver entre R$ 1212,01 e 2427,35 será de 9%, se estiver entre R$ 2427,36 e R$ 3641,03 o desconto é 12%, se estiver entre R$ 3641,04 a R$ 7087,22 será de 14% e se for maior do que 7087,22 o teto que é o máximo cobrado 14% de 7087,22. Mostre o desconto e o valor do salário final.</p>
+            <div class="inputs">
+                <input id="ValorAEx03" type="number" placeholder="Insira seu salário">
+                <input type="submit" value="Enviar" onclick="ex03()">
+            </div>
+            <div class="resultado">
+                <h3>Resultado: </h3>
+                <h2 id="resultadoEx03"></h2>
+            </div>
+        </div>
+
+        <div class="exAll ex04">
+            <h2>Exercício 04</h2>
+            <p class="resumo">Desenvolva um programa que leia os valores de três lados de um triângulo (a, b e c) e se os três lados forem diferentes escreva ESCALENO se os três lados forem iguais EQUILÁTERO e se apenas dois lados forem iguais ISÓSCELES.</p>
+            <div class="inputs">
+                <input id="ValorAEx04" type="number" placeholder="Insira o primeiro lado">
+                <input id="ValorBEx04" type="number" placeholder="Insira o segundo lado">
+                <input id="ValorCEx04" type="number" placeholder="Insira o terceiro lado">
+                <input type="submit" value="Enviar" onclick="ex04()">
+            </div>
+            <div class="resultado">
+                <h3>Resultado: </h3>
+                <h2 id="resultadoEx04"></h2>
+            </div>
+        </div>
+
+        <div class="exAll ex05">
+            <h2>Exercício 05</h2>
+            <p class="resumo">Desenvolva um programa que leia o nome e o preço de uma mercadoria. Se o preço for menor do que 1000 terá um aumento de 5% no preço da mercadoria, senão o aumento será de 7%. Mostrar o nome da mercadoria e o seu novo preço.</p>
+            <div class="inputs">
+                <input id="ValorAEx05" type="text" placeholder="Insira o nome do produto">
+                <input id="ValorBEx05" type="number" placeholder="Insira o valor do produto">
+                <input type="submit" value="Enviar" onclick="ex05()">
+            </div>
+            <div class="resultado">
+                <h3>Resultado: </h3>
+                <h2 id="resultadoEx05"></h2>
+            </div>
+        </div>
+
+        <div class="exAll ex06">
+            <h2>Exercício 06</h2>
+            <p class="resumo">Desenvolva um programa que leia 6 números inteiros e exiba na tela ao final, o maior número que foi digitado pelo usuáriou.</p>
+            <div class="inputs">
+                <input id="ValorAEx06" type="number" placeholder="Insira o primeiro valor">
+                <input id="ValorBEx06" type="number" placeholder="Insira o segundo valor">
+                <input id="ValorCEx06" type="number" placeholder="Insira o terceiro valor">
+                <input id="ValorDEx06" type="number" placeholder="Insira o quarto valor">
+                <input id="ValorEEx06" type="number" placeholder="Insira o quinto valor">
+                <input id="ValorFEx06" type="number" placeholder="Insira o sexto valor">
+                <input type="submit" value="Enviar" onclick="ex06()">
+            </div>
+            <div class="resultado">
+                <h3>Resultado: </h3>
+                <h2 id="resultadoEx06"></h2>
+            </div>
+        </div>
+
+        <div class="exAll ex07">
+            <h2>Exercício 07</h2>
+            <p class="resumo">Escreva um programa que leia 5 números inteiros em qualquer ordem e exiba na tela ao final, os cinco números em ordem crescente.</p>
+            <div class="inputs">
+                <input id="ValorAEx07" type="number" placeholder="Insira o primeiro valor">
+                <input id="ValorBEx07" type="number" placeholder="Insira o segundo valor">
+                <input id="ValorCEx07" type="number" placeholder="Insira o terceiro valor">
+                <input id="ValorDEx07" type="number" placeholder="Insira o quarto valor">
+                <input id="ValorEEx07" type="number" placeholder="Insira o quinto valor">
+                <input type="submit" value="Enviar" onclick="ex07()">
+            </div>
+            <div class="resultado">
+                <h3>Resultado: </h3>
+                <h2 id="resultadoEx07"></h2>
+            </div>
+        </div>
+
+        <div class="exAll ex08">
+            <h2>Exercício 08</h2>
+            <p class="resumo">Escreva um programa que leia dois números inteiros e determine qual é o maior e o menor.</p>
+            <div class="inputs">
+                <input id="ValorAEx08" type="number" placeholder="Insira o primeiro valor">
+                <input id="ValorBEx08" type="number" placeholder="Insira o segundo valor">
+                <input type="submit" value="Enviar" onclick="ex08()">
+            </div>
+            <div class="resultado">
+                <h3>Resultado: </h3>
+                <h2 id="resultadoEx08"></h2>
+            </div>
+        </div>
+
+        <div class="exAll ex09">
+            <h2>Exercício 09</h2>
+            <p class="resumo">
+                Desenvolva um algortimo que faço o cálculo do reajuste salarial do funcionário, baseado nos seguintes parâmetros:<br>
+                15% de aumento: 1.500,00 &lt;= salario Atual &lt; 1.750,00<br>
+                12% de aumento: 1.750,00 &lt;= salario Atual &lt; 2.000,00<br>
+                9% de aumento: 2.000,00 &lt;= salario Atual &lt; 3.000,00<br>
+                6% de aumento: salario Atual &gt;= 3.000,00
+            </p>
+            <div class="inputs">
+                <input id="ValorAEx09" type="text" placeholder="Insira o salário">
+                <input type="submit" value="Enviar" onclick="ex09()">
+            </div>
+            <div class="resultado">
+                <h3>Resultado: </h3>
+                <h2 id="resultadoEx09"></h2>
+            </div>
+        </div>
+
+        <div class="exAll ex10">
+            <h2>Exercício 10</h2>
+            <p class="resumo">Crie um programa que calcule a média de 3 notas do aluno e informe sua situação: (nota maior ou igual a 6 : aprovado), (nota inferior a 6 e maior ou igual a 4 : recuperação), (nota menor que 4 : reprovado).</p>
+            <div class="inputs">
+                <input id="ValorAEx10" type="number" placeholder="Insira a primeira nota">
+                <input id="ValorBEx10" type="number" placeholder="Insira a segunda nota">
+                <input id="ValorCEx10" type="number" placeholder="Insira a terceira nota">
+                <input type="submit" value="Enviar" onclick="ex10()">
+            </div>
+            <div class="resultado">
+                <h3>Resultado: </h3>
+                <h2 id="resultadoEx10"></h2>
+            </div>
+        </div>
+
+        <div class="exAll ex11">
+            <h2>Exercício 11</h2>
+            <p class="resumo">Uma loja está fazendo uma promoção e precisa de ajuda no momento da venda, para liberar os descontos. Baseado na peça, calcule o desconto e exiba o valor final da venda. (camisa - 20% de desconto, bermuda - 10% de desconto, calça - 15% de desconto).</p>
+            <div class="inputs">
+                <input id="ValorAEx11" type="text" placeholder="Insira o produto que deseja">
+                <input id="ValorBEx11" type="number" placeholder="Insira o preço do produto">
+                <input type="submit" value="Enviar" onclick="ex11()">
+            </div>
+            <div class="resultado">
+                <h3>Resultado: </h3>
+                <h2 id="resultadoEx11"></h2>
+            </div>
+        </div>
+    </main>
 </body>
+
+<script src="../js/transitions.js"></script>
+<script src="../js/List02.js"></script>
 </html>

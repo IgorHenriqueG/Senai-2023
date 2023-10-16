@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 03</title>
+    <link rel="stylesheet" href="../css/lists.css">
+    <link rel="stylesheet" href="../css/transitions.css">
+    <link rel="icon" href="../imgs/dev.svg">
+</head>
+<body>
+
+    <div class="transition transition-2 is-active"></div>
+
+    <header>
+        <div>
+            <a href="../../index.html">
+                <h1 class="logo">C to JavaScript</h1>
+            </a>
+            <div class="headerCenter">
+                <h2>Lista 03</h2>
+            </div>
+            <nav>
+                <a href="list01.html">
+                    <p>Lista 01</p>
+                </a>
+                <a href="list02.html">
+                    <p>Lista 02</p>
+                </a>
+                <a href="list03.html">
+                    <p>Lista 03</p>
+                </a>
+                <a href="list04.html">
+                    <p>Lista 04</p>
+                </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="exAll ex01">
+            <h2>Exercício 01</h2>
+            <p class="resumo">Faça um programa que mostre na tela valores no intervalo entre 10 e 200.</p>
+            <div class="inputs">
+                <input type="submit" value="Enviar" onclick="ex01()">
+            </div>
+            <div class="resultado">
+                <h3>Resultado: </h3>
+                <h2 id="resultadoEx01"></h2>
+            </div>
+        </div>
+
+        <div class="exAll ex02">
+            <h2>Exercício 02</h2>
+            <p class="resumo">Faça um programa que mostre na tela valores no intervalo entre 200 e 10.</p>
+            <div class="inputs">
+                <input type="submit" value="Enviar" onclick="ex02()">
+            </div>
+            <div class="resultado">
+                <h3>Resultado: </h3>
+                <h2 id="resultadoEx02"></h2>
+            </div>
+        </div>
+
+        <div class="exAll ex03">
+            <h2>Exercício 03</h2>
+            <p class="resumo">Faça um programa que solicite que o usuário digite um valor inteiro, positivo e imprima todos os valores entre 0 e o número digitado.</p>
+            <div class="inputs">
+                <input id="ValorAEx03" type="number" placeholder="Insira um valor">
+                <input type="submit" value="Enviar" onclick="ex03()">
+            </div>
+            <div class="resultado">
+                <h3>Resultado: </h3>
+                <h2 id="resultadoEx03"></h2>
+            </div>
+        </div>
+
+        <div class="exAll ex04">
+            <h2>Exercício 04</h2>
+            <p class="resumo">Faça um programa que solicite que o usuário digite dois valores inteiros diferentes e imprima todos os valores entre o um número e o outro.</p>
+            <div class="inputs">
+                <input id="ValorAEx04" type="number" placeholder="Insira o primeiro valor">
+                <input id="ValorBEx04" type="number" placeholder="Insira o segundo valor">
+                <input type="submit" value="Enviar" onclick="ex04()">
+            </div>
+            <div class="resultado">
+                <h3>Resultado: </h3>
+                <h2 id="resultadoEx04"></h2>
+            </div>
+        </div>
+
+        <div class="exAll ex05">
+            <h2>Exercício 05</h2>
+            <p class="resumo">Faça um programa que solicite que o usuário digite um valor inteiro, positivo e imprima todos os valores entre 0 e o número digitado de 2 em 2.</p>
+            <div class="inputs">
+                <input id="ValorAEx05" type="number" placeholder="Insira um valor">
+                <input type="submit" value="Enviar" onclick="ex05()">
+            </div>
+            <div class="resultado">
+                <h3>Resultado: </h3>
+                <h2 id="resultadoEx05"></h2>
+            </div>
+        </div>
+
+        <div class="exAll ex06">
+            <h2>Exercício 06</h2>
+            <p class="resumo">Faça um programa que solicite que o usuário digite um valor inteiro, positivo e imprima todos os valores ímpares entre 0 e o número digitado.</p>
+            <div class="inputs">
+                <input id="ValorAEx06" type="number" placeholder="Insira um valor">
+                <input type="submit" value="Enviar" onclick="ex06()">
+            </div>
+            <div class="resultado">
+                <h3>Resultado: </h3>
+                <h2 id="resultadoEx06"></h2>
+            </div>
+        </div>
+
+        <div class="exAll ex07">
+            <h2>Exercício 07</h2>
+            <p class="resumo">Faça um programa que imprima na tela a soma dos valores inteiros entre 0 e 100.</p>
+            <div class="inputs">
+                <input type="submit" value="Enviar" onclick="ex07()">
+            </div>
+            <div class="resultado">
+                <h3>Resultado: </h3>
+                <h2 id="resultadoEx07"></h2>
+            </div>
+        </div>
+
+        <div class="exAll ex08">
+            <h2>Exercício 08</h2>
+            <p class="resumo">Faça um programa que peça para o usuário digitar um número inteiro positivo e calcule o fatorial deste número.</p>
+            <div class="inputs">
+                <input id="ValorAEx08" type="number" placeholder="Insira um valor">
+                <input type="submit" value="Enviar" onclick="ex08()">
+            </div>
+            <div class="resultado">
+                <h3>Resultado: </h3>
+                <h2 id="resultadoEx08"></h2>
+            </div>
+        </div>
+
+        <div class="exAll ex09">
+            <h2>Exercício 09</h2>
+            <p class="resumo">
+                Escreva um programa que exiba na tela a tabuada de um número que deverá ser informado pelo usuário entre 0 e 10.<br>
+                Exemplo: Digite um número: 4<br>
+                
+                    4 x 0 = 0<br>
+                    4 x 1 = 4<br>
+                    4 x 2 = 8<br>
+                    4 x 3 = 12<br>
+                    4 x 4 = 16<br>
+                    4 x 5 = 20<br>
+                    4 x 6 = 24<br>
+                    4 x 7 = 28<br>
+                    4 x 8 = 32<br>
+                    4 x 9 = 36<br>
+                    4 x 10 = 40
+                
+                </p>
+            <div class="inputs">
+                <input id="ValorAEx09" type="number" placeholder="Insira um valor">
+                <input type="submit" value="Enviar" onclick="ex09()">
+            </div>
+            <div class="resultado">
+                <h3>Resultado: </h3>
+                <h2 id="resultadoEx09"></h2>
+            </div>
+        </div>
+
+        <div class="exAll ex10">
+            <h2>Exercício 10</h2>
+            <p class="resumo">Escreva um programa que leia 10 números inteiros e exiba na tela ao final, o maior número que foi digitado pelo usuário.</p>
+            <div class="inputs">
+                <input id="ValorAEx10" type="number" placeholder="Insira o primeiro valor">
+                <input id="ValorBEx10" type="number" placeholder="Insira o segundo valor">
+                <input id="ValorCEx10" type="number" placeholder="Insira o terceiro valor">
+                <input id="ValorDEx10" type="number" placeholder="Insira o quarto valor">
+                <input id="ValorEEx10" type="number" placeholder="Insira o quinto valor">
+                <input id="ValorFEx10" type="number" placeholder="Insira o sexto valor">
+                <input id="ValorGEx10" type="number" placeholder="Insira o sétimo valor">
+                <input id="ValorHEx10" type="number" placeholder="Insira o oitavo valor">
+                <input id="ValorIEx10" type="number" placeholder="Insira o nono valor">
+                <input id="ValorJEx10" type="number" placeholder="Insira o décimo valor">
+                <input type="submit" value="Enviar" onclick="ex10()">
+            </div>
+            <div class="resultado">
+                <h3>Resultado: </h3>
+                <h2 id="resultadoEx10"></h2>
+            </div>
+        </div>
+
+        <div class="exAll ex11">
+            <h2>Exercício 11</h2>
+            <p class="resumo">Escreva um programa que leia 5 números inteiros em qualquer ordem e exiba na tela ao final, os cinco números em ordem crescente.</p>
+            <div class="inputs">
+                <input id="ValorAEx11" type="number" placeholder="Insira o primeiro valor">
+                <input id="ValorBEx11" type="number" placeholder="Insira o segundo valor">
+                <input id="ValorCEx11" type="number" placeholder="Insira o terceiro valor">
+                <input id="ValorDEx11" type="number" placeholder="Insira o quarto valor">
+                <input id="ValorEEx11" type="number" placeholder="Insira o quinto valor">
+                <input type="submit" value="Enviar" onclick="ex11()">
+            </div>
+            <div class="resultado">
+                <h3>Resultado: </h3>
+                <h2 id="resultadoEx11"></h2>
+            </div>
+        </div>
+    </main>
+</body>
+
+<script src="../js/transitions.js"></script>
+<script src="../js/List03.js"></script>
+</html>

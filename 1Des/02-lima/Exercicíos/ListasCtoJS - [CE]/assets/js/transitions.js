@@ -1,5 +1,5 @@
 window.onload = () => {
-    const anchors = document.querySelectorAll('a');
+    const anchors = document.querySelectorAll('.link');
     const transition_el = document.querySelector('.transition');
   
     setTimeout(() => {
@@ -10,11 +10,13 @@ window.onload = () => {
       const anchor = anchors[i];
   
       anchor.addEventListener('click', e => {
-        e.preventDefault()
         transition_el.classList.add('is-active');
 
+        let anchorHREF = anchor.querySelector('#hrefTarget')
+        anchorHREF = anchorHREF.classList
+
         setInterval(() => {
-          window.location.href = anchor.href
+          window.location.href = anchorHREF
         }, 500);
       })
     }

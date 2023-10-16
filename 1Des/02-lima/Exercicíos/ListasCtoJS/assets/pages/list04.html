@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 04</title>
+    <link rel="stylesheet" href="../css/lists.css">
+    <link rel="stylesheet" href="../css/transitions.css">
+    <link rel="icon" href="../imgs/dev.svg">
+</head>
+<body>
+
+    <div class="transition transition-2 is-active"></div>
+
+    <header>
+        <div>
+            <a href="../../index.html">
+                <h1 class="logo">C to JavaScript</h1>
+            </a>
+            <div class="headerCenter">
+                <h2>Lista 04</h2>
+            </div>
+            <nav>
+                <a href="list01.html">
+                    <p>Lista 01</p>
+                </a>
+                <a href="list02.html">
+                    <p>Lista 02</p>
+                </a>
+                <a href="list03.html">
+                    <p>Lista 03</p>
+                </a>
+                <a href="wip.html">
+                    <p>Lista 04</p>
+                </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="exAll ex01">
+            <h2>Exercício 01</h2>
+            <p class="resumo">Desenvolva um programa que leia o nome e o salário de 5 pessoas, depois leia um valor de índice percentual (%) de reajuste do salário. Calcule e apresente na tela, o valor do novo salário e o nome das 5 pessoas.</p>
+            <div class="inputs">
+                <div>
+                    <input id="ValorAEx01" type="text" placeholder="Insira o nome">
+                    <input id="ValorBEx01" type="number" placeholder="Insira o salário">
+                </div>
+                <div>
+                    <input id="ValorCEx01" type="text" placeholder="Insira o nome">
+                    <input id="ValorDEx01" type="number" placeholder="Insira o salário">
+                </div>
+                <div>
+                    <input id="ValorEEx01" type="text" placeholder="Insira o nome">
+                    <input id="ValorFEx01" type="number" placeholder="Insira o salário">
+                </div>
+                <div>
+                    <input id="ValorGEx01" type="text" placeholder="Insira o nome">
+                    <input id="ValorHEx01" type="number" placeholder="Insira o salário">
+                </div>
+                <div>
+                    <input id="ValorIEx01" type="text" placeholder="Insira o nome">
+                    <input id="ValorJEx01" type="number" placeholder="Insira o salário">
+                </div>
+                <input id="ValorKEx01" type="number" placeholder="Insira o índice">
+                <input type="submit" value="Enviar" onclick="ex01()">
+            </div>
+            <div class="resultado">
+                <h3>Resultado: </h3>
+                <h2 id="resultadoEx01"></h2>
+            </div>
+        </div>
+
+        <div class="exAll ex02">
+            <h2>Exercício 02</h2>
+            <p class="resumo">Desenvolva um programa que leia o nome de 5 times de futebol, o número de vitórias e o número de empates de cada time. O programa deverá calcular e apresentar na tela, o nome dos times e o total de pontos de cada um e a ordem de classificação decrescente. Lembrando que a vitória vale 3 pontos e o empate vale 1 ponto.</p>
+            <div class="inputs">
+                <div>
+                    <input id="ValorAEx02" type="text" placeholder="Insira o time">
+                    <input id="ValorBEx02" type="number" placeholder="Insira o total de vitórias">
+                    <input id="ValorCEx02" type="number" placeholder="Insira o total de empates">
+                </div>
+                <div>
+                    <input id="ValorDEx02" type="text" placeholder="Insira o time">
+                    <input id="ValorEEx02" type="number" placeholder="Insira o total de vitórias">
+                    <input id="ValorFEx02" type="number" placeholder="Insira o total de empates">
+                </div>
+                <div>
+                    <input id="ValorGEx02" type="text" placeholder="Insira o time">
+                    <input id="ValorHEx02" type="number" placeholder="Insira o total de vitórias">
+                    <input id="ValorIEx02" type="number" placeholder="Insira o total de empates">
+                </div>
+                <div>
+                    <input id="ValorJEx02" type="text" placeholder="Insira o time">
+                    <input id="ValorKEx02" type="number" placeholder="Insira o total de vitórias">
+                    <input id="ValorLEx02" type="number" placeholder="Insira o total de empates">
+                </div>
+                <div>
+                    <input id="ValorMEx02" type="text" placeholder="Insira o time">
+                    <input id="ValorNEx02" type="number" placeholder="Insira o total de vitórias">
+                    <input id="ValorOEx02" type="number" placeholder="Insira o total de empates">
+                </div>
+                
+                <input type="submit" value="Enviar" onclick="ex02()">
+            </div>
+            <div class="resultado">
+                <h3>Resultado: </h3>
+                <h2 id="resultadoEx02"></h2>
+            </div>
+        </div>
+
+        <div class="exAll ex03">
+            <h2>Exercício 03</h2>
+            <p class="resumo">Desenvolva um programa que leia o nome e o preço de 5 mercadorias. Se o preço for menor do que 1000 terá um aumento de 5% no preço da mercadoria, senão o aumento será de 7%. Mostrar o nome das mercadorias e o seu novo preço.</p>
+            <div class="inputs">
+                <div>
+                    <input id="ValorAEx03" type="text" placeholder="Insira a mercadoria">
+                    <input id="ValorBEx03" class="mercadoria" type="text" placeholder="Insira o preço">
+                </div>
+
+                <div>
+                    <input id="ValorCEx03" type="text" placeholder="Insira a mercadoria">
+                    <input id="ValorDEx03" class="mercadoria" type="text" placeholder="Insira o preço">
+                </div>
+
+                <div>
+                    <input id="ValorEEx03" type="text" placeholder="Insira a mercadoria">
+                    <input id="ValorFEx03" class="mercadoria" type="text" placeholder="Insira o preço">
+                </div>
+
+                <div>
+                    <input id="ValorGEx03" type="text" placeholder="Insira a mercadoria">
+                    <input id="ValorHEx03" class="mercadoria" type="text" placeholder="Insira o preço">
+                </div>
+
+                <div>
+                    <input id="ValorIEx03" type="text" placeholder="Insira a mercadoria">
+                    <input id="ValorJEx03" class="mercadoria" type="text" placeholder="Insira o preço">
+                </div>
+                
+                <input type="submit" value="Enviar" onclick="ex03()">
+            </div>
+            <div class="resultado">
+                <h3>Resultado: </h3>
+                <h2 id="resultadoEx03"></h2>
+            </div>
+        </div>
+
+        <div class="exAll ex04 notR">
+            <h2>Exercício 04</h2>
+            <p class="resumo">Desenvolva um programa que leia o nome e o preço de 5 mercadorias, apresente na tela o mais caro e o mais barato.</p>
+            <div class="inputs">
+                <div>
+                    <input id="ValorAEx04" type="text" placeholder="Insira a mercadoria">
+                    <input id="ValorBEx04" type="number" placeholder="Insira o preço">
+                </div>
+
+                <div>
+                    <input id="ValorCEx04" type="text" placeholder="Insira a mercadoria">
+                    <input id="ValorDEx04" type="number" placeholder="Insira o preço">
+                </div>
+
+                <div>
+                    <input id="ValorEEx04" type="text" placeholder="Insira a mercadoria">
+                    <input id="ValorFEx04" type="number" placeholder="Insira o preço">
+                </div>
+
+                <div>
+                    <input id="ValorGEx04" type="text" placeholder="Insira a mercadoria">
+                    <input id="ValorHEx04" type="number" placeholder="Insira o preço">
+                </div>
+
+                <div>
+                    <input id="ValorIEx04" type="text" placeholder="Insira a mercadoria">
+                    <input id="ValorJEx04" type="number" placeholder="Insira o preço">
+                </div>
+                <input type="submit" value="Enviar" onclick="ex04()">
+            </div>
+            <div class="resultado">
+                <h3>Resultado: </h3>
+                <h2 id="resultadoEx04"></h2>
+            </div>
+        </div>
+
+        <div class="exAll ex05">
+            <h2>Exercício 05</h2>
+            <p class="resumo">---</p>
+            <div class="inputs">
+                <input id="ValorAEx05" type="number" placeholder="---">
+                <input type="submit" value="Enviar" onclick="ex05()">
+            </div>
+            <div class="resultado">
+                <h3>Resultado: </h3>
+                <h2 id="resultadoEx05"></h2>
+            </div>
+        </div>
+
+        <div class="exAll ex06">
+            <h2>Exercício 06</h2>
+            <p class="resumo">---</p>
+            <div class="inputs">
+                <input id="ValorAEx06" type="number" placeholder="---">
+                <input type="submit" value="Enviar" onclick="ex06()">
+            </div>
+            <div class="resultado">
+                <h3>Resultado: </h3>
+                <h2 id="resultadoEx06"></h2>
+            </div>
+        </div>
+
+        <div class="exAll ex07">
+            <h2>Exercício 07</h2>
+            <p class="resumo">---</p>
+            <div class="inputs">
+                <input id="ValorAEx07" type="number" placeholder="---">
+                <input type="submit" value="Enviar" onclick="ex07()">
+            </div>
+            <div class="resultado">
+                <h3>Resultado: </h3>
+                <h2 id="resultadoEx07"></h2>
+            </div>
+        </div>
+
+        <div class="exAll ex08">
+            <h2>Exercício 08</h2>
+            <p class="resumo">---</p>
+            <div class="inputs">
+                <input id="ValorAEx08" type="number" placeholder="---">
+                <input type="submit" value="Enviar" onclick="ex08()">
+            </div>
+            <div class="resultado">
+                <h3>Resultado: </h3>
+                <h2 id="resultadoEx08"></h2>
+            </div>
+        </div>
+
+        <div class="exAll ex09">
+            <h2>Exercício 09</h2>
+            <p class="resumo">---</p>
+            <div class="inputs">
+                <input id="ValorAEx09" type="number" placeholder="---">
+                <input type="submit" value="Enviar" onclick="ex09()">
+            </div>
+            <div class="resultado">
+                <h3>Resultado: </h3>
+                <h2 id="resultadoEx09"></h2>
+            </div>
+        </div>
+
+        <div class="exAll ex10">
+            <h2>Exercício 10</h2>
+            <p class="resumo">---</p>
+            <div class="inputs">
+                <input id="ValorAEx10" type="number" placeholder="---">
+                <input type="submit" value="Enviar" onclick="ex10()">
+            </div>
+            <div class="resultado">
+                <h3>Resultado: </h3>
+                <h2 id="resultadoEx10"></h2>
+            </div>
+        </div>
+
+        <div class="exAll ex11">
+            <h2>Exercício 11</h2>
+            <p class="resumo">---</p>
+            <div class="inputs">
+                <input id="ValorAEx11" type="number" placeholder="---">
+                <input type="submit" value="Enviar" onclick="ex11()">
+            </div>
+            <div class="resultado">
+                <h3>Resultado: </h3>
+                <h2 id="resultadoEx11"></h2>
+            </div>
+        </div>
+    </main>
+</body>
+
+<script src="../js/transitions.js"></script>
+<script src="../js/List04.js"></script>
+</html>
