@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-01: #333;
+    --clr-02: #ddd;
+    
+    --bg-clr-01: #373737;
+    --bg-clr-02: #1C3041;
+    --bg-clr-03: #2FE6DE;
+
+    --fc-01: #fff;
+
+    --ff-01: 'Teko', sans-serif;
+}
+/* 
+body {
+    background-color: rgb(215, 215, 212);
+} */
+
+header {
+    margin-top: 2.5rem;
+    text-align: center;
+    font-family: var(--ff-01);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: darkolivegreen; */
+
+    font-family: var(--ff-01);
+}
+
+.insert input[type="text"], .insert input[type="number"] {
+    padding: 10px;
+    outline: none;
+}
+
+.insert input[type="text"]:focus, .insert input[type="number"]:focus {
+    outline: 1px solid transparent;
+}
+
+.insert button {
+    border: 1px solid var(--clr-01);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.card-grid {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+    padding: 40px;
+    background-color: var(--bg-clr-02);
+    color: var(--bg-clr-03);
+
+    border: 1px solid black;
+    border-radius: 15px;
+    font-size: 22px;
+
+    box-shadow: 1px 1px 15px 1px var(--bg-clr-02);
+}
+
+.card h2::before {
+    content: 'Nome:';
+    position: relative;
+    left: 0;
+    margin-right: 3rem;
+}.card h3:nth-child(2)::before {
+    content: 'Salário:';
+    position: relative;
+    left: 0;
+    margin-right: 3.3rem;
+}.card h3:nth-child(3)::before {
+    content: 'INSS:';
+    position: relative;
+    left: 0;
+    margin-right: 4.5rem;
+}.card h3:nth-child(4)::before {
+    content: 'Sal. Base:';
+    position: relative;
+    left: 0;
+    margin-right: 2.2rem;
+}.card h3:nth-child(5)::before {
+    content: 'IRRF:';
+    position: relative;
+    left: 0;
+    margin-right: 4.6rem;
+}.card h3:nth-child(6)::before {
+    content: 'Sal. Liquido:';
+    position: relative;
+    left: 0;
+    margin-right: 1rem;
+}
