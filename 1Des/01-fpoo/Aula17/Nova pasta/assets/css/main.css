@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-01: #333;
+    --clr-02: #ddd;
+
+    --fc-01: #fff;
+
+    --ff-01: 'Teko', sans-serif;
+}
+
+header {
+    margin-top: 2.5rem;
+    text-align: center;
+    font-family: var(--ff-01);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.insert input[type="text"], .insert input[type="number"] {
+    padding: 10px;
+    outline: none;
+}
+
+.insert input[type="text"]:focus, .insert input[type="number"]:focus {
+    outline: 1px solid transparent;
+}
+
+.insert button {
+    border: 1px solid var(--clr-01);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+table {
+    width: 100vw;
+    max-width: 800px;
+    border-collapse: collapse;
+    border: 1px solid var(--clr-02);
+    margin: 20px;
+}
+
+table tr {
+    width: 98%;
+    border-bottom: 1px solid var(--clr-02);
+
+    font-size: 22px;
+    font-family: var(--ff-01);
+}
+
+table tr th {
+    background: var(--clr-01);
+    color: var(--fc-01);
+    padding: 10px;
+    text-align: center;
+
+    cursor: default;
+}
+
+table tr th {
+    cursor: help;
+    position: relative;
+}
+
+th[data-title]:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+    color: #fff;
+    background-color: var(--clr-01);
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 10px;
+    width: max-content;
+}
+
+table tr td {
+    padding: 10px;
+    text-align: center;
+
+    font-size: 22px;
+    font-family: var(--ff-01);
+    border-right: 1px solid #979797;
+}
+
+#pessoa button {
+    margin-inline: 5px;
+}
+
+#pessoa button:nth-child(1) {
+    padding: 10px;
+
+    border: 1px solid red;
+    border-radius: 5px;
+
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#pessoa button:nth-child(2) {
+    padding: 10px;
+
+    border: 1px solid blue;
+    border-radius: 5px;
+
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#pessoa button:nth-child(1):hover {
+    background-color: red;
+    color: white;
+}
+
+#pessoa button:nth-child(2):hover {
+    background-color: blue;
+    color: white;
+}
+
+.editInput {
+    width: 100%;
+    outline: none;
+}
