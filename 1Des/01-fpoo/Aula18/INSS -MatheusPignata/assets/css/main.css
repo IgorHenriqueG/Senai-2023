@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One&family=Oswald&display=swap');
+
+:root {
+    --ff-clr-01: #000;
+    --ff-clr-02: #fff;
+
+    --ff-01-X: 'Alumni Sans Collegiate One', sans-serif;
+    --ff-02-ow: 'Oswald', sans-serif;
+}
+
+body{
+    background-color: #eee;
+}
+
+header {
+    text-align: center;
+}
+
+#formPessoa {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    gap: 10px;
+}#formPessoa input[type="text"], #formPessoa input[type="number"] {
+    padding: 10px;
+    outline: none;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.9rem 1.8rem;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ff-clr-01);
+    border: 1px solid var(--ff-clr-01);
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    font-family: inherit;
+}.btn:hover {
+    color: var(--ff-clr-02);
+}
+   
+.btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--ff-clr-01);
+    transform: translateX(-100%);
+    transition: all .5s;
+    z-index: -1;
+}.btn:hover::before {
+    transform: translateX(0);
+}
+
+.card {
+    position: relative;
+    width: 250px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+    background-color: white;
+
+    font-family: var(--ff-02-ow);
+    text-transform: uppercase;
+}
+
+.card h1{
+    text-align: center;
+    border-bottom: 1px solid black;
+    
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.card div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card button {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: -3%;
+    top: -4%;
+    background-color: red;
+    color: white;
+
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+
+    transition: 0.5s;
+    font-size: 22px;
+    font-family: var(--ff-01-X);
+}.card button:hover {
+    background-color: rgb(172, 2, 2);
+    transform: scale3d(1.2, 1.2, 1.2);
+}
+
+.model {
+    display: none;
+}
+
+/* Card-grid */
+
+.card-grid {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin-inline: 5px;
+
+    gap: 20px;
+}

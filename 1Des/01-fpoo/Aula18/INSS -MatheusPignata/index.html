@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Versão Pignata</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <header>
+        <h1>Cálculo Trabalhista</h1>
+    </header>
+    <form id="formPessoa">
+        <input type="text" id="nomeInput" name="nomeInput" placeholder="Nome" required>
+        <input type="number" id="salarioInput" name="salarioInput" placeholder="Salário" required>
+        <!-- <input type="submit" value="Enviar"> -->
+        <button type="submit" class="btn">Enviar</button>
+    </form>
+
+    <div class="card-grid">
+        <div class="card model">
+            <button onclick="remover(this)">X</button>
+            <h1 id="nome">Nome</h1>
+            <div id="salario">0</div>
+            <div id="irrf">0</div>
+            <div id="salarioBase">0</div>
+            <div id="inss">0</div>
+            <div id="salarioLiquido">0</div>
+        </div>
+    </div>
+
+</body>
+<script src="assets/js/pessoa.js"></script>
+<script src="assets/js/viewController.js"></script>
+</html>
