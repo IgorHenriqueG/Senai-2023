@@ -29,11 +29,18 @@ header {
     font-family: var(--ff-01);
 }
 
+header p {
+    margin-bottom: 1rem;
+}
+
+header p span {
+    padding-inline: 2px;
+}
+
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background-color: darkolivegreen; */
 
     font-family: var(--ff-01);
 }
@@ -51,6 +58,7 @@ main {
     border: 1px solid var(--clr-01);
     border-radius: 5px;
     padding: 10px;
+    cursor: pointer;
 }
 
 .card-grid {
@@ -73,6 +81,9 @@ main {
     font-size: 22px;
 
     box-shadow: 1px 1px 15px 1px var(--bg-clr-02);
+
+    user-select: none;
+    transition: 0.5s ease;
 }
 
 .card h2::before {
@@ -105,4 +116,146 @@ main {
     position: relative;
     left: 0;
     margin-right: 1rem;
+}
+
+.card-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.card-buttons button {
+    background-color: transparent;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.card-buttons button:nth-child(1) {
+    border: 1px solid aqua;
+}.card-buttons button:nth-child(1):hover {
+    background-color: aqua;
+    color: black;
+}
+
+.card-buttons button:nth-child(2) {
+    border: 1px solid red;
+    margin-left: 20px;
+}.card-buttons button:nth-child(2):hover {
+    background-color: red;
+}
+
+.alert {
+    animation: alertKey 1s;
+}
+
+@keyframes alertKey {
+    0%{
+        background-color: red;
+        color: white;
+    }
+    25%{
+        background-color: white;
+        color: black;
+    }
+    50%{
+        background-color: red;
+        color: white;
+    }
+    75%{
+        background-color: white;
+        color: black;
+    }
+    100%{
+        background-color: red;
+        color: white;
+    }
+}
+
+
+.message-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+}.message-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: black;
+    opacity: 0.2;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: white;
+    z-index: 101;
+}
+
+.message #exclude {
+    padding: 10px;
+    border: 1px solid green;
+    background-color: transparent;
+    font-size: 16px;
+    cursor: pointer;
+}.message #exclude:hover {
+    background-color: green;
+    color: white;
+}
+
+.message #cancel {
+    padding: 10px;
+    border: 1px solid red;
+    background-color: transparent;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 10px;
+}.message #cancel:hover {
+    background-color: red;
+    color: white;
+}
+
+#objNome {
+    display: flex;
+}#objNome input {
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+}
+
+#objSalario {
+    display: flex;
+}#objSalario input {
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+}
+
+.button-done {
+    padding: 10px;
+    border: 1px solid green;
+    background-color: transparent;
+    font-size: 16px;
+    cursor: pointer;
+}.button-done:hover {
+    background-color: green;
+    color: white;
 }

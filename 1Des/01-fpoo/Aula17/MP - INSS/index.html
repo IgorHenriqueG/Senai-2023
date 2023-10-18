@@ -3,40 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cálculos Trabalhistas</title>
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
 
     <header>
         <h1>Cálculos Trabalhistas</h1>
+        <p>Prof:<span></span> Wellington Fábio -- Matheus Pignata</p>
     </header>
+
+    <div class="message-container" id="message">
+        <div class="message">
+            <h3 id="messageTitle"></h3>
+            <div class="buttons" id="buttons"></div>
+        </div>
+        <div class="message-bg"></div>
+    </div>
 
     <main>
         <div class="insert">
             <input type="text" id="inputName" placeholder="Nome do funcionário" required>
             <input type="number" id="inputIncome" placeholder="Salário" required>
-            <button onclick="insert()">Insert</button>
+            <button onclick="insert()">Inserir</button>
         </div>
         
         <div class="card-grid">
-            <div class="card">
-                <h2>Juliana</h2>
-                <h3>1500</h3>
-                <h3>1500</h3>
-                <h3>1500</h3>
-                <h3>1500</h3>
-                <h3>1500</h3>
-            </div>
-
-            <div class="card">
-                <h2>Wellington</h2>
-                <h3>1500</h3>
-                <h3>1500</h3>
-                <h3>1500</h3>
-                <h3>1500</h3>
-                <h3>1500</h3>
-            </div>
         </div>
         
     </main>
