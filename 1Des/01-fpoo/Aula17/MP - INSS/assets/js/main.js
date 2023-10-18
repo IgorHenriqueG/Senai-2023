@@ -71,7 +71,7 @@ function toTable(obj){
             let salaryInput = document.createElement('input')
             salaryInput.setAttribute('type','number');
 
-            let exButtons = document.querySelector('.card-buttons')
+            let exButtons = div.querySelector('.card-buttons')
 
             let buttonDone = document.createElement('button')
             buttonDone.classList.add('button-done')
@@ -80,8 +80,8 @@ function toTable(obj){
             buttonDone.addEventListener('click', function(){
                 obj.nome = nameInput.value
                 obj.salario = salaryInput.value
-                document.getElementById('objInss').innerHTML = obj.inss(obj.salario)
-                document.getElementById('objIrrf').innerHTML = obj.irrf(obj.salario)
+                div.querySelector('#objInss').innerHTML = obj.inss(obj.salario)
+                div.querySelector('#objIrrf').innerHTML = obj.irrf(obj.salario)
                 obj.salarioBase = (salaryInput.value - obj.inss()).toFixed(2)
                 obj.salarioLiquido = (obj.salarioBase - obj.irrf()).toFixed(2)
 
