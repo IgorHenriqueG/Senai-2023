@@ -71,7 +71,7 @@ main {
 .card {
     position: relative;
     width: 20rem;
-    height: 20rem;
+    height: fit-content;
     padding: 40px;
     background-color: var(--bg-clr-02);
     color: var(--bg-clr-03);

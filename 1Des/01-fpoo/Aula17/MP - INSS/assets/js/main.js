@@ -78,25 +78,34 @@ function toTable(obj){
             buttonDone.innerHTML = 'Done'
 
             buttonDone.addEventListener('click', function(){
-                obj.nome = nameInput.value
-                obj.salario = salaryInput.value
-                div.querySelector('#objInss').innerHTML = obj.inss(obj.salario)
-                div.querySelector('#objIrrf').innerHTML = obj.irrf(obj.salario)
-                obj.salarioBase = (salaryInput.value - obj.inss()).toFixed(2)
-                obj.salarioLiquido = (obj.salarioBase - obj.irrf()).toFixed(2)
+                if(nameInput.value != '' && salaryInput.value != ''){
+                    obj.nome = nameInput.value
+                    obj.salario = salaryInput.value
+                    div.querySelector('#objInss').innerHTML = obj.inss(obj.salario)
+                    div.querySelector('#objIrrf').innerHTML = obj.irrf(obj.salario)
+                    obj.salarioBase = (salaryInput.value - obj.inss()).toFixed(2)
+                    obj.salarioLiquido = (obj.salarioBase - obj.irrf()).toFixed(2)
 
-                console.log(obj.nome)
-                div.querySelector("#objNome").innerHTML = nameInput.value
-                div.querySelector("#objSalario").innerHTML = salaryInput.value
-                div.querySelector("#objSalBase").innerHTML = obj.salarioBase
-                div.querySelector("#objSalLiquido").innerHTML = obj.salarioLiquido
-                nameInput.remove()
+                    console.log(obj.nome)
+                    div.querySelector("#objNome").innerHTML = nameInput.value
+                    div.querySelector("#objSalario").innerHTML = salaryInput.value
+                    div.querySelector("#objSalBase").innerHTML = obj.salarioBase
+                    div.querySelector("#objSalLiquido").innerHTML = obj.salarioLiquido
+                    nameInput.remove()
 
-                buttonDone.style.display = 'none'
-                exButtons.querySelector('#editButton').style.display = 'block'
-                exButtons.querySelector('#removeButton').style.display = 'block'
+                    buttonDone.style.display = 'none'
+                    exButtons.querySelector('#editButton').style.display = 'block'
+                    exButtons.querySelector('#removeButton').style.display = 'block'
 
-                console.log(obj)
+                    console.log(obj)
+                }else{
+                    nameInput.classList.add('alert')
+                    salaryInput.classList.add('alert')
+                }
+                setTimeout(() => {
+                    nameInput.classList.remove('alert')
+                    salaryInput.classList.remove('alert')
+                }, 1000);
             })
 
             exButtons.querySelector('#editButton').style.display = 'none'
