@@ -72,25 +72,16 @@ header {
     text-transform: uppercase;
 }
 
-.card h1{
-    text-align: center;
-    border-bottom: 1px solid black;
-    
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-
 .card div {
     display: flex;
     justify-content: space-between;
 }
 
-.card button {
+.card .removeBtn {
     position: absolute;
     width: 30px;
     height: 30px;
-    right: -3%;
+    right: -5%;
     top: -4%;
     background-color: red;
     color: white;
@@ -102,9 +93,64 @@ header {
     transition: 0.5s;
     font-size: 22px;
     font-family: var(--ff-01-X);
-}.card button:hover {
+}.card .removeBtn:hover {
     background-color: rgb(172, 2, 2);
     transform: scale3d(1.2, 1.2, 1.2);
+}
+
+.card .editBtn {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: -5%;
+    top: 5%;
+    background-color: blue;
+    color: white;
+
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+
+    transition: 0.5s;
+    font-size: 22px;
+    font-family: var(--ff-01-X);
+}.card .editBtn:hover {
+    background-color: rgb(0, 0, 168);
+    transform: scale3d(1.2, 1.2, 1.2);
+}.card .editBtn svg {
+    filter: invert(100%);
+}
+
+.name {
+    width: 100%;
+    overflow: hidden;
+
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.name h1{
+    width: 100%;
+    transition: 1s infinite;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.name h1:hover {
+    animation: nameAnim 5s infinite;
+    overflow:visible;
+}
+
+@keyframes nameAnim {
+    from {
+      transform: translateX(0%);
+    }
+  
+    to {
+        transform: translateX(-100%);
+    }
 }
 
 .model {
@@ -120,4 +166,28 @@ header {
     margin-inline: 5px;
 
     gap: 20px;
+}
+
+/* Edit */
+
+.editInput{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.editInputSalary{
+    margin-top: 10px;
+}
+
+.doneButton {
+    padding: 10px;
+    margin-left: 35%;
+    background-color: transparent;
+    border: 1px solid forestgreen;
+
+    cursor: pointer;
+}.doneButton:hover {
+    background-color: forestgreen;
+    color: white;
 }
