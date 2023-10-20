@@ -21,11 +21,11 @@ function criarCard(){
         let cardNew = card.cloneNode(true)
         cardNew.classList.remove('model')
         cardNew.querySelector(".nome").innerHTML = pessoa.nome
-        cardNew.querySelector(".salario").innerHTML = `<p>Salário:</p><p>R$<span class="editSalarioInput">${pessoa.salario}</span></p>`
-        cardNew.querySelector(".inss").innerHTML = `<p>INSS:</p><p>R$${pessoa.inss().toFixed(2)}`
-        cardNew.querySelector(".salarioBase").innerHTML = `<p>Sal. Base:</p><p>R$${pessoa.salarioBase}`
-        cardNew.querySelector(".irrf").innerHTML = `<p>IRRF:</p><p>R$${pessoa.irrf().toFixed(2)}</p>`
-        cardNew.querySelector(".salarioLiquido").innerHTML = `<p>Sal. Liquido:</p><p>R$${pessoa.salarioLiquido}</p>`
+        cardNew.querySelector(".salario").innerHTML = `<p>Salário:</p><p>R$ <span class="editSalarioInput">${pessoa.salario}</span></p>`
+        cardNew.querySelector(".inss").innerHTML = `<p>INSS:</p><p>R$ ${pessoa.inss().toFixed(2)}`
+        cardNew.querySelector(".salarioBase").innerHTML = `<p>Sal. Base:</p><p>R$ ${pessoa.salarioBase}`
+        cardNew.querySelector(".irrf").innerHTML = `<p>IRRF:</p><p>R$ ${pessoa.irrf().toFixed(2)}</p>`
+        cardNew.querySelector(".salarioLiquido").innerHTML = `<p>Sal. Liquido:</p><p>R$ ${pessoa.salarioLiquido}</p>`
         cardNew.querySelector(".id").innerHTML = `#${pessoas.indexOf(pessoa)}`
 
         cards.appendChild(cardNew)
@@ -67,9 +67,6 @@ function edit(e){
 }
 
 function editDone(e){
-    let cardNameM = e.parentNode.querySelector('.name')
-    let cardSalaryM = e.parentNode.querySelector('.salario')
-
     let inputName = e.parentNode.querySelector('.editInput')
     let inputSalary = e.parentNode.querySelector('.editInputSalary')
 
@@ -81,9 +78,6 @@ function editDone(e){
             pessoas[index].salarioLiquido = (pessoa.salarioBase - pessoa.irrf()).toFixed(2)
         }
     })
-
-    cardNameM.innerHTML = `<h1 class="nome">${inputName.value}</h1>`
-    cardSalaryM.innerHTML = `<p>Salário:</p><p>R$<span class="editSalarioInput">${inputSalary.value}</span></p>`
 
     e.parentNode.querySelector('.doneButton').remove()
     criarCard()
