@@ -27,6 +27,8 @@ function criarCard(){
 }
 
 function remover(e){
+    console.log(pessoas, 'after')
     e.parentNode.remove()
-    pessoas.splice(e, 1)
+    console.log(pessoas, 'before')
+    console.log(pessoas.splice(e, 1))
 }

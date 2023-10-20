@@ -16,6 +16,11 @@ header {
     text-align: center;
 }
 
+.id {
+    color: #171717;
+    opacity: .3;
+}
+
 #formPessoa {
     display: flex;
     justify-content: center;

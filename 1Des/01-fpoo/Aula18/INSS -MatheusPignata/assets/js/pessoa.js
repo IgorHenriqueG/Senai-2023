@@ -34,6 +34,3 @@ class Pagamento {
             return this.salario * 27.5 / 100 - 869.36;
     }
 }
-
-const pgto1 = new Pagamento("João", 2689);
-// console.log(pgto1);
