@@ -19,13 +19,18 @@ function newPassword() {
     let numbersCheckbox = document.querySelector('#numbers').checked
     let symbolsCheckbox = document.querySelector('#symbols').checked
 
-    let charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+    let charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
     let numbers = '0123456789'
     let symbols = '~!@#$%^&*()_+'
     let passwordLength = document.querySelector('#passwordlgh').value
     let password = ''
 
-    if(passwordLength == '') {
+    if(isNaN(passwordLength)) {
+        let body = document.querySelector('body')
+        body.innerHTML = '<video autoplay src="assets/GBM.mp4"></video>'
+
+        
+    }else if(passwordLength == '') {
         document.querySelector('.passwordText p').innerText = 'Insert a value!'
     }else if(passwordLength >= 12){
         document.querySelector('.passwordText p').innerText = 'Max value is 12'
