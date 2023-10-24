@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Versão Pignata</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    
+    <form id="formPessoa">
+        <input type="text" id="nomeInput" name="nomeInput" placeholder="Nome">
+        <input type="number" id="salarioInput" name="salarioInput" placeholder="Salário">
+        <input type="submit" value="Enviar" onclick="">
+    </form>
+
+    <div class="card-grid">
+        <div class="card model">
+            <h1 id="nome">Nome</h1>
+            <h4 id="salario">1000</h4>
+            <h4 id="salarioBase">1000</h4>
+            <h4 id="salarioLiquido">1000</h4>
+            <button onclick="remover(this)">Remover</button>
+        </div>
+    </div>
+
+</body>
+<script src="assets/js/pessoa.js"></script>
+<script src="assets/js/viewController.js"></script>
+</html>

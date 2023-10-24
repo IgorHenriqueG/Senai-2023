@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#passForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    margin-top: 20px;
+    width: 100%;
+    color: #171717;
+    gap: 10px;
+}
+
+#passForm input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+#passForm button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #fff;
+    color: #000;
+}
+
+#passForm #checkboxs {
+    display: flex;
+    gap: 10px;
+    margin: 20px;
+}
+
+#passForm #checkboxs label{
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    user-select: none;
+}
+
+.password {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    width: 100%;
+}
+
+.passwordText {
+    position: relative;
+    display: flex;
+    font-size: 30px;
+    background-color: white;
+    padding: 5px;
+    width: 250px;
+
+    border: 1px solid black;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.passwordText p {
+    user-select: all;
+}
+
+.svgDiv {
+    position: absolute;
+    display: flex;
+    right: 0px;
+    top: 0;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    cursor: pointer;
+}
+
+/* video {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+} */
