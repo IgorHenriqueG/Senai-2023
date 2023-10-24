@@ -77,6 +77,7 @@ function newPassword() {
 }
 
 function copy() {
+    console.log('click')
     let copyText = document.querySelector('.passwordText p')
     let message = copyText.innerText
     copyText.innerHTML = 'Copyed!'

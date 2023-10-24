@@ -1,0 +1,115 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-01: #b8b8b8;
+    --color-02: #666666;
+
+    /* --ff-01: ; */
+}
+
+body {
+    background-color: var(--color-01);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+
+    border-bottom: 3px solid black;
+}
+
+.info-nav {
+    display: flex;
+    gap: 30px;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.info-nav .item-1, .item-2, .item-3 {
+    display: flex;
+    gap: 45px;
+}
+
+.info-nav .item-1 span {
+    color: red;
+}.info-nav .item-2 span {
+    color: green;
+}.info-nav .item-3 span {
+    color: aqua;
+}
+
+header img {
+    width: 100px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}header nav input {
+    padding: 10px;
+    border-radius: 15px;
+    outline: none;
+    border: 1px solid black;
+    width: 15rem;
+}header nav img {
+    width: 30px;
+    height: 30px;
+    transform: translateX(-125%);
+}
+
+.content-display {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 3  rem;
+}
+
+.news {
+    gap: 20px;
+}
+
+.news img {
+    width: 300px;
+}
+
+.content-1, .content-2, .content-3 {
+    display: flex;
+    gap: 4rem;
+    padding-bottom: 3rem;
+    /* align-items: center; */
+    width: 55rem;
+}.content-1 h2 , .content-2 h2, .content-3 h2 {
+    padding-top: 2rem;
+}.content-1 p , .content-2 p , .content-3 p {
+    padding-top: 2rem;
+}
+
+.trending {
+    background-color: white;
+    width: fit-content;
+    height: fit-content;
+}
+
+.trending div {
+    padding: 10px 10px 0px 10px;
+    width: 100%;
+    border-bottom: 2px solid black;
+}
+
+.trending div p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.trending p:not(:nth-child(1)) {
+    margin: 20px 20px 20px 20px;
+    padding-bottom: 5px;
+
+    border-bottom: 2px solid black;
+    cursor: pointer;
+}
