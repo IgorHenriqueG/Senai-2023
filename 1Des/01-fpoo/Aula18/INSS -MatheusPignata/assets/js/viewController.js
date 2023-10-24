@@ -36,6 +36,7 @@ function remove(e){
     e.parentNode.remove()
     pessoas.splice(e.parentNode.querySelector('.id').innerHTML.slice(1), 1)
     criarCard()
+    console.log(pessoas)
 }
 
 function edit(e){
