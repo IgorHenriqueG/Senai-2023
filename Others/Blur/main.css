@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Código feio pois fiz as pressas */
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-text { /* Texto padrão (É necessário estar no mesmo Z-index ou inferior ao Blur) */
+    font-size: 5rem;
+    font-weight: 700;
+    color: red;
+}
+
+.blur { /* Efeito de blur */
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    border-right: 1px solid black;
+    background: rgba(255, 255, 255, 0.2); /* Coloração e alpha do blur (pode ser alterado) */
+    backdrop-filter: blur(3px); /* Blur em sí */
+
+    animation: move 10s ease-in-out infinite;
+}
+
+@keyframes move { /* Animação do efeito de blur */
+    0% {
+        width: 0vw;
+    }
+    50% {
+        width: 50vw;
+    }
+    100% {
+        width: 0vw;
+    }
+}
