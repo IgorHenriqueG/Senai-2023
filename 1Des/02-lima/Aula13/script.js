@@ -133,9 +133,9 @@ function add() {
     let price = document.getElementById('price').value
 
     objs.push({
-        "id": "1",
-        "produto": type,
-        "tipo": name,
+        "id": objs.length + 1,
+        "tipo": type,
+        "produto": name,
         "preco": price,
         "img": image
     });

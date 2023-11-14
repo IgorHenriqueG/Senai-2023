@@ -22,6 +22,7 @@ main {
 .blur { /* Efeito de blur */
     position: absolute;
     height: 100vh;
+    width: 50vw;
     top: 0;
     left: 0;
     border-right: 1px solid black;
@@ -31,14 +32,3 @@ main {
     animation: move 10s ease-in-out infinite;
 }
 
-@keyframes move { /* Animação do efeito de blur */
-    0% {
-        width: 0vw;
-    }
-    50% {
-        width: 50vw;
-    }
-    100% {
-        width: 0vw;
-    }
-}
