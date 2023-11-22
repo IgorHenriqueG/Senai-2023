@@ -7,6 +7,13 @@ input.oninput = function (event) {
     }else {
         toText(input.value)
     }
+
+    if(input.value === '') {
+        output.style.color = '#979797'
+        output.innerHTML = 'Output will be displayed here';
+    }else{
+        output.style.color = 'black'
+    }
 }
 
 function toMorse(textInput) {
@@ -29,8 +36,9 @@ function toMorse(textInput) {
 }
 
 function toText(morseInput) {
+    const text = morseInput.split('/');
     let morseOutput = ''
-    const text = {
+    const letters = {
         '.-': 'A', '-...': 'B', '-.-.': 'C', '-..': 'D', '.': 'E',
         '..-.': 'F', '--.': 'G', '....': 'H', '..': 'I', '.---': 'J',
         '-.-': 'K', '.-..': 'L', '--': 'M', '-.': 'N', '---': 'O',
@@ -41,11 +49,13 @@ function toText(morseInput) {
         '----.': '9','/': ' '
     }
 
-    for(let i = 0; i < morseInput.length; i++) {
-        if(morse[morseInput[i]]) {
-            morseOutput += morse[morseInput[i]] + ' '
-        }
-    }
-    
-    output.innerHTML = morseOutput
+    text.forEach(e => {
+        const words = e.split(' ');
+        words.forEach(letter => {
+            morseOutput += letters[letter] || '';
+        });
+        morseOutput += ' ';
+      });
+  
+      output.innerHTML = morseOutput.trim();
 }

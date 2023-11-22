@@ -32,5 +32,6 @@ main textarea {
     width: 300px;
     height: 100px;
     background-color: whitesmoke;
+    border-radius: 5px;
     padding: 5px;
 }
