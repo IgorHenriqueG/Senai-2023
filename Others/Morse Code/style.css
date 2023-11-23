@@ -4,6 +4,21 @@
     box-sizing: border-box;
 }
 
+html {
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -24,14 +39,60 @@ main textarea {
 }
 
 .input-container {
+    position: relative;
     display: flex;
     flex-direction: column;
 }
 
 #output-field {
+    position: relative;
     width: 300px;
     height: 100px;
     background-color: whitesmoke;
     border-radius: 5px;
     padding: 5px;
+
+    overflow-y: auto;
 }
+
+.clip {
+    position:absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #c9c9c9;
+    padding: 5px;
+    border-radius: 5px 0px 5px 0px;
+
+    cursor: pointer;
+    /* display: none; */
+}
+
+.clip:hover {
+    background-color: #aaaaaa;
+}
+
+img {
+    width: 25px;
+}
+
+.copyed {
+    position: absolute;
+    bottom: 50px;
+    right: 8px;
+}
+
+.message {
+    background-color: #aaaaaa;
+    color: white;
+    padding: 5px;
+}
+
+.arrow-down {
+    position: absolute;
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    right: 0;
+    border-top: 10px solid #aaaaaa;
+  }

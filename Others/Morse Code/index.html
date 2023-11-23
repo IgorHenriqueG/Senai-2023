@@ -11,13 +11,22 @@
         <h1>Morse Code Translator</h1>
         <div class="input-container">
             <label>Input:</label>
-            <textarea id="input-field" placeholder="Insert what you want to tranlate"></textarea>
+            <textarea id="input-field" placeholder="Insert what you want to translate"></textarea>
         </div>
         
         <hr/>
         <div class="input-container">
             <label>Output:</label>
-            <div id="output-field" style="color: #979797;">Output will be displayed here</div>
+            <div id="output-field" style="color: #979797;">
+                <div id="output-text">Output will be displayed here</div>
+            </div>
+            <div class="copyed" style="display: none;">
+                <div class="message"><p>Copyed</p></div>
+                <div class="arrow-down"></div>
+            </div>
+            <div class="clip" onclick="copy()">
+                <img src="clipboard.png">
+            </div>
         </div>
     </main>
 </body>
