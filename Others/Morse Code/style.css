@@ -55,6 +55,10 @@ main textarea {
     overflow-y: auto;
 }
 
+#output-text {
+    user-select: all;
+}
+
 .clip {
     position:absolute;
     right: 0;
@@ -95,4 +99,4 @@ img {
     border-right: 10px solid transparent;
     right: 0;
     border-top: 10px solid #aaaaaa;
-  }
+}
