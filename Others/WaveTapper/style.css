@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #222;
+    --white: #FFF;
+}
+
+body {
+    background-color: var(--bg);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    width: 50%;
+    height: fit-content;
+}
+
+.box {
+    position: relative;
+    height: 15vh;
+    margin: 10px;
+    flex: 0 0 19%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 15px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #FFF;
+    border: 1px solid #FFF;
+    border-radius: 5px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+
+    z-index: 2;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #FFF;
+    color: var(--bg);
+    border-radius: 0;
+}
+
+.btn img {
+    width: 15px;
+    height: 15px;
+    filter: invert(100%);
+    transition: 0.3s;
+}
+
+.btn:hover img {
+    filter: invert(0%);
+}
+
+.c-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    z-index: 10;
+
+    transition: 0.5s;
+}
+
+.credits {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+}
+
+a {
+    color: #25B4D6;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #1e7186;
+}
+
+.box span {
+    opacity: 0;
+}
+
+/* First box */
+
+.box1 span {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-Left: 60px solid transparent;
+    border-Right: 60px solid transparent;
+    bottom: 5px;
+}
+
+.box1.top {
+    transform: translateY(-10px);
+}
+
+.box1.top span {
+    opacity: 1;
+    border-top: 60px solid #F4B2B4;
+    top: 5px;
+}
+
+.box1.right {
+    transform: translateX(10px);
+}
+
+.box1.right span {
+    opacity: 1;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent; 
+    border-right: 60px solid #F4B2B4;
+    right: 5px;
+}
+
+.box1.bottom {
+    transform: translateY(10px); 
+}
+
+.box1.bottom span {
+    opacity: 1;
+    border-Bottom: 60px solid #F4B2B4;
+}
+
+.box1.left {
+    transform: translateX(-10px);
+}
+
+.box1.left span {
+    opacity: 1;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent; 
+    border-left: 60px solid #F4B2B4;
+    left: 5px;
+}
+
+/* Box 2 */
+
+.box2 {
+    position: relative;
+}
+
+.box2 .span-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: fit-content;
+    bottom: 5px;
+}
+
+.box2.bottom-left {
+    transform: translateY(10px);
+}
+
+.box2 span {
+    width: 40px;
+    height: 15px;
+    background-color: red;
+    gap: 10px;
+}
+
+.box2 .span1 {
+    background-color: #F5B399;
+}
+
+.box2 .span2 {
+    background-color: #F5B399;
+}
+
+.box2.bottom-left .span1 {
+    opacity: 1;
+}.box2.bottom-right .span2 {
+    opacity: 1;
+}
+
+/* Box 3 */
+
+.box3 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box3 span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #FAEC90;
+    font-size: 170px;
+    opacity: 1;
+    font-family: 'Bebas Neue', sans-serif;
+    transform: translateY(10px);
+}
+
+/* Box 4 */
+
+.box4 {
+    position: relative;
+}
+
+.box4 span {
+    width: 90%;
+    height: 90%;
+
+    border-radius: 100%;
+    background-color: #C8E169;
+}
+
+.box4.O {
+    transform: translateY(-10px);
+}
+
+.box4.O span {
+    opacity: 1;
+}
+
+/* Box 5 */
+
+.box5 {
+    position: relative;
+}
+
+.box5.active {
+    transform: translateY(10px);
+}
+
+.box5 span {
+    background-color: #9DDA7A;
+}
+
+.box5.active span {
+    opacity: 1;
+}
+
+/* Box 6 */
+
+.box6 {
+    position: relative;
+}
+
+.box6.top {
+    transform: translateX(10px);
+}
+
+.box6.bottom {
+    transform: translateX(-10px);
+}
+
+.box6 span {
+    position: absolute;
+    width: 0;
+    height: 0;
+
+    border-Left: 60px solid transparent;
+    border-Right: 60px solid transparent;
+    border-top: 60px solid #A3DDB8;
+}
+
+.box6.top .span2 {
+    opacity: 1;
+    position: absolute;
+    top: -5px;
+    right: -35px;
+    rotate: -135deg;
+}
+
+.box6.bottom .span1 {
+    opacity: 1;
+    position: absolute;
+    bottom: -5px;
+    left: -35px;
+    rotate: 45deg;
+}
+
+.show-up {
+    opacity: 0;
+}
+
+.timer {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 15px;
+    font-size: 20px;
+    color: white;
+}
