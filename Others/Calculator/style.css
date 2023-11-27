@@ -44,7 +44,7 @@
 }
 
 .screen {
-    background: linear-gradient(0deg, forestgreen, rgba(34, 139, 34, 0.664), forestgreen);
+    background: linear-gradient(0deg, forestgreen, rgba(34, 139, 34, 0.664));
     background-size: 100% 6px;
     animation: gradient 2s linear infinite;
 }
