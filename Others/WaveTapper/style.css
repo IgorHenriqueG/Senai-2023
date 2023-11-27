@@ -61,11 +61,30 @@ main {
 
     z-index: 2;
     transition: 0.3s;
+    overflow: hidden;
+    position: relative;
 }
 
-.btn:hover {
+.btn p {
+    mix-blend-mode: difference;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    z-index: -1;
     background-color: #FFF;
-    color: var(--bg);
+    transition: 0.5s;
+}
+
+.btn:hover::after {
+    height: 100%;
+}
+
+.btn:hover{
     border-radius: 0;
 }
 

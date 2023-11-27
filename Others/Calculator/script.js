@@ -1,7 +1,7 @@
 const screen = document.querySelector(".screen");
 const buttons = document.querySelectorAll("button");
 
-var calc = ''
+var calc = '0'
 var bool = false
 
 document.addEventListener("keydown", (event) => {
@@ -24,29 +24,48 @@ function calculus (item, key) {
     }
     
     if(bool == true){
-        screen.innerText = calcKey;
-        calc = calcKey
+        if(calcKey == "clear" || calcKey == "c") {
+            screen.innerText = "0";
+            calc = '0'
+        }else if(calcKey == "Backspace") {
+            screen.innerText = screen.innerText.slice(0, -1);
+            calc = calc.slice(0, -1)
+            if(screen.innerText == "") {
+                screen.innerText = "0"
+            }
+        }else if(calcKey == "+" || calcKey == "-" || calcKey == "*" || calcKey == "/" || calcKey == "%"){
+            screen.innerText += calcKey;
+            calc += calcKey
+        }else {
+            screen.innerText = calcKey;
+            calc = calcKey
+        }
         bool = false
     }else{
         if (calcKey == "clear" || calcKey == "c") {
             screen.innerText = "0";
-            calc = ''
+            calc = '0'
         }else if (calcKey == "Backspace") {
             screen.innerText = screen.innerText.slice(0, -1);
             calc = calc.slice(0, -1)
             if(screen.innerText == ""){
                 screen.innerText = "0"
+                calc = '0'
             }
         }else if (screen.innerText != "" && (calcKey == "equal" || calcKey == "Enter") ) {
-            try {
-                screen.innerText = eval(calc);
-                calc = screen.innerText
-                bool = true
-            }catch(error) {
-                screen.innerText = "Error"
-                setTimeout(() => {
-                    screen.innerText = "0"
-                }, 1000) 
+            if(screen.innerText == "0"){
+                return
+            }else {
+                try {
+                    screen.innerText = eval(calc);
+                    calc = screen.innerText
+                    bool = true
+                }catch(error) {
+                    screen.innerText = "Error"
+                    setTimeout(() => {
+                        screen.innerText = "0"
+                    }, 1000) 
+                }
             }
         }else {
             if(screen.innerText != "Error"){
