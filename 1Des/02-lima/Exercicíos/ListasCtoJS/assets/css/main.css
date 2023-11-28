@@ -36,6 +36,13 @@ body {
     cursor: default;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 header {
     display: flex;
     align-items: center;
@@ -67,6 +74,7 @@ header h1:hover {
 
 .cards-wrap {
     display: flex;
+    width: 60%;
     flex-wrap: wrap;
     justify-content: center;
 
