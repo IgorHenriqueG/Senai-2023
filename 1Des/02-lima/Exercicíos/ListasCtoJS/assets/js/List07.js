@@ -74,6 +74,7 @@ function ex07(){
 function ex08() {
     let valorA = Number(document.getElementById('ValorAEx08').value)
     let resultado = document.getElementById('resultadoEx08')
+    resultado.innerHTML = ''
 
     let c = valorA
     let fat = 1
@@ -82,5 +83,5 @@ function ex08() {
         fat *= c
         c --
     }
-    saida.innerHTML += `1 = <strong>${fat.toLocaleString('pt-BR')}</strong>`
+    resultado.innerHTML += `1 = <strong>${fat}</strong>`
 }

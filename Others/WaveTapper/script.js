@@ -80,6 +80,13 @@ const pause = (seconds) => {
                         box5()
                         setTimeout(() => {
                             box6()
+                            setTimeout(() => {
+                                const boxes = document.querySelectorAll('.box')
+
+                                for(let i = 0; i < boxes.length; i++) {
+                                    boxes[i].classList.remove(('show-up'));
+                                }
+                            }, 4500)
                         }, 4500)
                     }, 4500)
                 }, 4500)

@@ -73,9 +73,8 @@ header h1:hover {
 }
 
 .cards-wrap {
-    display: flex;
-    width: 60%;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: center;
 
     margin-top: 5rem;
