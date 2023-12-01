@@ -112,11 +112,12 @@ main {
 
 .subtext {
     font-size: 14px;
-    color: #999;
+    color: var(--RosaViado);
 }
 
 .discount {
     text-decoration: line-through;
+    color: #999;
 }
 
 .discount-img {
