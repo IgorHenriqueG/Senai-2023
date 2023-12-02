@@ -1,0 +1,45 @@
+{
+    "usuarios": [
+        {
+            "id": 1,
+            "name": "a",
+            "password": "1234",
+            "admin": true
+        }
+    ],
+    "itens": [
+        {
+            "id": 1,
+            "type": "game",
+            "name": "The Last of Us Part II",
+            "price": 149.90,
+            "discount": 5,
+            "image": "https://raw.githubusercontent.com/IgorHenriqueG/Senai-2023/main/1Des/01-fpoo/Aula19/ItemTest/img/TLOU.png",
+            "imageHover": "https://raw.githubusercontent.com/IgorHenriqueG/Senai-2023/main/1Des/01-fpoo/Aula19/ItemTest/img/Ellie.png",
+            "console": "PlayStation 4",
+            "stars": 3
+        },
+        {
+            "id": 2,
+            "type": "game",
+            "name": "Horizon Forbidden West",
+            "price": 99.90,
+            "discount": 0,
+            "image": "https://raw.githubusercontent.com/IgorHenriqueG/Senai-2023/main/1Des/01-fpoo/Aula19/ItemTest/img/Horizon.png",
+            "imageHover": "https://raw.githubusercontent.com/IgorHenriqueG/Senai-2023/main/1Des/01-fpoo/Aula19/ItemTest/img/Ellie.png",
+            "console": "PlayStation 5",
+            "stars": 5
+        },
+        {
+            "id": 3,
+            "type": "game",
+            "name": "Red Dead Redemption 2",
+            "price": 249.90,
+            "discount": 0,
+            "image": "https://raw.githubusercontent.com/IgorHenriqueG/Senai-2023/main/1Des/01-fpoo/Aula19/ItemTest/img/RDR2.png",
+            "imageHover": "https://raw.githubusercontent.com/IgorHenriqueG/Senai-2023/main/1Des/01-fpoo/Aula19/ItemTest/img/Ellie.png",
+            "console": "PlayStation 4",
+            "stars": 4
+        }
+    ]
+}

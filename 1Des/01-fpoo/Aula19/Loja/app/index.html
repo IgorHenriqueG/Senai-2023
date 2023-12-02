@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>MAG</title>
+</head>
+<body>
+    <header>
+        <h1 id="title">MAG</h1>
+        <nav>
+            <label class="file-upload" id="file-upload">
+                <input type="file" id="file"/>
+                Enviar Arquivo
+            </label>
+            <div class="buttons hidden">
+                <button id="login">Login</button>
+                <p>|</p>
+                <button id="register">Register</button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="lr login hidden">
+        <form>
+            <label for="username">Usuário</label>
+            <input type="text" id="username">
+            <label for="password">Senha</label>
+            <div class="password">
+                <input type="password" id="password">
+                <img src="../assets/view.png" class="eye">
+            </div>
+            <p style="color: red; font-size: 12px">Sistema de login não funcional</p>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <div class="lr register hidden">
+        <form>
+            <label for="username-register">Usuário</label>
+            <input type="text" id="username-register">
+            <label for="password">Senha</label>
+            <div class="password">
+                <input type="password" id="password-register">
+                <img src="../assets/view.png" class="eye">
+            </div>
+            <label for="password-confirm">Confirmar Senha</label>
+            <div class="password">
+                <input type="password" id="password-confirm">
+                <img src="../assets/view.png" class="eye">
+            </div>
+            <p style="color: red; font-size: 12px">Sistema de registro não funcional</p>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <main>
+
+
+        <div class="text-container">
+            <h1>Trabalhando com dados locais</h1>
+            <p>Sistema de exemplo para aulas de Web Design, com HTML, CSS e JavaScript</p>
+            <p>Para executar o sistema faça upload do arquivo JSON com dados iniciais de teste, seguindo o modelo a seguir: <a download="dados.json" href="../bd/dados.json">Dados.json</a></p>
+            <p>Faça o download do arquivo JSON com os dados de teste e carregue-o para o sistema clicando em <b>Enviar Arquivo</b></p>
+        </div>
+        
+
+        <div class="container hidden">
+
+            <div class="banner">
+                <div class="banner-text">
+                    <h1>MAG</h1>
+                    <p>Games, Consoles e Acessórios</p>
+                </div>
+                <img src="../assets/banner.jpg" alt="">
+            </div>
+
+            <div class="filter">
+                <p>Todos</p>
+                <p>Consoles</p>
+                <p>Games</p>
+                <p>Acessórios</p>
+                <p>Cards</p>
+            </div>
+            <div class="cards">
+            
+            </div>
+        </div>
+    </main>
+
+    <footer style="position: absolute; bottom: 0; width: 100%;">
+        <p class="signature">Carlos Augusto<br>Igor Henrique<br>Vinícius Manzano<br>Jack </p>
+        <p>MAG © 2020. Todos os direitos reservados.</p>
+    </footer>
+</body>
+<script src="script.js"></script>
+<script src="secundary.js"></script>
+</html>
