@@ -6,6 +6,8 @@ var dados = {
     itens: []
 }
 
+// Lendo o arquivo
+
 file.addEventListener('change', (e) => {
     const file = e.target.files[0]
     let reader = new FileReader()
@@ -22,6 +24,8 @@ file.addEventListener('change', (e) => {
         cards()
     }
 })
+
+// Criando os cards em referência a quantos itens existem no arquivo JSON
 
 function cards() {
     cardsContainer.innerHTML = `

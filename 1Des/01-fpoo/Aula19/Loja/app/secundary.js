@@ -3,6 +3,7 @@ const login = document.getElementById('login')
 const register = document.getElementById('register')
 const title = document.getElementById('title')
 
+// Adicionando interação aos corações
 function heart() {
     const hearts = document.querySelectorAll('.heart')
     hearts.forEach(heart => {
@@ -17,7 +18,7 @@ function heart() {
     })
 }
 
-
+// Funções para abrir as telas de Login e Register
 title.onclick = () => {
     document.querySelector('.container').classList.remove('hidden')
     document.querySelector('.login').classList.add('hidden')
@@ -35,6 +36,8 @@ register.onclick = () => {
     document.querySelector('.login').classList.add('hidden')
     document.querySelector('.register').classList.remove('hidden')
 }
+
+// Mostrar e esconder senha
 
 eyes.forEach(eye => {
     eye.onclick = () => {
