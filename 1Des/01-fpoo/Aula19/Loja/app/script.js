@@ -31,8 +31,8 @@ function cards() {
             <div class=""></div>
         </div>
         <div class="main-image">
-            <img src="../assets/noimage.jpg" alt="">
-            <img src="../assets/noimage.jpg" class="hover-img">
+            <img src="" onerror="this.src='../assets/noimage.jpg'" class="main-img">
+            <img src="" onerror="this.src='../assets/noimage.jpg'" class="hover-img">
         </div>
         <div class="info">
             <h1>a</h1>
@@ -73,8 +73,7 @@ function cards() {
         model.querySelector('.discount').innerHTML = item.price > 0 ? `R$${Number(price).toFixed(2).replace('.', ',')}` : ''
         model.querySelector('.percentage').innerHTML = percentage
         model.querySelector('.hover-img').src = item.imageHover
-        model.querySelector('.main-image').src = item.image
-
+        model.querySelector('.main-img').src = item.image == '404' ? '../assets/noimage.jpg' : item.image
         const rating = model.querySelector('.rating')
         for (let i = 0; i < 5; i++) {
             if (i < item.stars) {

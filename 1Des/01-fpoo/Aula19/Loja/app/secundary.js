@@ -5,7 +5,6 @@ const title = document.getElementById('title')
 
 function heart() {
     const hearts = document.querySelectorAll('.heart')
-    console.log(hearts)
     hearts.forEach(heart => {
         heart.onclick = () => {
             heart.classList.toggle('liked')
@@ -25,6 +24,7 @@ title.onclick = () => {
     document.querySelector('.register').classList.add('hidden')
 }
 login.onclick = () => {
+    document.querySelector('body').scrollTo(0, 0)
     document.querySelector('.container').classList.add('hidden')
     document.querySelector('.login').classList.remove('hidden')
     document.querySelector('.register').classList.add('hidden')
