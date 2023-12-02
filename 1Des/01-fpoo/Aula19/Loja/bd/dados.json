@@ -23,7 +23,7 @@
             "image": "https://raw.githubusercontent.com/IgorHenriqueG/Senai-2023/main/1Des/01-fpoo/Aula19/ItemTest/img/Images/Games/TLOU_PS4.png",
             "imageHover": "https://raw.githubusercontent.com/IgorHenriqueG/Senai-2023/main/1Des/01-fpoo/Aula19/ItemTest/img/Images/Games/Ellie_TLOU.png",
             "console": "PlayStation 4",
-            "stars": 3
+            "stars": 5
         },
         {
             "id": 2,
@@ -34,7 +34,18 @@
             "image": "https://raw.githubusercontent.com/IgorHenriqueG/Senai-2023/main/1Des/01-fpoo/Aula19/ItemTest/img/Images/Games/horizonFW_PS5.png",
             "imageHover": "https://raw.githubusercontent.com/IgorHenriqueG/Senai-2023/main/1Des/01-fpoo/Aula19/ItemTest/img/Images/Games/Aloy_HFW.png",
             "console": "PlayStation 5",
-            "stars": 5
+            "stars": 4
+        },
+        {
+            "id": 3,
+            "type": "game",
+            "name": "Red Dead Redemption 2",
+            "price": 249.90,
+            "discount": 0,
+            "image": "https://raw.githubusercontent.com/IgorHenriqueG/Senai-2023/main/1Des/01-fpoo/Aula19/ItemTest/img/Images/Games/RDR2_PS4.png",
+            "imageHover": "https://raw.githubusercontent.com/IgorHenriqueG/Senai-2023/main/1Des/01-fpoo/Aula19/ItemTest/img/Images/Games/Arthur_RDR2.png",
+            "console": "PlayStation 4",
+            "stars": 4
         },
         {
             "id": 3,
