@@ -73,7 +73,7 @@ function cards() {
         model.querySelector('.discount').innerHTML = item.price > 0 ? `R$${Number(price).toFixed(2).replace('.', ',')}` : ''
         model.querySelector('.percentage').innerHTML = percentage
         model.querySelector('.hover-img').src = item.imageHover
-        model.querySelector('.main-image img').src = item.image
+        model.querySelector('.main-image').src = item.image
 
         const rating = model.querySelector('.rating')
         for (let i = 0; i < 5; i++) {
