@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <form action="http://localhost:3000/Clientes/Create" method="POST">
+            <div>
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" required>
+            </div>
+    
+            <div>
+                <label for="sobrenome">Sobrenome:</label>
+                <input type="text" name="sobrenome" required>
+            </div>
+    
+            <div>
+                <label for="nascimento">Nascimento:</label>
+                <input type="date" name="nascimento" required>
+            </div>
+    
+            <div>
+                <label for="cpf">CPF:</label>
+                <input id="cpf" type="text" name="cpf" required maxlength="11">
+            </div>
+            
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+    
+</body>
+</html>

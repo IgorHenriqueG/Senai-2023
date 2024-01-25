@@ -1,0 +1,2 @@
+Caso nodemon não funcione 
+npx nodemon
