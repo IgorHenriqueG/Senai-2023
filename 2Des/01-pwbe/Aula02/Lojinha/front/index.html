@@ -20,17 +20,28 @@
                 </tr>
             </thead>
 
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>111.111.111-11</td>
-                    <td>Nome Sobrenome</td>
-                    <td>01/01/2000</td>
-                </tr>
-            </tbody>
+            <tbody id="dados"></tbody>
         </table>
     </main>
 
     <footer></footer>
 </body>
+<script>
+    const dados = document.querySelector('#dados');
+
+    fetch('http://localhost:3000/Clientes')
+        .then(res => res.json())
+        .then(res => {
+            res.forEach(cli => {
+               dados.innerHTML += `
+               <tr>
+                    <td>${cli.id}</td>
+                    <td>${cli.cpf}</td>
+                    <td>${cli.nome} ${cli.sobrenome}</td>
+                    <td>${cli.nascimento}</td>
+                </tr>
+               ` 
+            });
+        })
+</script>
 </html>

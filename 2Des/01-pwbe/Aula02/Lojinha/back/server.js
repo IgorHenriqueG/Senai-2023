@@ -13,7 +13,7 @@ const con = mysql.createConnection({
 
 //Rota de teste
 const teste = (req, res) => {
-    res.send("Back-end respondendo ");
+    res.send("Back-end respondendo");
 }
 
 //CRUD - create
@@ -22,19 +22,20 @@ const create = (req, res) => {
     let nome = req.body.nome;
     let sobrenome = req.body.sobrenome;
     let nascimento = req.body.nascimento;
+    
     let query = `INSERT INTO clientes(cpf, nome, sobrenome, nascimento) VALUE`;
     query += `('${cpf}', '${nome}', '${sobrenome}', '${nascimento}');`;
     con.query(query,(err, result)=>{
         if(err)
-            res.json(err);
+            res.redirect('http://127.0.0.1:5500/front/erro.html?erro=CPF JÁ CADASTRADO&errcod=' + err.errno + '&err=' + err.code);
         else
-            res.json(result);
+            res.redirect('http://127.0.0.1:5500/front/index.html');
     });
 }
 
 //CRUD - Read
 const read = (req, res) => {
-    con.query("SELECT * FROM Clientes",(err, result)=>{
+    con.query("SELECT * FROM Clientes ORDER BY id DESC",(err, result)=>{
         if(err)
             res.json(err);
         else
@@ -50,7 +51,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //Rotas de Saída - FrontEnd
 app.get("/", teste);
-app.post("/clientes/create", create);
+app.post("/clientes", create);
 app.get("/clientes", read);
 
 //Teste e porta no console
