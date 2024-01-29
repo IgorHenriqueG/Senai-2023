@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Beatfy - Login</title>
+    <link rel="icon" type="image/png" href="../../assets/Logo_Icon.png">
+</head>
+<body>
+    <header>
+        <img src="../../assets/Logo.png" alt="Logo" onclick="location.href='../index.html'">
+
+        <ul>
+            <li><a href="login.html">Login</a></li>
+            <span>|</span>
+            <li><a href="register.html">Register</a></li>
+        </ul>
+    </header>
+
+    <main id="login-page">
+        <form onsubmit="login(event)" id="login-form">
+            <h1>Login</h1>
+            
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+            </div>
+
+            <div>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password">
+            </div>
+
+            <div>
+                <input type="submit" value="Login">
+            </div>
+
+            <div id="login-form-footer">
+                <p id="error-message">Error message</p>
+
+                <p>Don't have an account? <a href="register.html">Register</a></p>
+            </div>
+            
+            
+        </form>
+    </main>
+
+    <footer></footer>
+</body>
+</html>

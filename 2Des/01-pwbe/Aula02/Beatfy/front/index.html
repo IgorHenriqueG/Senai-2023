@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Beatfy - Home</title>
+    <link rel="icon" type="image/png" href="../assets/Logo_Icon.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="../assets/Logo.png" alt="Logo" onclick="location.href='index.html'">
+
+        <ul>
+            <li><a href="pages/login.html">Login</a></li>
+            <span>|</span>
+            <li><a href="pages/register.html">Register</a></li>
+        </ul>
+    </header>
+
+    <main>
+
+        <div class="left-container">
+            <div class="selectors-container">
+                <div class="selectors">
+                    <p><i class="fas fa-home"></i>Home</p>
+                    <p><i class="fas fa-search"></i>Search</p>
+                </div>
+            </div>
+
+            <div class="playlist-container">
+                <div class="playlist">
+                    <h1>Playlist</h1>
+
+                    <div class="song">
+                        <img src="../assets/wtdJakeHill.jpg" alt="Logo">
+                        <p>Waiting to Die</p>
+                        <p>iamjakehill</p>
+                    </div>
+                    
+                    <div class="song">
+                        <img src="../assets/wtdJakeHill.jpg" alt="Logo">
+                        <p>Waiting to Die</p>
+                        <p>iamjakehill</p>
+                    </div>
+
+                    <div class="song">
+                        <img src="../assets/wtdJakeHill.jpg" alt="Logo">
+                        <p>Waiting to Die</p>
+                        <p>iamjakehill</p>
+                    </div>
+                </div>
+        </div>
+
+        <div class="music-player">
+            <div class="music-info">
+                <img src="../assets/wtdJakeHill.jpg" alt="Logo" id="cover-art">
+                <p id="song-info"><span id="title">Waiting to Die</span><span id="artist">iamjakehill</span></p>
+            </div>
+
+            <div class="controls">
+                <div class="buttons-container">
+
+                    <button id="shuffle">
+                        <i class="fas fa-random"></i>
+                    </button>
+
+                    <button id="prev" onclick="prevSong()">
+                        <i class="fas fa-backward"></i>
+                    </button>
+
+                    <button id="play" onclick="togglePlay(this)">
+                        <i class="fas fa-play"></i>
+                    </button>
+
+                    <button id="next" onclick="nextSong()">
+                        <i class="fas fa-forward"></i>
+                    </button>
+
+                    <button id="repeat" onclick="toggleRepeat(this)">
+                        <i class="fas fa-solid fa-circle-notch"></i>
+                    </button>
+
+                </div>
+
+                <div class="progress">
+                    <p id="progress-time">0:00</p>
+                    <div class="progress-filled">
+                        <div class="progress-filled-inner"></div>
+                        <input type="range" id="duration" min="0" max="100" value="0">
+                    </div>
+                    <p id="duration-time">0:00</p>
+                </div>
+            </div>
+
+            <div class="volume">
+                <i class="fas fa-volume-down"></i>
+                <div class="volume-container">
+                    <div class="volume-range"></div>
+                    <input type="range" id="volume" min="0" max="100" value="50">
+                </div>
+                
+            </div>
+        </div>
+
+        <audio src="../assets/wtdJakeHill.m4a" id="audio"></audio>
+    </main>
+
+    <footer></footer>
+</body>
+</html>
+
+<!-- <i class="fas fa-fire"></i> -->

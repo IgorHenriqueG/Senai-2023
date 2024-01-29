@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Teko&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #FFF;
+
+    --background-base: #121212;
+    --background-tinted-base: hsla(0,0%,100%,.07);
+    --background-highlight: #1a1a1a;
+
+    --primary-text: #FFFFFF;
+    --secondary-text: #999999;
+
+    /* --logo-color: #1db954; */
+    --logo-color-hover: #1db954d8;
+
+    --logo-color: #7B68EE;
+
+    --error-message:  rgba(255, 0, 0, 0.938);
+
+    --primary-button: #1db9549c;
+    --primary-button-hover: #1db954d8;
+    --secondary-button: #FFFFFF;
+
+    --text-shadow: 0 0 5px rgba(0,0,0,.5);
+
+    --font-family: 'Teko', sans-serif;
+    --font-family-title: 'Oswald', sans-serif;
+
+    --font-size: 1.5rem;
+    --font-size-title: 3rem;
+
+    --border-radius: 4px;
+    
+}
+
+/* Global */
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+ul {
+    list-style: none;
+}
+
+.active {
+    color: var(--logo-color)
+}
+
+body {
+    background-color: var(--background-base);
+    color: var(--primary-text);
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    overflow: hidden;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+
+    background-color: var(--background-highlight);
+}
+
+header img {
+    height: 3rem;
+    cursor: pointer;
+}
+
+header ul {
+    display: flex;
+    gap: 1rem;
+
+    color: var(--secondary-text);
+    cursor: default;
+}
+
+header ul li {
+    transition: color .3s;
+}
+
+header ul li:hover {
+    color: var(--primary-text);
+}
+
+/* Login & Register */
+
+#login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+#login-form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+
+    background-color: var(--background-tinted-base);
+    border-radius: var(--border-radius);
+
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    max-width: 400px;
+    color: var(--primary-text);
+}
+
+#login-form h1 {
+    font-size: var(--font-size-title);
+    font-family: var(--font-family-title);
+    text-align: center;
+}
+
+#login-form div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: .5rem;
+    width: 250px;
+}
+
+#login-form label {
+    width: 90%;
+    text-transform: uppercase;
+}
+
+#login-form input {
+    padding: .5rem;
+    width: 90%;
+    background-color: var(--background-tinted-base);
+    border: none;
+    border-radius: var(--border-radius);
+    outline: none;
+    color: var(--primary-text);
+}
+
+#login-form input[type="submit"] {
+    padding: .5rem;
+    background-color: var(--primary-button);
+    color: var(--secondary-button);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+#login-form input[type="submit"]:hover {
+    background-color: var(--primary-button-hover);
+    color: var(--secondary-button);
+}
+
+#login-form input[type="submit"]:active {
+    background-color: var(--primary-button);
+    color: var(--secondary-button);
+}
+
+#login-form-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 0px !important;
+}
+
+#login-form p {
+    color: var(--secondary-text);
+    cursor: default;
+}
+
+#login-form #error-message {
+    height: min-content;
+    color: var(--error-message);
+}
+
+#login-form p a {
+    color: var(--primary-button);
+    transition: color .3s;
+}
+
+#login-form p a:hover {
+    color: var(--logo-color-hover);
+}
+
+/* Left Menu */
+
+.left-container {
+    display: flex;
+    flex-direction: column;
+
+    width: 300px;
+    height: 81vh;
+
+    padding: 10px;
+    gap: 0.5rem;
+}
+
+.left-container img {
+    width: 30%;
+}
+
+.selectors-container {
+    display: flex;
+
+    width: 100%;
+    background-color: var(--background-highlight);
+
+    padding: 10px;
+    border-radius: 15px 15px 0 0;
+}
+
+.selectors-container .selectors {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    color: var(--secondary-text);
+}
+
+.selectors-container .selectors i {
+    width: 30px;
+}
+
+.selectors-container .selectors p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.selectors-container .selectors p:hover {
+    color: var(--logo-color);
+}
+
+.playlist-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-highlight);
+
+    border-radius: 0 0 15px 15px;
+
+    overflow-y: scroll;
+}
+
+.playlist-container::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Music Player */
+
+.music-player {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    
+    position: absolute;
+    bottom: 0;
+    padding: 1rem;
+
+    width: 100%;
+
+    background-color: var(--background-highlight);
+}
+
+.music-player .music-info {
+    display: flex;
+    align-items: center;
+
+    gap: 1.2rem;
+}
+
+#cover-art {
+    width: 5vw;
+}
+
+#song-info {
+    display: flex;
+    flex-direction: column;
+    transform: translateY(5px);
+    font-size: 1.2rem;
+    gap: 0px;
+}
+
+#song-info span:nth-child(2) {
+    color: var(--secondary-text);
+    transform: translateY(-10px);
+    cursor: default;
+}
+
+/* Music Player - Controls */
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.controls .buttons-container {
+    display: flex;
+    justify-content: space-evenly;
+
+    width: 50%;
+}
+
+.controls button {
+    border: none;
+    background-color: transparent;
+    color: var(--secondary-text);
+    cursor: pointer;
+}
+
+.controls button:active {
+    color: var(--primary-text);
+}
+
+.controls button i {
+    font-size: 3vh;
+}
+
+
+/* Music Player - Progress */
+
+.progress {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.progress-filled {
+    position: relative;
+    width: 34vw;
+}
+
+.progress-filled input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    width: 100%;
+    height: 11px;
+    background-color: var(--background-tinted-base);
+    border-radius: 50px;
+    outline: none;
+    cursor: pointer;
+}
+
+.progress-filled input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    background-color: var(--background-base);
+    cursor: pointer;
+    border: 3px solid var(--logo-color);
+    border-radius: 100%;
+    transition: .3s ease;
+
+    box-shadow: 0 0 5px rgba(0,0,0,.5);
+
+    position: relative;
+}
+
+.progress-filled-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 0%;
+    height: 11px;
+
+    border-radius: 50px 0 0 50px;
+    background-color: var(--logo-color);
+    transform: translateY(100%);
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+.progress p {
+    width: 35px;
+    color: var(--secondary-text);
+    cursor: default;
+}
+/* Music Player - Volume */
+
+.volume {
+    display: flex;
+    align-items: center;
+}
+
+.volume-container {
+    position: relative;
+}
+
+/* .volume i {
+    cursor: pointer;
+} */
+
+.volume input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 10vw;
+    cursor: pointer;
+    appearance: none;
+    background-color: var(--background-tinted-base);
+    border-radius: 50px;
+    outline: none;
+    height: 11px;
+}
+
+.volume input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    background-color: var(--background-base);
+    cursor: pointer;
+    border: 3px solid var(--logo-color);
+    border-radius: 100%;
+
+    box-shadow: 0 0 5px rgba(0,0,0,.5);
+
+    position: relative;
+}
+
+.volume-range {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 50%;
+    height: 11px;
+
+    border-radius: 50px 0 0 50px;
+    background-color: var(--logo-color);
+    transform: translateY(100%);
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+.volume i {
+    width: 15px;
+    margin-right: 1rem;
+}
