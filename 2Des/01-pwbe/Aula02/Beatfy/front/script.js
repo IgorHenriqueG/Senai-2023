@@ -62,9 +62,7 @@ volume.querySelector('input').addEventListener('input', (e) => {
     if (volumeValue > 0.8) {
         volume.querySelector('i').classList.remove('fa-volume-down');
         volume.querySelector('i').classList.add('fa-volume-up');
-    }
-
-    
+    }  
 })
 
 // volume.querySelector('i').addEventListener('click', () => {
@@ -112,7 +110,6 @@ audio.addEventListener('timeupdate', () => {
         seconds = `0${seconds}`
     }
     document.querySelector('#progress-time').textContent = `${minutes}:${seconds}`
-
 })
 
 audio.addEventListener('ended', () => {

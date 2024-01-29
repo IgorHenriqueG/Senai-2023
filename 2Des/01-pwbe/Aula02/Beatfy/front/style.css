@@ -62,6 +62,11 @@ body {
     overflow: hidden;
 }
 
+main {
+    display: flex;
+    flex-direction: row;
+}
+
 /* Header */
 
 header {
@@ -242,6 +247,8 @@ header ul li:hover {
     color: var(--logo-color);
 }
 
+/* Left Menu - Playlist */
+
 .playlist-container {
     display: flex;
     flex-direction: column;
@@ -256,8 +263,58 @@ header ul li:hover {
     overflow-y: scroll;
 }
 
+.playlist-container .playlist-preview {
+    display: flex;
+    align-items: center;
+    width: 99%;
+    padding: 15px;
+    gap: 1rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.playlist-container .playlist-preview:hover {
+    background-color: var(--background-tinted-base);
+}
+
+.playlist-container .playlist-preview .playlist-preview-info p:nth-child(2) {
+    color: var(--secondary-text);
+}
+
+/* Playlist - Scrollbar */
+
 .playlist-container::-webkit-scrollbar {
-    display: none;
+    display: auto;
+
+    /* width: 50px; */
+
+    background-color: var(--background-highlight);
+
+    border-radius: 0 0 15px 15px;
+}
+
+.playlist-container::-webkit-scrollbar {
+    width: 10px;
+
+    overflow: hidden;
+}
+  
+  /* Track */
+.playlist-container::-webkit-scrollbar-track {
+    background: var(--background-tinted-base);
+
+    border-radius: 0 0 15px 0;
+}
+  
+  /* Handle */
+.playlist-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 0 0 15px 0;
+}
+  
+  /* Handle on hover */
+.playlist-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
 
