@@ -13,8 +13,11 @@
     --background-tinted-base: hsla(0,0%,100%,.07);
     --background-highlight: #1a1a1a;
 
+    --blue-background-gradient: linear-gradient(150deg, #4b3e94 70%, #1e8fff9f 100%);
+
     --primary-text: #FFFFFF;
     --secondary-text: #999999;
+    --tertiary-text: #e6e6e6c7;
 
     /* --logo-color: #1db954; */
     --logo-color-hover: #1db954d8;
@@ -108,7 +111,7 @@ main {
     display: flex;
     flex-direction: column;
 
-    height: 100vh;
+    height: 97vh;
 }
 
 /* Header */
@@ -261,7 +264,7 @@ header ul li:hover {
     display: flex;
     flex-direction: column;
 
-    width: 300px;
+    width: 400px;
     /* height: 81vh; */
     height: 100%;
 
@@ -312,7 +315,7 @@ header ul li:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    /* padding: 15px; */
     width: 100%;
     height: 100%;
     background-color: var(--background-highlight);
@@ -332,6 +335,10 @@ header ul li:hover {
     cursor: pointer;
 }
 
+.playlist-container h1 {
+    padding: 0 15px;
+}
+
 .playlist-container .playlist-preview:hover {
     background-color: var(--background-tinted-base);
 }
@@ -344,7 +351,8 @@ header ul li:hover {
 
 .main-playlist {
     display: flex;
-    width: 75%;
+    /* width: 65%; */
+    width: 100%;
     height: 100%;
     gap: 1rem;
     overflow-y: scroll;
@@ -354,6 +362,77 @@ header ul li:hover {
     border-radius: 15px;
 }
 
+.main-playlist .main-playlist-info {
+    display: flex;
+    width: 100%;
+    height: min-content;
+
+    align-items: center;
+
+    padding: 15px;
+    gap: 1rem;
+    text-transform: uppercase;
+
+    background-image: var(--blue-background-gradient);
+}
+
+.main-playlist .main-playlist-info p {
+    color: var(--tertiary-text);
+}
+
+/* AD Section */
+
+.ad-container {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 100%;
+    padding: 15px;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.ad-container img {
+    width: 100%;
+    height: 100%;
+
+    cursor: pointer;
+}
+
+.ad-container .ad {
+	position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}.ad-container .ad::before {
+	position: absolute;
+	top: 0;
+	left: -100%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 50%;
+	height: 100%;
+	background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	-webkit-transform: skewX(-25deg);
+	transform: skewX(-25deg);
+}
+
+.ad-container .ad:hover::before {
+	-webkit-animation: shine .75s;
+	animation: shine .75s;
+}
+@-webkit-keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+
+@keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
 
 /* Music Player */
 
@@ -363,7 +442,7 @@ header ul li:hover {
     justify-content: space-between;
     align-items: center;
     
-    /* position: absolute; */
+    position: fixed;
     bottom: 0;
     padding: 1rem;
 
