@@ -72,9 +72,11 @@
                         <h1>Favorites</h1>
                         <p>12 songs</p>
                     </div>
-                    
+                
                     <!-- <i class="fas fa-ellipsis-v"></i>  Three dots -->
                 </div>
+
+                <div class="main-playlist-songs"></div> <!-- songs will be added here -->
             </div>
             
             <div class="ad-container">
@@ -145,6 +147,36 @@
 
     <footer></footer>
 </body>
+
+<script>
+    const dados = document.querySelector('.main-playlist-songs');
+
+    // fetch('https://api.deezer.com/chart/0/tracks')
+    fetch('http://localhost:3000/songs')
+        .then(res => res.json())
+        .then(res => {
+            res.forEach(song => {
+                dados.innerHTML += `
+                <div class="song">
+                        <div class="song-info-container">
+                            <p class="song-id">${song.id}</p>
+                            <img src="${song.image}" alt="Logo">
+                            <div class="song-info">
+                                <p>${song.title}</p>
+                                <p>${song.artist}</p>
+                            </div>
+                        </div>
+
+                        <div class="song-duration">
+                            <p>${song.duration}</p>
+                        </div>
+                        
+                        <i class="fas fa-ellipsis-v"></i>
+                </div>
+                `
+            });
+        });
+</script>
 </html>
 
 <!-- <i class="fas fa-fire"></i> -->

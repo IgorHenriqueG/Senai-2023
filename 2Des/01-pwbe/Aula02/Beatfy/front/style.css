@@ -351,6 +351,7 @@ header ul li:hover {
 
 .main-playlist {
     display: flex;
+    flex-direction: column;
     /* width: 65%; */
     width: 100%;
     height: 100%;
@@ -379,6 +380,45 @@ header ul li:hover {
 .main-playlist .main-playlist-info p {
     color: var(--tertiary-text);
 }
+
+.main-playlist-songs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 15px;
+}
+
+.song-info-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.song-info-container img {
+    width: 50px;
+    height: 50px;
+}
+
+.main-playlist-songs .song {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 10px 25px;
+    border-radius: 25px;
+
+    cursor: pointer;
+}
+
+.main-playlist-songs .song:hover {
+    background-color: var(--background-tinted-base);
+}
+
+.main-playlist-songs .song .song-info p:nth-child(2) {
+    color: var(--secondary-text);
+}
+
+
 
 /* AD Section */
 
@@ -518,6 +558,7 @@ header ul li:hover {
 .progress-filled {
     position: relative;
     width: 34vw;
+    display: flex;
 }
 
 .progress-filled input {
@@ -545,8 +586,6 @@ header ul li:hover {
     transition: .3s ease;
 
     box-shadow: 0 0 5px rgba(0,0,0,.5);
-
-    position: relative;
 }
 
 .progress-filled-inner {
@@ -555,15 +594,14 @@ header ul li:hover {
     left: 0;
 
     width: 0%;
+    max-width: 95%;
     height: 11px;
 
     border-radius: 50px 0 0 50px;
     background-color: var(--logo-color);
-    transform: translateY(100%);
 
     pointer-events: none;
-
-    z-index: 0;
+    z-index: -1;
 }
 
 .progress p {
