@@ -6,16 +6,21 @@ const volume = document.querySelector('.volume');
 
 const audio = document.querySelector('audio');
 
-const songHover = document.querySelectorAll('.song');
+const activePlaylist = document.querySelector('.main-playlist-songs');
 
-// songHover.forEach(song => {
-//     song.addEventListener('mouseover', () => {
-//         song.querySelector('.song-id').innerHTML = "<i class='fas fa-play'></i>";
-//     })
-//     song.addEventListener('mouseout', () => {
-//         song.querySelector('.song-id').innerHTML = song.id;
-//     })
-// })
+setTimeout(() => {
+    activePlaylist.querySelectorAll('.song').forEach(song => {
+        const songId = song.querySelector('.song-id').innerHTML;
+        song.addEventListener('mouseover', () => {
+            song.querySelector('.song-id').innerHTML = '<i class="fas fa-play"></i>';
+        })
+
+        song.addEventListener('mouseout', () => {
+            song.querySelector('.song-id').innerHTML = songId;
+        })
+    })
+}, 100)
+
 
 var volumeValue = 0;
 
@@ -126,7 +131,7 @@ audio.onloadedmetadata = () => {
 audio.addEventListener('timeupdate', () => {
     const progressValue = (audio.currentTime / audio.duration) * 100;
     progressBar.value = progressValue;
-    progressFilled.style.width = `${progressValue + 0.5}%`;
+    progressFilled.style.width = `${progressValue}%`;
     const minutes = Math.floor(audio.currentTime / 60);
     let seconds = Math.floor(audio.currentTime % 60);
     if (seconds < 10) {  

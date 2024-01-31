@@ -28,7 +28,7 @@
                     <div class="selectors">
                         <p><i class="fas fa-home"></i>Home</p>
                         <p><i class="fas fa-search"></i>Search</p>
-                        <!-- <p><i class="fas fa-book"></i>Library</p> -->
+                        <p><i class="fas fa-book"></i>Library</p>
                         <p><i class="fas fa-plus"></i>Add Music</p>
                         <p><i class="fas fa-heart"></i>Credits</p>
                     </div>
@@ -61,6 +61,62 @@
                                 <p>136 Songs</p>
                             </div>
                         </div>
+
+                        <div class="playlist-preview">
+                            <img src="../assets/zzz.jfif" alt="Logo">
+                            <div class="playlist-preview-info">
+                                <p>A Mimir</p>
+                                <p>136 Songs</p>
+                            </div>
+                        </div>
+
+                        <div class="playlist-preview">
+                            <img src="../assets/zzz.jfif" alt="Logo">
+                            <div class="playlist-preview-info">
+                                <p>A Mimir</p>
+                                <p>136 Songs</p>
+                            </div>
+                        </div>
+
+                        <div class="playlist-preview">
+                            <img src="../assets/zzz.jfif" alt="Logo">
+                            <div class="playlist-preview-info">
+                                <p>A Mimir</p>
+                                <p>136 Songs</p>
+                            </div>
+                        </div>
+
+                        <div class="playlist-preview">
+                            <img src="../assets/zzz.jfif" alt="Logo">
+                            <div class="playlist-preview-info">
+                                <p>A Mimir</p>
+                                <p>136 Songs</p>
+                            </div>
+                        </div>
+
+                        <div class="playlist-preview">
+                            <img src="../assets/zzz.jfif" alt="Logo">
+                            <div class="playlist-preview-info">
+                                <p>A Mimir</p>
+                                <p>136 Songs</p>
+                            </div>
+                        </div>
+
+                        <div class="playlist-preview">
+                            <img src="../assets/zzz.jfif" alt="Logo">
+                            <div class="playlist-preview-info">
+                                <p>A Mimir</p>
+                                <p>136 Songs</p>
+                            </div>
+                        </div>
+
+                        <div class="playlist-preview">
+                            <img src="../assets/zzz.jfif" alt="Logo">
+                            <div class="playlist-preview-info">
+                                <p>A Mimir</p>
+                                <p>136 Songs</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -76,7 +132,34 @@
                     <!-- <i class="fas fa-ellipsis-v"></i>  Three dots -->
                 </div>
 
-                <div class="main-playlist-songs"></div> <!-- songs will be added here -->
+                <div class="main-playlist-songs">
+                    <table class="song-table">
+                        <thead>
+                                <th class="song-table-header">
+                                    <p>#</p>
+                                    <p>Title</p>
+                                </th>
+                                <th>Duration</th>
+                                <th>Settings</th>
+                        </thead>
+
+                        <tbody class="song-table-body">
+                            <tr class="song-info-container">
+                                
+                                <td class="song-info-image">
+                                    <p class="song-id">1</p>
+                                    <img src="../assets/wtdJakeHill.jpg">
+                                    <div class="song-info">
+                                        <p>${song.title}</p>
+                                        <p>${song.artist}</p>
+                                    </div>
+                                </td>
+                                <td>${song.duration}</td>
+                                <td><i class="fas fa-ellipsis-v"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div> <!-- songs will be added here -->
             </div>
             
             <div class="ad-container">
