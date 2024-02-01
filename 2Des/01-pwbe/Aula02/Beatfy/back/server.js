@@ -4,6 +4,8 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const isUrl = require('is-url');
 
+const PORT = 3000
+
 const con = mysql.createConnection({
     host: 'localhost',
     user: 'root',
@@ -21,8 +23,8 @@ const create = (req, res) => {
     // if(duration != parseInt(duration))
     //     res.status(400).send('Duration must be an integer');
     
-    // if(!urlVerification)
-    //     res.status(400).send('Cover must be a valid URL');
+    if(!urlVerification)
+        res.status(400).send('Cover must be a valid URL');
 
     if(!artist || !title || !cover || !url || !duration)
         res.status(400).send('All fields must be filled');
@@ -68,6 +70,6 @@ app.post('/songs', create);
 app.get('/songs', read);
 app.delete('/songs', delet);
 
-app.listen(3000, () => {
-    console.log('Server running on port 3000');
+app.listen(PORT, () => {
+    console.log('Server running on port ' + PORT);
 })
