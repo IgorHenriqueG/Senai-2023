@@ -2,6 +2,7 @@ const express = require('express');
 const mysql = require('mysql');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const isUrl = require('is-url');
 
 const con = mysql.createConnection({
     host: 'localhost',
@@ -14,13 +15,26 @@ const testResponse = (req, res) => {
 }
 
 const create = (req, res) => {
-    let query = "INSERT INTO Musics(artist, title, album, image, url, duration) VALUE";
-    query += "('test', 'test', 'test', 'test', 'test', 'test');";
+    const {artist, title, cover, url, duration} = req.body;
+    const urlVerification = isUrl(cover);
+
+    // if(duration != parseInt(duration))
+    //     res.status(400).send('Duration must be an integer');
+    
+    // if(!urlVerification)
+    //     res.status(400).send('Cover must be a valid URL');
+
+    if(!artist || !title || !cover || !url || !duration)
+        res.status(400).send('All fields must be filled');
+    let query = "INSERT INTO Musics(artist, title, cover, url, duration) VALUE";
+    query += "('" + artist + "', '" + title + "', '" + cover + "', '" + url + "', '" + duration + "');";
     con.query(query,(err, result)=>{
-        if(err)
-            res.redirect("http://127.0.0.1:5500/front/index.html?" + err.code);
-        else
+        if(err) {
             res.redirect("http://127.0.0.1:5500/front/index.html");
+        }else {
+            res.redirect("http://127.0.0.1:5500/front/index.html");
+        }
+            
     });
 }
 

@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
 }
 
 :root {
@@ -12,6 +13,7 @@
     --background-base: #121212;
     --background-tinted-base: hsla(0,0%,100%,.07);
     --background-highlight: #1a1a1a;
+    --blur-background: rgba(0,0,0,.5);
 
     --blue-background-gradient: linear-gradient(150deg, #4b3e94 70%, #1e8fff9f 100%);
 
@@ -91,6 +93,10 @@
 }
 
 /* Global */
+
+.hidden {
+    display: none !important;
+}
 
 a {
     text-decoration: none;
@@ -353,6 +359,28 @@ header ul li:hover {
     color: var(--secondary-text);
 }
 
+.playlist-container .playlist-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.playlist-container .playlist-header i {
+    padding: 10px;
+    margin-right: 10px;
+    background-color: var(--background-base);
+    border-radius: 100%;
+
+    cursor: pointer;
+}
+
+.playlist-container .playlist-header i:hover {
+    background-color: var(--background-tinted-base);
+    color: var(--logo-color);
+}
+
+
 /* Main Playlist Container */
 
 .main-playlist {
@@ -366,6 +394,8 @@ header ul li:hover {
     background-color: var(--background-tinted-base);
 
     border-radius: 15px;
+
+    user-select: none;
 }
 
 .main-playlist .main-playlist-info {
@@ -387,56 +417,38 @@ header ul li:hover {
 }
 
 
-.song-table {
-    display: flex;
-    flex-direction: column;
+table{
     width: 100%;
-    height: 100%;
-    padding: 15px;
-    gap: 1rem;
-}
-
-.song-table table {
-    width: 100%;
-    height: 100%;
     border-collapse: collapse;
+    margin: 20px 0;
 }
 
-.song-table thead tr {
-    display: flex;
-    justify-content: space-between;
-    color: var(--secondary-text);
+
+thead {
+    border-bottom: 1px solid var(--background-base);
 }
 
-.song-table tbody tr {
-    display: flex;
-    justify-content: space-between;
+th, td{
+    padding: 10px 20px;
+    text-align: left;
 }
 
-.song-info-image {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+.song {
+    cursor: default;
+}
+
+.song:hover {
+    background-color: var(--background-tinted-base);
 }
 
 .song-id {
-    margin-right: 5%;
+    pointer-events: none;
+    width: 15px;
 }
 
-.song-table-header {
-    display: flex;
-    gap: 1rem;
+.song-duration {
+    padding-left: 35px;
 }
-
-
-.song-info-container img {
-    width: 50px;
-    height: 50px;
-
-    border: 1px solid white;
-}
-
-
 
 /* AD Section */
 
@@ -689,4 +701,88 @@ header ul li:hover {
 .volume i {
     width: 15px;
     margin-right: 1rem;
+}
+
+/* Add Music Container */
+
+.add-music-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    background-color: var(--blur-background);
+    z-index: 101;
+}
+
+.add-music-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    width: 60%;
+    height: 60%;
+    padding: 1rem;
+    border-radius: 15px;
+
+    background-color: var(--background-highlight);
+    opacity: 1;
+    z-index: 102;
+}
+
+.add-music-inner form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.add-music-inner form label {
+    color: var(--secondary-text);
+    cursor: default;
+}
+
+.add-music-inner form input {
+    width: 100%;
+    color: var(--white);
+
+    padding: .5rem;
+    outline: none;
+    border: 0;
+    border-radius: var(--border-radius);
+    background-color: var(--background-tinted-base);
+}
+
+.add-music-inner .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    width: 100%;
+}
+
+.add-music-inner .buttons button {
+    width: 100%;
+    padding: .5rem;
+    border: 0;
+    border-radius: var(--border-radius);
+    background-color: var(--background-tinted-base);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.add-music-inner .buttons button:nth-child(2):hover {
+    background-color: var(--logo-color);
+}
+
+.add-music-inner .buttons button:hover {
+    background-color: var(--background-base);
 }

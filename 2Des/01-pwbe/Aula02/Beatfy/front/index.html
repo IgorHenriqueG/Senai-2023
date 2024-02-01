@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Beatfy - Home</title>
+    <title>Beatify - Home</title>
     <link rel="icon" type="image/png" href="../assets/Logo_Icon.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
     <script src="script.js" defer></script>
@@ -20,6 +20,25 @@
         </ul>
     </header>
 
+    <div class="add-music-container hidden">
+        <div class="add-music-inner">
+            <h2>Add Music - <span style="color: var(--logo-color);">Early Version</span></h2>
+
+            <form action="http://localhost:3000/songs" method="POST">
+                <input type="text" name="title" id="title-input" placeholder="Title" required>
+                <input type="text" name="artist" id="artist-input" placeholder="Artist" required>
+                <input type="text" name="cover" id="cover-input" placeholder="Cover" required>
+                <input type="text" name="url" id="url-input" placeholder="URL - Not working">
+                <input type="text" name="duration" id="duration-time-input" placeholder="Duration" required>
+
+                <div class="buttons">
+                    <button type="reset">Reset</button>
+                    <button type="submit">Add Music</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <main>
 
         <div class="middle-container">
@@ -29,14 +48,17 @@
                         <p><i class="fas fa-home"></i>Home</p>
                         <p><i class="fas fa-search"></i>Search</p>
                         <p><i class="fas fa-book"></i>Library</p>
-                        <p><i class="fas fa-plus"></i>Add Music</p>
+                        <p id="add-music"><i class="fas fa-plus"></i>Add Music</p>
                         <p><i class="fas fa-heart"></i>Credits</p>
                     </div>
                 </div>
     
                 <div class="playlist-container">
                     <div class="playlist">
-                        <h1>Playlists</h1>
+                        <div class="playlist-header">
+                            <h1>Playlists</h1>
+                            <i class="fas fa-plus"></i>
+                        </div>
     
                         <div class="playlist-preview">
                             <img src="../assets/saturn.jpg" alt="Logo">
@@ -133,33 +155,27 @@
                 </div>
 
                 <div class="main-playlist-songs">
-                    <table class="song-table">
+                    <table>
                         <thead>
-                                <th class="song-table-header">
-                                    <p>#</p>
-                                    <p>Title</p>
-                                </th>
-                                <th>Duration</th>
-                                <th>Settings</th>
-                        </thead>
-
-                        <tbody class="song-table-body">
-                            <tr class="song-info-container">
+                            <tr>
                                 
-                                <td class="song-info-image">
-                                    <p class="song-id">1</p>
-                                    <img src="../assets/wtdJakeHill.jpg">
-                                    <div class="song-info">
-                                        <p>${song.title}</p>
-                                        <p>${song.artist}</p>
+                                <th>
+                                    <div style="display: flex; align-items: center; gap: 1rem">
+                                        <p>#</p>
+                                        <p>Title</p>
                                     </div>
-                                </td>
-                                <td>${song.duration}</td>
-                                <td><i class="fas fa-ellipsis-v"></i></td>
+                                </th>
+
+                                <th>
+                                    <div style="display: flex; align-items: center; gap: 1rem">
+                                        <p>Duration</p>
+                                    </div>
+                                </th>
                             </tr>
-                        </tbody>
+                        </thead>
+                        <tbody id="dados"></tbody><!-- songs will be added here -->
                     </table>
-                </div> <!-- songs will be added here -->
+                </div>
             </div>
             
             <div class="ad-container">
@@ -232,7 +248,7 @@
 </body>
 
 <script>
-    const dados = document.querySelector('.main-playlist-songs');
+    const dados = document.getElementById('dados');
 
     // fetch('https://api.deezer.com/chart/0/tracks')
     fetch('http://localhost:3000/songs')
@@ -240,22 +256,22 @@
         .then(res => {
             res.forEach(song => {
                 dados.innerHTML += `
-                <div class="song">
-                        <div class="song-info-container">
-                            <p class="song-id">${song.id}</p>
-                            <img src="${song.image}" alt="Logo">
-                            <div class="song-info">
-                                <p>${song.title}</p>
-                                <p>${song.artist}</p>
+                <tr class="song">
+                        <td>
+                            <div style="display: flex; align-items: center; gap: 1rem">
+                                <p class="song-id">${song.id}</p>
+                                <div style="display: flex; align-items: center; gap: 1rem">
+                                    <img src="${song.cover}" style="width: 50px; height: 50px;" alt="Logo">
+                                    <div>
+                                        <p>${song.title}</p>
+                                        <p style="color: var(--secondary-text);">${song.artist}</p>
+                                    </div>
+                                </div>        
                             </div>
-                        </div>
-
-                        <div class="song-duration">
-                            <p>${song.duration}</p>
-                        </div>
-                        
-                        <i class="fas fa-ellipsis-v"></i>
-                </div>
+                        </td>
+                        <td class="song-duration">${song.duration}</td>
+                        <td><i class="fas fa-ellipsis-v"></i></td>
+                    </tr>
                 `
             });
         });

@@ -2,11 +2,36 @@ const progress = document.querySelector('.progress');
 const progressBar = document.querySelector('#duration');
 const progressFilled = document.querySelector('.progress-filled-inner');
 
+const addButton = document.getElementById('add-music');
+const musicContainer = document.querySelector('.add-music-container');
+
 const volume = document.querySelector('.volume');
 
 const audio = document.querySelector('audio');
 
 const activePlaylist = document.querySelector('.main-playlist-songs');
+
+// Add Music
+
+musicContainer.addEventListener('click', (e) => {
+    if(e.target.classList.contains('add-music-container')) {
+        musicContainer.classList.add('hidden');
+        addButton.classList.remove('active');
+        addButton.querySelector('i').classList.add('fa-plus');
+        addButton.querySelector('i').classList.remove('fa-times');
+    }
+})
+
+addButton.addEventListener('click', () => {
+    
+    addButton.classList.toggle('active');
+    if (addButton.classList.contains('active')) {
+        addButton.querySelector('i').classList.remove('fa-plus');
+        addButton.querySelector('i').classList.add('fa-times');
+
+        musicContainer.classList.remove('hidden');
+    }
+})
 
 setTimeout(() => {
     activePlaylist.querySelectorAll('.song').forEach(song => {
