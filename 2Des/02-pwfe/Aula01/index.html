@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Weather App</title>
+    <!-- <link rel="icon" href="https://www.svgrepo.com/show/488200/find.svg"> -->
+    <link rel="icon" href="https://i.pinimg.com/originals/06/c4/f7/06c4f70ec5931e2342e703e8a3f0a253.png">
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
     <div class="caixa-maior">
@@ -18,13 +21,16 @@
         
     
         <div class="caixa-media">
-            <h2>Tempo em São Paulo</h2>
-            <p>23ºC</p>
+            <h2>Tempo em <span id="city-name">Nenhuma</span></h2>
+            <p id="temperature">Desconhecida</p>
 
             <div class="caixa-menor">
-                <p>Nublado</p>
+                <img src="" alt="" id="icon">
+                <p id="description">Desconhecido</p>
             </div>
-            <p>Umidade: 60%</p>
+
+            <p id="humidity">Umidade: Desconhecida</p>
+            
         </div>
 
         
