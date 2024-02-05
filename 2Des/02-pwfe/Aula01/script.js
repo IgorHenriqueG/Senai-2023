@@ -8,6 +8,12 @@ const link = 'https://openweathermap.org/img/wn/'
 
 const key = 'eb1fcd935ede98a7c4bcc9f082499981'
 
+document.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        search()
+    }
+})
+
 async function search() {
     const dados = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=${key}&lang=pt_br&units=metric`)
     const resultado = await dados.json()
