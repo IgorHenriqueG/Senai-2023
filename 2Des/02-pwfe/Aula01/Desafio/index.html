@@ -3,10 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ViaCEP</title>
+    <link rel="stylesheet" href="main.css">
     <!-- https://viacep.com.br -->
 </head>
 <body>
+    <h1>Busca CEP</h1>
+
+    <div>
+        <p>CEP:</p>
+        <input type="text" id="cep">
+    </div>
+
+    <div>
+        <p>Rua:</p>
+        <input type="text" id="rua">
+    </div>
+
+    <div>
+        <p>Bairro:</p>
+        <input type="text" id="bairro">
+    </div>
+
+    <div>
+        <p>Cidade:</p>
+        <input type="text" id="cidade">
+    </div>
+
+    <div>
+        <p>Estado:</p>
+        <input type="text" id="estado">
+    </div>
     
+    <button id="btn" onclick="buscaCep()">Buscar</button>
 </body>
+<script src="script.js"></script>
 </html>
