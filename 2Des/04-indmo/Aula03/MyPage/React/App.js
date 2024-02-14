@@ -24,7 +24,12 @@ export default function App() {
         <br/>
         <br/>
         <Text style={styles.text}>Contato</Text>
-        <Button title="Github" color="#d3d" onPress={() => Linking.openURL('https://github.com/Igorhenriqueg')}/>
+        <br/>
+        <div style={{display: 'flex', flexDirection: 'row', gap: 10}}>
+          <Button title="Github" color="#d3d" onPress={() => Linking.openURL('https://github.com/Igorhenriqueg')}/>
+          <Button title="Portfolio" color="#d3d" onPress={() => Linking.openURL('https://igorhenriqueg.github.io')}/>
+        </div>
+        
 
 
       <StatusBar style="auto" />
