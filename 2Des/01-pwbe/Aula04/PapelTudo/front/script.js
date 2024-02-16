@@ -49,6 +49,7 @@ function load() {
     .then(response => response.json())
     .then(data => {
         dados.push(...data);
+        console.log(dados);
         render();
     })
 }
@@ -74,7 +75,7 @@ function render() {
             <td>${item.descricao}</td>
             <td>${item.valor}</td>
             <td>
-                <button onclick="edit(${item.id})">🖊️</button>
+                <button onclick="edit(this)">🖊️</button>
                 <button onclick="del(${item.id})">🗑️</button>
             </td>
         `;
@@ -84,16 +85,67 @@ function render() {
 
 // CRUD - UPDATE
 
-function edit(id) {
-    const item = dados.find(item => item.id === id);
-    document.querySelector('#id').value = item.id;
-    document.querySelector('#nome').value = item.nome;
-    document.querySelector('#desc').value = item.desc;
-    document.querySelector('#valor').value = item.valor;
+function edit(item) {
+    
+    const id = item.parentNode.parentNode.children[0].innerText;
+    const nome = item.parentNode.parentNode.children[1].innerText;
+    const descricao = item.parentNode.parentNode.children[2].innerText;
+    const valor = item.parentNode.parentNode.children[3].innerText;
+
+    document.querySelector('#id').value = id;
+    document.querySelector('#nome').value = nome;
+    document.querySelector('#desc').value = descricao;
+    document.querySelector('#valor').value = valor;
+
+    document.querySelector('#act').value = 'Alterar';
+
+    document.querySelector('#act').innerText = 'Alterar';
+
+    document.querySelector('#act').addEventListener('click', () => {
+        
+        const data = {
+            id: document.querySelector('#id').value,
+            nome: document.querySelector('#nome').value,
+            descricao: document.querySelector('#desc').value,
+            valor: document.querySelector('#valor').value
+        }
+
+        fetch(`${uri}/${id}`, {
+            
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+
+
+        })
+
+        .then(res => res.json())
+        .then(data => {
+            if(data.error) {
+                sysmsg.classList.add('error');
+                sysmsg.innerText = data.error;
+                return
+            } else {
+                sysmsg.classList.remove('error');
+                sysmsg.innerText = data.success;
+            }
+        })
+    })
+    
+
 }
 
 // CRUD - DELETE
 function del(id) {
+    let item = dados.find(item => item.id == id);
+
+    if(confirm(`Deseja excluir o item ${item.nome}?`))
+        delData(id);
+}
+
+function delData(id) {
     fetch(`${uri}/${id}`, {
         method: 'DELETE'
     })
