@@ -1,7 +1,9 @@
 const form = document.querySelector('form');
-const uri = 'http://localhost:3000/info';
+const uri = 'http://localhost:3000/items';
 const dados = [];
 const sysmsg = document.querySelector('#sysmsg');
+
+const tbody = document.querySelector('tbody');
 
 // CRUD - CREATE
 
@@ -11,7 +13,7 @@ form.addEventListener('submit', (event) => {
     const data = {
         id: document.querySelector('#id').value,
         nome: document.querySelector('#nome').value,
-        desc: document.querySelector('#desc').value,
+        descricao: document.querySelector('#desc').value,
         valor: document.querySelector('#valor').value
     }
 
@@ -36,6 +38,8 @@ form.addEventListener('submit', (event) => {
             form.reset();
         }
     });
+
+    window.location.reload();
 });
 
 // CRUD - READ
@@ -50,29 +54,28 @@ function load() {
 }
 
 function render() {
-    const tbody = document.querySelector('tbody');
     tbody.innerHTML = '';
     sysmsg.innerText = '';
 
     if(dados.length === 0) {
         const tr = document.createElement('tr');
-        tr.innerHTML = '<td colspan="5">Nenhum item encontrado</td>';
+        tr.innerHTML = '<td colspan="5">Nenhum registro encontrado</td>';
         tbody.appendChild(tr);
         sysmsg.classList.add('error');
-        sysmsg.innerText = 'ERROR: 404 - Nenhum item encontrado';
+        sysmsg.value = 'ERROR: 404 - Nenhum registro encontrado';
         return
     }
 
     dados.forEach(item => {
-        const tr = document.createElement('tr');
+        let tr = document.createElement('tr');
         tr.innerHTML = `
             <td>${item.id}</td>
             <td>${item.nome}</td>
-            <td>${item.desc}</td>
+            <td>${item.descricao}</td>
             <td>${item.valor}</td>
             <td>
                 <button onclick="edit(${item.id})">🖊️</button>
-                <button onclick="remove(${item.id})">🗑️</button>
+                <button onclick="del(${item.id})">🗑️</button>
             </td>
         `;
         tbody.appendChild(tr);
@@ -87,6 +90,15 @@ function edit(id) {
     document.querySelector('#nome').value = item.nome;
     document.querySelector('#desc').value = item.desc;
     document.querySelector('#valor').value = item.valor;
+}
 
-    
+// CRUD - DELETE
+function del(id) {
+    fetch(`${uri}/${id}`, {
+        method: 'DELETE'
+    })
+    // .then(res => res.json())
+    .then(res => {
+        window.location.reload();
+    });
 }

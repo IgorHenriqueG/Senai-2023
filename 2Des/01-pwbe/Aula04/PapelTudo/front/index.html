@@ -6,7 +6,7 @@
     <title>PapelTudo</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onload="load()">
     <header>
         <div class="container">
             <p style="font-size: 1.5rem;"><b>Inventário - Papelaria PapelTudo</b></p>
@@ -23,7 +23,7 @@
     
                     <div>
                         <label for="desc">Descrição:</label>
-                        <input type="text" name="dec" id="desc">
+                        <input type="text" name="desc" id="desc">
                     </div>
     
                     <div>
@@ -68,7 +68,7 @@
     
                 <div>
                     <label for="total">Total:</label>
-                    <input type="text" name="total" id="total" value="R$ 0,00" readonly>
+                    <input type="text" name="total" id="total" readonly>
                 </div>
             </div>
         </div>
