@@ -4,6 +4,7 @@ USE inventario;
 
 CREATE TABLE item(
     id varchar(5) not null primary key,
+    -- id integer auto_increment primary key,
     nome varchar(50) not null,
     descricao text,
     valor decimal(10,2) not null

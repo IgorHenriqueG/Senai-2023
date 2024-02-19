@@ -5,6 +5,8 @@ const sysmsg = document.querySelector('#sysmsg');
 
 const tbody = document.querySelector('tbody');
 
+// var idBackup = null;
+
 // CRUD - CREATE
 
 form.addEventListener('submit', (event) => {
@@ -49,7 +51,6 @@ function load() {
     .then(response => response.json())
     .then(data => {
         dados.push(...data);
-        console.log(dados);
         render();
     })
 }
@@ -59,7 +60,7 @@ function render() {
     sysmsg.innerText = '';
 
     if(dados.length === 0) {
-        const tr = document.createElement('tr');
+        let tr = document.createElement('tr');
         tr.innerHTML = '<td colspan="5">Nenhum registro encontrado</td>';
         tbody.appendChild(tr);
         sysmsg.classList.add('error');
@@ -85,56 +86,105 @@ function render() {
 
 // CRUD - UPDATE
 
-function edit(item) {
-    
-    const id = item.parentNode.parentNode.children[0].innerText;
-    const nome = item.parentNode.parentNode.children[1].innerText;
-    const descricao = item.parentNode.parentNode.children[2].innerText;
-    const valor = item.parentNode.parentNode.children[3].innerText;
+function edit(btn) {
+    // const id = btn.parentNode.parentNode.children[0];
+    const nome = btn.parentNode.parentNode.children[1];
+    const descricao = btn.parentNode.parentNode.children[2];
+    const valor = btn.parentNode.parentNode.children[3];
+    const buttonVer = btn;
+    const btnCancel = buttonVer.nextElementSibling;
 
-    document.querySelector('#id').value = id;
-    document.querySelector('#nome').value = nome;
-    document.querySelector('#desc').value = descricao;
-    document.querySelector('#valor').value = valor;
+    // idBackup = id.innerText;
 
-    document.querySelector('#act').value = 'Alterar';
+    buttonVer.innerHTML = '✅';
+    buttonVer.setAttribute('onclick', 'update(this)');
+    btnCancel.innerHTML = '❌';
+    btnCancel.setAttribute('onclick', 'cancel(this)');
 
-    document.querySelector('#act').innerText = 'Alterar';
+    // id.setAttribute('contenteditable', 'true');
+    // id.style = 'background-color: #f0f0f0; border: 1px solid #ccc;';
+    nome.setAttribute('contenteditable', 'true');
+    nome.style = 'background-color: #f0f0f0; 1px solid #ccc;';
+    descricao.setAttribute('contenteditable', 'true');
+    descricao.style = 'background-color: #f0f0f0; border: 1px solid #ccc;';
+    valor.setAttribute('contenteditable', 'true');
+    valor.style = 'background-color: #f0f0f0; border: 1px solid #ccc;';
+}
 
-    document.querySelector('#act').addEventListener('click', () => {
-        
-        const data = {
-            id: document.querySelector('#id').value,
-            nome: document.querySelector('#nome').value,
-            descricao: document.querySelector('#desc').value,
-            valor: document.querySelector('#valor').value
+function update(btn) {
+    const id = btn.parentNode.parentNode.children[0];
+    const nome = btn.parentNode.parentNode.children[1];
+    const descricao = btn.parentNode.parentNode.children[2];
+    const valor = btn.parentNode.parentNode.children[3];
+    const buttonVer = btn;
+    const buttonCancel = buttonVer.nextElementSibling;
+
+    buttonVer.innerHTML = '🖊️';
+    buttonVer.setAttribute('onclick', 'edit(this)');
+    buttonCancel.innerHTML = '🗑️';
+    buttonCancel.setAttribute('onclick', 'cancel(this)');
+
+    // id.setAttribute('contenteditable', 'false');
+    // id.style = 'background-color: transparent; border: none;';
+    nome.setAttribute('contenteditable', 'false');
+    nome.style = 'background-color: transparent; border: none;';
+    descricao.setAttribute('contenteditable', 'false');
+    descricao.style = 'background-color: transparent; border: none;';
+    valor.setAttribute('contenteditable', 'false');
+    valor.style = 'background-color: transparent; border: none;';
+
+    const data = {
+        id: id.innerText,
+        nome: nome.innerText,
+        descricao: descricao.innerText,
+        valor: valor.innerText
+    }
+
+    fetch(`${uri}/${data.id}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if(data.error) {
+            sysmsg.classList.add('error');
+            sysmsg.innerText = data.error;
+            return
+        } else {
+            sysmsg.classList.remove('error');
+            sysmsg.innerText = data.success;
         }
 
-        fetch(`${uri}/${id}`, {
-            
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
+        window.location.reload();
+    });
 
-
-        })
-
-        .then(res => res.json())
-        .then(data => {
-            if(data.error) {
-                sysmsg.classList.add('error');
-                sysmsg.innerText = data.error;
-                return
-            } else {
-                sysmsg.classList.remove('error');
-                sysmsg.innerText = data.success;
-            }
-        })
-    })
     
+}
 
+function cancel(btn) {
+    // const id = btn.parentNode.parentNode.children[0];
+    const nome = btn.parentNode.parentNode.children[1];
+    const descricao = btn.parentNode.parentNode.children[2];
+    const valor = btn.parentNode.parentNode.children[3];
+    const buttonCancel = btn;
+    const buttonVer = buttonCancel.previousElementSibling;
+
+    buttonVer.innerHTML = '🖊️';
+    buttonVer.setAttribute('onclick', 'edit(this)');
+    buttonCancel.innerHTML = '🗑️';
+    buttonCancel.setAttribute('onclick', `del(${id.innerText})`);
+
+    // id.setAttribute('contenteditable', 'false');
+    // id.style = 'background-color: transparent; border: none;';
+    nome.setAttribute('contenteditable', 'false');
+    nome.style = 'background-color: transparent; border: none;';
+    descricao.setAttribute('contenteditable', 'false');
+    descricao.style = 'background-color: transparent; border: none;';
+    valor.setAttribute('contenteditable', 'false');
+    valor.style = 'background-color: transparent; border: none;';
 }
 
 // CRUD - DELETE

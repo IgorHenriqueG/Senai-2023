@@ -33,8 +33,6 @@ const update = (req, res) => {
     const { id } = req.params;
     const { nome, descricao, valor } = req.body;
 
-    console.log(id, nome, descricao, valor);
-
     let query = `UPDATE item SET nome = '${nome}', descricao = '${descricao}', valor = '${valor}' WHERE id = '${id}'`;
     con.query(query, (err, result) => {
         if (err) {
