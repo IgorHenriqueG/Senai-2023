@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--teko);
+    font-size: var(--font-size);
+}
+
+:root {
+    --orange: #FF4E20;
+
+    --table-orange: #ff4c20da;
+    --button-clr: #1c81d4;
+
+    --bg-white: #c7c7c7;
+    --bg-white2: #fff;
+
+    --teko: 'Teko', sans-serif;
+    --font-size: 1.3rem;
+}
+
+/* global */
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+
+    background-color: var(--bg-white2);
+}
+
+header .logo {
+    width: fit-content;
+    height: 100px;
+    cursor: pointer;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+header nav a:hover {
+    color: #FF4E20;
+}
+
+body {
+    background-color: var(--bg-white);
+    overflow-x: hidden;
+}
+
+/* Container */
+
+.container {
+    width: 100vw;
+    height: fit-content;
+    padding: 100px;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    margin-top: 50px;
+}
+
+/* Table */
+
+main table {
+    width: 80%;
+    border-collapse: collapse;
+
+    background-color: var(--bg-white2);
+
+    text-align: center;
+
+    margin-top: 20px;
+    
+
+    font-size: var(--font-size);
+}
+
+main table th {
+    padding: 10px;
+    color: var(--orange);
+}
+
+main table tbody tr:nth-child(odd) {
+    background-color: var(--table-orange);
+    color: var(--bg-white2);
+}
+
+main table td {
+    padding: 10px;
+}
+
+main table td:nth-child(2), main table th:nth-child(2) {
+    text-align: left;
+}
+
+main table td:nth-child(1), main table th:nth-child(1) {
+    width: 5%;
+}
+
+/* Buttons */
+
+button {
+    padding: 10px;
+    width: 100px;
+    border: none;
+
+    background-color: var(--button-clr);
+
+    color: var(--bg-white2);
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0d6efd;
+}
+
+/* footer */
+
+footer {
+    margin-top: 50px;
+    width: 100%;
+    height: 100px;
+    background-color: var(--orange);
+}
