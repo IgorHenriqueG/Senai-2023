@@ -37,8 +37,3 @@ INSERT INTO Clients(name) VALUES
 ('Client 1'),
 ('Client 2'),
 ('Client 3');
-
-
-SELECT * FROM Products;
-SELECT * FROM Suppliers;
-SELECT * FROM Clients;

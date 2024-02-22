@@ -1,9 +1,13 @@
 const form = document.querySelector('form');
 const uri = 'http://localhost:3000/items';
 const dados = [];
+var oldData = {};
 const sysmsg = document.querySelector('#sysmsg');
+const totalmsg = document.querySelector('#total');
+var totalNumber = 0;
 
 const tbody = document.querySelector('tbody');
+
 
 // var idBackup = null;
 
@@ -28,7 +32,8 @@ form.addEventListener('submit', (event) => {
     })
     .then (response => response.json())
     .then(data => {
-        if(data.error) {
+        console.log(data);
+        if(data.err) {
             sysmsg.classList.add('error');
             sysmsg.innerText = data.error;
             return
@@ -80,8 +85,10 @@ function render() {
                 <button onclick="del(${item.id})">🗑️</button>
             </td>
         `;
+        totalNumber += item.valor
         tbody.appendChild(tr);
     });
+    totalmsg.value = `R$ ${totalNumber}`;
 }
 
 // CRUD - UPDATE
@@ -93,6 +100,13 @@ function edit(btn) {
     const valor = btn.parentNode.parentNode.children[3];
     const buttonVer = btn;
     const btnCancel = buttonVer.nextElementSibling;
+
+    oldData = {
+        // id: id.innerText,
+        nome: nome.innerText,
+        descricao: descricao.innerText,
+        valor: valor.innerText
+    }
 
     // idBackup = id.innerText;
 
@@ -172,6 +186,11 @@ function cancel(btn) {
     const buttonCancel = btn;
     const buttonVer = buttonCancel.previousElementSibling;
 
+    // id.innerText = idBackup;
+    nome.innerHTML = oldData.nome;
+    descricao.innerHTML = oldData.descricao;
+    valor.innerHTML = oldData.valor;
+
     buttonVer.innerHTML = '🖊️';
     buttonVer.setAttribute('onclick', 'edit(this)');
     buttonCancel.innerHTML = '🗑️';
@@ -184,14 +203,13 @@ function cancel(btn) {
     descricao.setAttribute('contenteditable', 'false');
     descricao.style = 'background-color: transparent; border: none;';
     valor.setAttribute('contenteditable', 'false');
-    valor.style = 'background-color: transparent; border: none;';
-}
+    valor.style = 'background-color: transparent; border: none;';}
 
 // CRUD - DELETE
 function del(id) {
     let item = dados.find(item => item.id == id);
 
-    if(confirm(`Deseja excluir o item ${item.nome}?`))
+    if(confirm(`Deseja excluir o id: ${id}, item: ${item.nome}?`))
         delData(id);
 }
 
