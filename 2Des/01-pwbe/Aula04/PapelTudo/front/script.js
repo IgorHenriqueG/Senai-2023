@@ -1,6 +1,6 @@
 const form = document.querySelector('form');
 const uri = 'http://localhost:3000/items';
-const dados = [];
+var dados = [];
 var oldData = {};
 const sysmsg = document.querySelector('#sysmsg');
 const totalmsg = document.querySelector('#total');
@@ -30,28 +30,29 @@ form.addEventListener('submit', (event) => {
         },
         body: JSON.stringify(data)
     })
-    .then (response => response.json())
-    .then(data => {
-        console.log(data);
-        if(data.err) {
+    .then (res => res.json())
+    .then(res => {
+        if(res.err) {
             sysmsg.classList.add('error');
-            sysmsg.innerText = data.error;
+            sysmsg.value = res.err;
             return
         } else {
             sysmsg.classList.remove('error');
-            sysmsg.innerText = data.success;
+            sysmsg.value = res.success;
             dados.push(data);
-            render();
+            load();
             form.reset();
         }
     });
 
-    window.location.reload();
+    
 });
 
 // CRUD - READ
 
 function load() {
+    dados = [];
+    totalNumber = 0;
     fetch(uri)
     .then(response => response.json())
     .then(data => {
@@ -73,6 +74,8 @@ function render() {
         return
     }
 
+    sysmsg.value = '';
+
     dados.forEach(item => {
         let tr = document.createElement('tr');
         tr.innerHTML = `
@@ -82,7 +85,7 @@ function render() {
             <td>${item.valor}</td>
             <td>
                 <button onclick="edit(this)">🖊️</button>
-                <button onclick="del(${item.id})">🗑️</button>
+                <button onclick="del('${item.id}')">🗑️</button>
             </td>
         `;
         totalNumber += item.valor
@@ -169,10 +172,9 @@ function update(btn) {
             return
         } else {
             sysmsg.classList.remove('error');
-            sysmsg.innerText = data.success;
+            sysmsg.value = data.success;
         }
-
-        window.location.reload();
+        load();
     });
 
     
@@ -194,7 +196,7 @@ function cancel(btn) {
     buttonVer.innerHTML = '🖊️';
     buttonVer.setAttribute('onclick', 'edit(this)');
     buttonCancel.innerHTML = '🗑️';
-    buttonCancel.setAttribute('onclick', `del(${id.innerText})`);
+    buttonCancel.setAttribute('onclick', `del('${id.innerText}')`);
 
     // id.setAttribute('contenteditable', 'false');
     // id.style = 'background-color: transparent; border: none;';
@@ -219,6 +221,14 @@ function delData(id) {
     })
     // .then(res => res.json())
     .then(res => {
-        window.location.reload();
+        if(res.error) { 
+            sysmsg.classList.add('error');
+            sysmsg.innerText = res.error;
+            return
+        } else {
+            sysmsg.classList.remove('error');
+            sysmsg.value = res.success;
+        }
+        load()
     });
 }

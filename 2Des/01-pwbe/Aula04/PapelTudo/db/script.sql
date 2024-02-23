@@ -3,7 +3,7 @@ CREATE DATABASE inventario CHARSET=UTF8 COLLATE utf8_general_ci;
 USE inventario;
 
 CREATE TABLE item(
-    id varchar(5) not null primary key,
+    id varchar(5) not null primary key unique,
     -- id integer auto_increment primary key,
     nome varchar(50) not null,
     descricao text,
