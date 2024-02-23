@@ -5,9 +5,9 @@ const create = (req, res) => {
 
     let query = `INSERT INTO item(id, nome, descricao, valor) VALUE ('${id}', '${nome}', '${descricao}', '${valor}')`;
     con.query(query, (err, result) => {
-        if (err) {
+        if(err) {
             res.status(400).json({error: 'Falha ao criar item'}).end();
-        } else {
+        }else{
             // const novo = {
             //     id: result.insertId,
             //     nome,
@@ -35,11 +35,11 @@ const update = (req, res) => {
 
     let query = `UPDATE item SET nome = '${nome}', descricao = '${descricao}', valor = '${valor}' WHERE id = '${id}'`;
     con.query(query, (err, result) => {
-        if (err) {
+        if(err) {
             res.status(400).json(err).end();
-        } else if(result.affectedRows > 0) {
+        }else if(result.affectedRows > 0) {
             res.status(202).json({success: 'Item Atualizado com sucesso!'}).end();
-        } else {
+        }else{
             res.status(404).json({error: 'Item não encontrado'}).end();
         }
     })
@@ -50,12 +50,12 @@ const del = (req, res) => {
 
     let query = `DELETE FROM item WHERE id = '${id}'`;
     con.query(query, (err, result) => {
-        if (err) {
+        if(err) {
             res.status(400).json(err).end();
-        } else if(result.affectedRows > 0) {
+        }else if(result.affectedRows > 0) {
             res.status(204).json({success: `Item de ID = ${id} deletado com sucesso`}).end();
-        } else {
-            res.status(404).json({message: 'Item não encontrado'}).end();
+        }else {
+            res.status(404).json({error: 'Item não encontrado'}).end();
         }
     })
 }

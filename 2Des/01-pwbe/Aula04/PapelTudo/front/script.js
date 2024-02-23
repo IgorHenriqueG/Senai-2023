@@ -8,7 +8,6 @@ var totalNumber = 0;
 
 const tbody = document.querySelector('tbody');
 
-
 // var idBackup = null;
 
 // CRUD - CREATE
@@ -32,9 +31,10 @@ form.addEventListener('submit', (event) => {
     })
     .then (res => res.json())
     .then(res => {
-        if(res.err) {
+        if(res.status == 400) {
+            console.log('worked', res.error, res.success)
             sysmsg.classList.add('error');
-            sysmsg.value = res.err;
+            sysmsg.value = res.error;
             return
         } else {
             sysmsg.classList.remove('error');
@@ -63,7 +63,6 @@ function load() {
 
 function render() {
     tbody.innerHTML = '';
-    sysmsg.innerText = '';
 
     if(dados.length === 0) {
         let tr = document.createElement('tr');
@@ -221,9 +220,9 @@ function delData(id) {
     })
     // .then(res => res.json())
     .then(res => {
-        if(res.error) { 
+        if(res.err) { 
             sysmsg.classList.add('error');
-            sysmsg.innerText = res.error;
+            sysmsg.value = res.error;
             return
         } else {
             sysmsg.classList.remove('error');
