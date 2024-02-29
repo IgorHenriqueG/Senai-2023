@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS bd;
-CREATE DATABASE bd CHARSET=UTF8 COLLATE utf8_general_ci;
-USE bd;
+DROP DATABASE IF EXISTS transportadora;
+CREATE DATABASE transportadora CHARSET=UTF8 COLLATE utf8_general_ci;
+USE transportadora;
 
 CREATE TABLE Clientes (
     id INT PRIMARY KEY AUTO_INCREMENT,
