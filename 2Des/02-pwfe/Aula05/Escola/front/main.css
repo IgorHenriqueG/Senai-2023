@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -20,6 +22,8 @@
     --gray-700: #0d0d0d;
 
     --purple-500: #8284FA;
+    --purple-600: #5E60CE;
+    --purple-gradient: linear-gradient(90deg, var(--purple-600) 0%, var(--purple-500) 100%);
 
     --danger-500: #E25858;
 
@@ -30,6 +34,8 @@
     --green-500: #00875F;
 
     --blue-500: #61dafb;
+
+    --font-family: 'Chakra Petch', sans-serif;
 }
 
 /* Scroll */
@@ -57,12 +63,53 @@ header {
     color: white;
 }
 
+.logo-search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .logo {
     display: flex;
     align-items: center;
     gap: 10px;
     margin-left: 2rem;
     cursor: default;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search input {
+    width: 300px;
+    height: 40px;
+
+    background-color: var(--gray-500);
+
+    border: 1px solid var(--purple-500);
+    opacity: 0.5;
+    padding: 0 10px;
+    color: white;
+    outline: none;
+
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+.search input::placeholder {
+    color: var(--purple-500)
+}
+
+.search input:focus {
+    opacity: 1;
+}
+
+.search i {
+    transform: translateX(-30px);
+    color: var(--purple-500);
+    cursor: pointer;
 }
 
 header nav ul {
@@ -83,12 +130,76 @@ header nav ul li:hover {
 
 body {
     font-family: 'Roboto', sans-serif;
+    background-color: var(--gray-700);
 }
 
 main {
     display: flex;
+    width: 80%;
+    margin: 0 auto;
     flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-text {
+    color: var(--gray-200);
+    font-family: var(--font-family);
+
+    margin-top: 50px;
+}
+
+.main-text h1 {
+    font-size: 50px;
+}
+
+.main-text span {
+    background: -webkit-gradient(linear, left top, right top, from(var(--blue-500)), to(var(--purple-600)));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main-text p {
+    font-size: 20px;
+}
+
+.first-seen {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.5rem;
+}
+
+.main-img {
+    display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    position: absolute;
+    right: 20%;
+    top: 10%;
+
+    filter: brightness(0.85);
+}
+
+.main-button button {
+    width: 200px;
+    height: 50px;
+    background: var(--purple-gradient);
+
+    border: none;
+    color: var(--white);
+    filter: brightness(0.9);
+    font-size: 20px;
+    cursor: pointer;
+
+    /* border-radius: 5px; */
+    border: 1px solid var(--purple-600);
+    clip-path: polygon(0 0,100% 0,100% calc(100% - 20px),calc(100% - 20px) 100%,0 100%);
+
+    transition: filter 0.2s;
+}
+
+.main-button button:hover {
+    filter: brightness(1);
 }
