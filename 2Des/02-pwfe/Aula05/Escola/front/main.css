@@ -231,8 +231,11 @@ main {
 
     filter: brightness(0.85);
 
+    animation: up-down 7s ease-in-out infinite;
+
     z-index: -1;
 }
+
 
 /* Cards */
 
