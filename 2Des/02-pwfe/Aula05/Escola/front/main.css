@@ -79,6 +79,29 @@
     z-index: 99;
 }
 
+.bubble {
+    position: absolute;
+
+    filter: blur(100px);
+    opacity: 0.6;
+
+    width: 600px;
+
+    animation: bubble 8s infinite;
+    z-index: -1;
+}
+
+@keyframes bubble {
+    0%, 100% {
+        transform: translateX(0);
+        rotate: 0;
+    }
+    50% {
+        transform: translateX(100px);
+        rotate: 70deg;
+    }
+}
+
 
 .sharp-button {
     width: 200px;
