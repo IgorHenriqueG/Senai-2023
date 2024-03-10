@@ -645,7 +645,7 @@ footer {
 
 /* Second Try */
 
-.first {
+/* .first {
     position: relative;
     height: 120vh;
 
@@ -657,6 +657,22 @@ footer {
     height: 130vh;
 
     z-index: -1;
+}
+
+.second > div > div{
+    background-color: var(--gray-700);
+} */
+
+/* Third Try */
+
+.first {
+    position: sticky;
+    top: -50vh;
+}
+
+.second {
+    position: sticky;
+    top: 0;
 }
 
 .second > div > div{
