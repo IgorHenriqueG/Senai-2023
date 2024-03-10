@@ -60,7 +60,7 @@
 
 .blur-line {
     width: 100%;
-    height: 100px;
+    height: 500px;
 
     /* background-color: var(--gray-200); */
 
@@ -73,7 +73,7 @@
     inset: 10%;
     /* backdrop-filter: blur(1px); */
     background-color: var(--gray-700);
-    mask: linear-gradient(180deg, transparent, var(--gray-700) 70%);
+    mask: linear-gradient(180deg, transparent, var(--gray-700) 30%);
     -webkit-mask: linear-gradient(180deg, transparent, var(--gray-700) 30%);
 
     z-index: 99;
@@ -670,7 +670,12 @@ footer {
     top: -50vh;
 }
 
-.second {
+/* .second {
+    
+    height: calc(100vh - 50vh);
+} */
+
+.second > div {
     position: sticky;
     top: 0;
 }
