@@ -29,11 +29,85 @@
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="pages/cursos.html">Cursos</a></li>
-                <li><a href="#">Contato</a></li>
-                <li><button class="sharp-button" onclick="window.location.href='pages/matricula.html'">Matricule-se</button></li>
+                <li><a onclick="openDialog('contact')">Contato</a></li>
+                <li><button class="sharp-button" onclick="openDialog('matricula')">Matricule-se</button></li>
             </ul>
         </nav>
     </header>
+
+    <div class="dialog contactDialog hidden">
+        <div class="dialog-content">
+            <i class="bi bi-x-lg exit-dialog" onclick="closeDialog('contact')"></i>
+            <h1>Contato</h1>
+            <form>
+                <div>
+                    <label>Nome</label>
+                    <input type="text" placeholder="Nome" required>
+                </div>
+                
+                <div>
+                    <label>Email</label>
+                    <input type="email" placeholder="Email" required>
+                </div>
+
+                <div>
+                    <label>Assunto</label>
+                    <input type="text" placeholder="Assunto" required>
+                </div>
+
+                <div>
+                    <label>Mensagem</label>
+                    <textarea placeholder="Mensagem" rows="5" cols="30" required></textarea>
+                </div>
+                <button class="sharp-button">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="dialog matriculaDialog hidden">
+        <div class="dialog-content">
+            <i class="bi bi-x-lg exit-dialog" onclick="closeDialog('matricula')"></i>
+            <h1>matricula</h1>
+            <form>
+                <div>
+                    <label>Nome</label>
+                    <input type="text" placeholder="Nome" required>
+                </div>
+                
+                <div>
+                    <label>Email</label>
+                    <input type="email" placeholder="Email" required>
+                </div>
+
+                <div>
+                    <label>Curso</label>
+                    <select required>
+                        <option value="">Selecione</option>
+                        <option value="">Front-End - R$1999,90</option>
+                        <option value="">Back-End - R$6999,90</option>
+                        <option value="">Mobile - R$9,90</option>
+                        <option value="">UX & UI - R$24,90</option>
+                        <option value="">Data Science - R$98,90</option>
+                        <option value="">DevOps - R$15,90</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>Forma de Pagamento</label>
+                    <select required>
+                        <option value="">Selecione</option>
+                        <option value="">Boleto</option>
+                        <option value="">Cartão de Credito</option>
+                        <option value="">Cartão de Debito</option>
+                        <option value="">Pix</option>
+                    </select>
+                    
+                </div>
+                <button class="sharp-button">Matricular-se</button>
+            </form>
+        </div>
+    </div>
+
     <main>
         <section class="first">
 
@@ -183,7 +257,7 @@
                             </div>
     
                             <div class="price-card-button">
-                                <button class="sharp-button" onclick="window.location.href='pages/matricula.html'">Matricule-se</button>
+                                <button class="sharp-button" onclick="openDialog('matricula')">Matricule-se</button>
                             </div>
     
                         </div>
@@ -226,7 +300,7 @@
                             </div>
     
                             <div class="price-card-button">
-                                <button class="sharp-button" onclick="window.location.href='pages/matricula.html'">Matricule-se</button>
+                                <button class="sharp-button" onclick="openDialog('matricula')">Matricule-se</button>
                             </div>
     
                         </div>
