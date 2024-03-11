@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
     <link rel="shortcut icon" href="img/Logo.png" type="image/x-icon">
-    <title>Elysium</title>
+    <title>Elysium - Home</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
     <header>
         <div class="logo-search">
-            <div class="logo">
-                <img src="img/Logo.png" alt="Logo" width="50px">
-                <h1>Elysium</h1>
-            </div>
+            <a href="index.html">
+                <div class="logo">
+                    <img src="img/Logo.png" alt="Logo" width="50px">
+                    <h1>Elysium</h1>
+                </div>
+            </a>
 
             <div class="search">
                 <input type="text" placeholder="Pesquisar">
@@ -26,9 +28,9 @@
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Cursos</a></li>
+                <li><a href="pages/cursos.html">Cursos</a></li>
                 <li><a href="#">Contato</a></li>
-                <li><button class="sharp-button">Matricule-se</button></li>
+                <li><button class="sharp-button" onclick="window.location.href='pages/matricula.html'">Matricule-se</button></li>
             </ul>
         </nav>
     </header>
@@ -48,7 +50,7 @@
                 </div>
     
                 <div class="main-button">
-                    <button class="sharp-button">Ver Cursos</button>
+                    <button class="sharp-button" onclick="window.location.href='pages/cursos.html'">Ver Cursos</button>
                 </div>
             </div>
             
@@ -145,7 +147,7 @@
                                 Clique no botão abaixo para saber mais.
                             </p>
     
-                            <button class="sharp-button">Ver Cursos</button>
+                            <button class="sharp-button" onclick="window.location.href='pages/cursos.html'">Ver Cursos</button>
                         </div>
     
     
@@ -181,7 +183,7 @@
                             </div>
     
                             <div class="price-card-button">
-                                <button class="sharp-button">Matricule-se</button>
+                                <button class="sharp-button" onclick="window.location.href='pages/matricula.html'">Matricule-se</button>
                             </div>
     
                         </div>
@@ -224,7 +226,7 @@
                             </div>
     
                             <div class="price-card-button">
-                                <button class="sharp-button">Matricule-se</button>
+                                <button class="sharp-button" onclick="window.location.href='pages/matricula.html'">Matricule-se</button>
                             </div>
     
                         </div>
@@ -236,7 +238,7 @@
     <footer>
         <div class="footer">
             <div class="logo">
-                <img src="img/Logo.png" alt="Logo">
+                <img src="img/Logo.png" alt="Logo" draggable="false">
                 <h1>Elysium</h1>
             </div>
 
@@ -249,20 +251,20 @@
 
                 <div class="social-icons">
                     <div class="instagram">
-                        <i class="bi bi-instagram"></i>
+                        <a href="https://www.instagram.com/just.saturno/" target="_blank"><i class="bi bi-instagram"></i></a>
                     </div>
     
                     <div class="github">
                         <a href="https://github.com/Igorhenriqueg" target="_blank"><i class="bi bi-github"></i></a>
                     </div>
     
-                    <div class="twitter">
+                    <!-- <div class="twitter">
                         <i class="bi bi-twitter-x"></i>
                     </div>
     
                     <div class="telegram">
                         <i class="bi bi-telegram"></i>       
-                    </div>
+                    </div> -->
                 </div>
         </div>
     </footer>
