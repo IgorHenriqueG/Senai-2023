@@ -195,3 +195,8 @@ section {
     transition: 0.3s;
     rotate: y 180deg;
 }
+
+.rotate2 {
+    transition: 0.3s;
+    rotate: y 0deg;
+}
