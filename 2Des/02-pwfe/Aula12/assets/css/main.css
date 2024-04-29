@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #fff;
+    --black: #000;
+    --background: #7159A5;
+
+    --purple: #453666;
+    --purple-hover: #3b2f5c;
+}
+
+.hidden {
+    display: none !important;
+}
+
+body {
+    background: var(--background);
+    color: var(--white);
+    overflow: hidden;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Menu */
+
+#menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-container img {
+    width: 500px;
+    margin-bottom: 30px;
+}
+
+.menu-container button {
+    margin: 5px;
+    padding: 15px;
+
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    transition: 0.3s;
+    border-radius: 5px;
+
+    background-color: var(--purple);
+    color: var(--white);
+}
+
+.menu-container button:hover {
+    background-color: var(--purple-hover);
+}
+
+/* Game Versus Computer */
+
+.scores {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+
+.status-score {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 10px;
+    padding: 15px;
+    border-radius: 8px;
+
+    width: 47%;
+
+    background-color: var(--purple-hover);
+}
+
+/* Cards */
+
+.cards-set {
+    display: flex;
+    justify-content: center;
+    transform: translateX(-25px);
+}
+
+.cards-set .card {
+    width: 5vw;
+    position: relative;
+    left: 0;
+
+    scale: 0.9;
+    transition: 0.3s;
+
+    position: relative;
+}
+
+/* Computer */
+
+.cards-computer {
+    margin-top: 10px;
+}
+
+.cards-computer .card img {
+    width: 150px;
+    height: 240px;
+}
+
+/* Player */
+
+.cards-player .card:hover {
+    transform: translateY(-20px);
+    cursor: pointer;
+}
+
+.cards-player .card:hover ~ .card {
+    left: 50px;
+}
+
+/* Game board */
+
+.game-board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 39%;
+}
+
+.cards-position {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+/* Play Card */
+
+.disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.card-position {
+    width: 147px;
+    height: 220px;
+}
+
+.cards-player #rock.selected {
+    transform: translate(0px, -140%);
+}
+
+.cards-player #paper.selected {
+    transform: translate(-110%, -140%);
+}
+
+.cards-player #scissors.selected {
+    transform: translate(-220%, -140%);
+}
+
+.cards-computer #first.selected {
+    transform: translate(210%, 140%);
+}
+
+.cards-computer #second.selected {
+    transform: translate(100%, 140%);
+}
+
+.cards-computer #third.selected {
+    transform: translate(-10%, 140%);
+}
+
+/* Rotate card */
+
+.rotate {
+    transition: 0.3s;
+    rotate: y 180deg;
+}
