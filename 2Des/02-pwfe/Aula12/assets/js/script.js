@@ -10,6 +10,8 @@ const computerOrb = document.querySelector('.computer-orb');
 var playerMultiplier = 1;
 var computerMultiplier = 1;
 
+const choice = ['rock', 'paper', 'scissors'];
+
 // Menu
 
 document.querySelector('#start-computer').addEventListener('click', () => {
@@ -30,7 +32,6 @@ playerCards.forEach(card => {
 })
 
 function computerPlay() {
-    const choice = ['rock', 'paper', 'scissors'];
     return choice[Math.floor(Math.random() * 3)];
 }
 
@@ -49,7 +50,9 @@ function play(playerCard) {
                 document.querySelector(`#${computerCard}`).querySelector('img').src = `assets/images/${computerChoice}.png`;
             }, 100)
         }, 500)
-    }, Math.floor(Math.random() * 1000) + 500);
+    }, 0);
+
+    // Math.floor(Math.random() * 1000) + 50
 
     setTimeout(() => {
         document.querySelector(`#${computerCard}`).querySelector('img').classList.add('rotate2');
@@ -62,8 +65,6 @@ function play(playerCard) {
             }, 50)
         }, 100)
         
-
-
         setTimeout(() => {
             document.querySelector(`#${computerCard}`).classList.remove('selected');
             document.querySelector(`#${computerCard}`).classList.remove('disabled');
@@ -72,7 +73,9 @@ function play(playerCard) {
                 card.classList.remove('selected');
             })
         }, 50)
-    }, 3500)
+    }, 2000)
+
+    //3500
 
     setTimeout(() => {
         const result = checkWinner(playerCard, computerChoice);
@@ -118,7 +121,9 @@ function play(playerCard) {
                 }, 1000)
             })
         }
-    }, 2000)
+    }, 1000)
+
+    //2000
 }
 
 function checkWinner(playerCard, computerCard) {
@@ -134,3 +139,53 @@ function checkWinner(playerCard, computerCard) {
         return 'computer';
     }
 }
+
+
+
+
+
+// Define the strategy interface
+class PaymentStrategy {
+    makePayment(amount) {
+      throw new Error("makePayment must be implemented");
+    }
+}
+  
+// Implement a concrete strategy
+class CreditCardStrategy extends PaymentStrategy {
+    makePayment(amount) {
+      console.log(`Paying ${amount} using credit card`);
+    }
+}
+  
+// Implement another concrete strategy
+class PayPalStrategy extends PaymentStrategy {
+    makePayment(amount) {
+      console.log(`Paying ${amount} using PayPal`);
+    }
+}
+  
+// Define the context that uses the strategy
+class PaymentContext {
+    constructor(paymentStrategy) {
+      this.paymentStrategy = paymentStrategy;
+    }
+  
+    setPaymentStrategy(paymentStrategy) {
+      this.paymentStrategy = paymentStrategy;
+    }
+  
+    pay(amount) {
+      this.paymentStrategy.makePayment(amount);
+    }
+}
+  
+// Use the strategy in the context
+const creditCardStrategy = new CreditCardStrategy();
+const paymentContext = new PaymentContext(creditCardStrategy);
+paymentContext.pay(100);
+  
+  // Change the strategy at runtime
+const paypalStrategy = new PayPalStrategy();
+paymentContext.setPaymentStrategy(paypalStrategy);
+paymentContext.pay(200);

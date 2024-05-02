@@ -21,6 +21,8 @@ body {
     background: var(--background);
     color: var(--white);
     overflow: hidden;
+    
+    user-select: none;
 }
 
 section {
