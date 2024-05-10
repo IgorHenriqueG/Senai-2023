@@ -33,6 +33,7 @@ playerCards.forEach(card => {
 
 function computerPlay() {
     return choice[Math.floor(Math.random() * 3)];
+    
 }
 
 function play(playerCard) {
