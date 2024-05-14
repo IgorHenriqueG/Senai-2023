@@ -2,9 +2,9 @@
 var questions = [
     {
         type: "select",
-        text: "Quantas casas decimais tem o número pi?",
-        options: ["Duas", "Centenas", "Milhares", "Infinitas", ],
-        answer: 3
+        text: "Como é chamado o corpo celeste, decorrente de uma explosão de uma supernova, com um intenso campo magnético?",
+        options: ["Estrela de Nêutrons", "Magnetar", "Anã Branca", "Buraco Negro", "Anã Marrom"],
+        answer: 1
     },
     {
         type: "select",
@@ -34,8 +34,15 @@ var questions = [
         answer: "netuno"
     },
     {
-        type: "option",
-        text: "Qual é o nome do ",
+        type: "text",
+        text: "Qual é o nome do maior objeto estelar do sistema solar?",
+        answer: "sol"
+    },
+    {
+        type: "select",
+        text: "Qual é o maior buraco negro conhecido?",
+        options: ["Ton 618", "Ic 1101", "Sagittarius A", "Stellar", "Abell 1201 BCG", "Arp 220"],
+        answer: 0
     }
 ]
 

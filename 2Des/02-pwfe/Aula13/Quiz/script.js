@@ -27,9 +27,19 @@ send.addEventListener("click", () => {
     checkAnswer();
 })
 
-document.addEventListener("keypress" , (event) => {
+window.oncontextmenu = (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    return false;
+}
+
+document.addEventListener("keydown" , (event) => {
+
+    console.log(event.key);
     if (event.key === "Enter") {
         checkAnswer();
+    } else if (event.key == "Control") {
+        selectRandomQuestion();
     }
 });
 
@@ -56,6 +66,7 @@ function checkAnswer() {
         } else {
             streak = 0;
         }
+        answer.value = "";
         alreadyAnswered.push(questionIndex);
         selectRandomQuestion();
     }
