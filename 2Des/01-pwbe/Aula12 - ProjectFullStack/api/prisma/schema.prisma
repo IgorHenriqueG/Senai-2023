@@ -1,0 +1,53 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Destinos {
+  id Int @id @default(autoincrement())
+  nome String @db.VarChar(255)
+  valor Decimal @db.Decimal(10, 2)
+  data  DateTime?  @default(now())
+  pontos Pontos_Turisticos[]
+  hoteis Hoteis[]
+}
+
+model Pontos_Turisticos {
+  id Int @id @default(autoincrement())
+  nome String @db.VarChar(255)
+  endereco String @db.VarChar(255)
+  telefone String? @db.VarChar(20)
+  valor Decimal? @db.Decimal(10, 2) @default(0)
+
+  id_destino Int
+  destinos Destinos @relation(fields: [id_destino], references: [id])
+}
+
+model Hoteis {
+  id Int @id @default(autoincrement())
+  nome String @db.VarChar(255)
+  valor Decimal @db.Decimal(10, 2)
+  avaliacao Int @default(0)
+  email String @db.VarChar(255)
+  telefones Telefones[]
+  site String? @db.VarChar(255)
+  id_destino Int
+  destinos Destinos @relation(fields: [id_destino], references: [id])
+}
+
+model Telefones {
+  id Int @id @default(autoincrement())
+  id_hotel Int
+  telefone String? @db.VarChar(20) @unique
+  hotel Hoteis @relation(fields: [id_hotel], references: [id])
+}

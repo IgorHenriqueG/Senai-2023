@@ -13,9 +13,52 @@ const create = async (req, res) => {
 }
 
 const read = async (req, res) => {
-    const clientes = await prisma.clientes.findMany();
+    const clientes = await prisma.clientes.findMany({
+        include: {
+            telefones: {
+                select: {
+                    telefone: true
+                }
+            }
+        }
+    });
 
     return res.status(200).json(clientes).end();
+}
+
+const readById = async (req, res) => {
+    const cliente = await prisma.clientes.findUnique({
+        where: {
+            id: Number(req.params.id)
+        },
+        include: {
+            telefones: {
+                select: {
+                    telefone: true
+                }
+            }
+        }
+    });
+
+    return res.status(200).json(cliente).end();
+}
+
+const readByName = async (req, res) => {
+    const { nome } = req.body;
+    const cliente = await prisma.clientes.findMany({
+        where: { nome: {
+            contains: nome
+        }},
+        include: {
+            telefones: {
+                select: {
+                    telefone: true
+                }
+            }
+        }   
+    });
+
+    res.status(200).json(cliente).end();
 }
 
 const update = async (req, res) => {
@@ -42,8 +85,10 @@ const del = async (req, res) => {
 }
 
 module.exports = { 
-    create, 
+    create,
     read,
+    readById,
+    readByName,
     update,
     del
 }
