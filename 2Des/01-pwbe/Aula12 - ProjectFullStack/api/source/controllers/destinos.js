@@ -15,7 +15,11 @@ const create = async (req, res) => {
 const read = async (req, res) => {
     const destinos = await prisma.destinos.findMany({
         include: {
-            hoteis: true,
+            hoteis: {
+                include: {
+                    telefones: true
+                }
+            },
             pontos: true
         }
     });

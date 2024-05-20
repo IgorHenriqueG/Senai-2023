@@ -21,9 +21,9 @@ router.get('/pontos_turisticos', pontos_turisticos.read);
 router.put('/pontos_turisticos/:id', pontos_turisticos.update);
 router.delete('/pontos_turisticos/:id', pontos_turisticos.del);
 
-// router.post('/telefones', telefones.create);
-// router.get('/telefones', telefones.read);
-// router.put('/telefones/:id', telefones.update);
-// router.delete('/telefones/:id', telefones.del);
+router.post('/telefones', telefones.create);
+router.get('/telefones', telefones.read);
+router.put('/telefones/:id', telefones.update);
+router.delete('/telefones/:id', telefones.del);
 
 module.exports = router;

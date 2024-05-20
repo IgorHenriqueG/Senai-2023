@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>North Star - Home</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="shortcut icon" href="assets/imgs/logo.png" type="image/x-icon">
+    <script src="assets/js/gsap.min.js" defer></script>
+    <script src="assets/js/ScrollTrigger.min.js" defer></script>
+    <script src="assets/js/animation.js" defer></script>
+</head>
+<body>
+
+    <div class="loading-screen">
+        <div class="logo" style="--this-color: var(--white);">
+            <img src="assets/imgs/logo.png" alt="logo">
+            <h1>North Star</h1>
+            <p>Guiding Your Journey since 1999</p>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="assets/imgs/logo.png" alt="logo">
+            </div>
+    
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Destinos</a></li>
+                    <li><a href="#">Hoteis</a></li>
+                    <li><a href="#">Pontos Turisticos</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero">
+            <div class="sky">
+                <!-- <img src="assets/imgs/plane.png" class="plane" alt="plane"> -->
+                <img src="assets/imgs/first.svg" class="cloud" alt="sky">
+            </div>
+            <div class="logo" style="--this-color: var(--primary);">
+                <img src="assets/imgs/logo.png" alt="logo">
+                <h1>North Star</h1>
+                <p>Guiding Your Journey since 1999</p>
+            </div>
+        </div>
+        <div class="cloud-down">
+            <img src="assets/imgs/bottom-clouds.svg" alt="cloud" class="parallax-cloud" data-speed=".1">
+            <img src="assets/imgs/bottom-clouds.svg" alt="cloud" class="parallax-cloud" data-speed=".50">
+            <img src="assets/imgs/bottom-clouds.svg" alt="cloud" class="parallax-cloud" data-speed=".95">
+            <img src="assets/imgs/bottom-clouds.svg" alt="cloud" class="parallax-cloud" data-speed="-.1">
+            <img src="assets/imgs/bottom-clouds.svg" alt="cloud" class="parallax-cloud" data-speed="-.2">
+            <img src="assets/imgs/bottom-clouds.svg" alt="cloud" class="parallax-cloud" data-speed="-.1">
+            <img src="assets/imgs/bottom-clouds.svg" alt="cloud" class="parallax-cloud" data-speed="-.2">
+        </div>
+        
+        <section class="destinos">
+            <div class="container">
+                <h2>Destinos</h2>
+                <div class="destinos-location">
+                    <div class="destino-card model">
+                        <img src="assets/imgs/rio_janeiro.webp" alt="destino">
+                        <div class="destino-info">
+                            <div class="text">
+                                <h3>Rio de Janeiro</h3>
+                                <p>Rio de Janeiro, Brazil</p>
+                            </div>
+                            <div class="number">
+                                <p><span>5</span> Hoteis</p>
+                                <p><span>2</span> Pontos Turísticos</p>
+                            </div>
+                        </div>
+
+                        <button>Ver</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

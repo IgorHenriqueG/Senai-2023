@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --montserrat: 'Montserrat', sans-serif;
+    --antonio: 'Antonio', sans-serif;
+
+    --white: #fff;
+    --black: #000;
+
+    --primary: #0A1161;
+
+    --highlight: #FFC700;
+
+    --inactive: #b9b9b9;
+
+    --bg-white: #d4d9e4;
+    --bg-blue: #030210;
+}
+
+/* ScrollBar */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--bg-blue);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--inactive);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--bg-white);
+}
+
+/* Global */
+
+img {
+    user-select: none;
+    pointer-events: none;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 2rem;
+    background-color: var(--bg-blue);
+}
+
+/* Classes */
+
+.hidden {
+    display: none !important;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+    color: var(--this-color);
+    z-index: 2;
+}.logo img {
+    width: 200px;
+}.logo h1 {
+    font-size: 4rem;
+    font-family: var(--antonio);
+}.logo p {
+    font-size: 1rem;
+    font-family: var(--montserrat);
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+body {
+    background-color: var(--bg-white);
+    overflow-x: hidden;
+}
+
+header {
+    background-color: transparent;
+    color: var(--black);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 9rem;
+    z-index: 999;
+    transition: .5s;
+}
+
+header.not-top {
+    background-color: var(--bg-blue);
+    color: var(--inactive);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2rem;
+}
+
+header .logo img {
+    width: 70px;
+}
+
+header nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 0.5rem;
+    text-transform: uppercase;
+    font-family: var(--montserrat);
+}
+
+header.not-top nav ul li a:hover {
+    color: var(--white);
+}
+
+/* Main */
+
+/* main {
+    padding: 2rem;
+} */
+
+/* Hero */
+
+main .hero {
+    position: relative;
+    /* background-image: url(../imgs/hero.jpg); */
+    background-color: var(--bg-blue);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.hero .sky {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.hero .sky .cloud {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.hero .sky .plane {
+    position: absolute;
+    bottom: 0%;
+    width: 25%;
+    z-index: 2;
+}
+
+.cloud-down {
+    width: 100%;
+}
+
+.cloud-down img {
+    position: absolute;
+    bottom: 0;
+    transform: translateX(-20%) translateY(50%);
+    z-index: 2;
+}
+
+.parallax-cloud:nth-child(2) {
+    transform: translateX(20%) translateY(30%);
+}
+
+.parallax-cloud:nth-child(3) {
+    transform: translateX(60%) translateY(0%);
+}
+
+.parallax-cloud:nth-child(4) {
+    transform: translateX(-50%) translateY(65%);
+}
+
+/* First Section */
+
+.destinos {
+    margin-top: 11rem;
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+    color: var(--white);
+    font-family: var(--montserrat);
+}
+
+.destinos h2 {
+    font-size: 2rem;
+}
+
+.destinos .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.destinos .destinos-location {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    height: 200px;
+}
+
+/* Card */
+
+.destino-card {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: fit-content;
+    height: 200px;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: var(--primary);
+}
+
+.destino-card img {
+    width: 200px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.destino-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    gap: 1rem;
+}
+
+.destino-info .text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.destino-info .text h3 {
+    font-size: 1.5rem;
+}
+
+.destino-info .text p {
+    font-size: 0.8rem;
+    font-family: var(--antonio);
+}
+
+.destino-info .number {
+    font-size: 0.8rem;
+}
+
+.destino-info .number p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.destino-info .number p span {
+    font-size: 1.5rem;
+    color: var(--highlight);
+}
+
+/* Button */
+
+.destino-card button {
+    background-color: var(--bg-blue);
+    color: var(--white);
+    border: none;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.destino-card button:hover {
+    background-color: var(--highlight);
+    color: var(--bg-blue);
+}
+
+/* Loading screen */
+
+.loading-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: var(--bg-blue);
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    position: fixed;
+}
