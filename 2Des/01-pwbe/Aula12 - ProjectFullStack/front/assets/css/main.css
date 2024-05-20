@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hidden {
+    display: none !important;
+}
+
+:root {
+    --montserrat: 'Montserrat', sans-serif;
+    --antonio: 'Antonio', sans-serif;
+
+    --white: #fff;
+    --black: #000;
+
+    --primary: #0A1161;
+
+    --highlight: #FFC700;
+
+    --inactive: #b9b9b9;
+
+    --bg-white: #d4d9e4;
+    --bg-blue: #030210;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: var(--bg-white);
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+    transition: .3s;
+}
+
+ul {
+    list-style: none;
+}
+
+section {
+    padding: 5rem 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* ScrollBar */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--bg-blue);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--inactive);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--bg-white);
+}
+
+/* Header */
+
+header {
+    position: fixed;
+    width: 100vw;
+    height: 8rem;
+    font-family: var(--montserrat);
+    transition: .5s;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    align-items: center;
+    gap: 1rem;
+}
+
+header .logo img {
+    width: 100px;
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+}
+
+header.not-top {
+    background-color: var(--bg-blue);
+    color: var(--inactive);
+}
+
+header.not-top a:hover {
+    color: var(--white);
+}

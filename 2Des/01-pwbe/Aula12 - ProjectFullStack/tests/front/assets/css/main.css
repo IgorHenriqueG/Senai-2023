@@ -204,10 +204,12 @@ main .hero {
 
 .destinos {
     margin-top: 11rem;
-    padding-top: 9rem;
+    /* padding-top: 9rem; */
+    padding-top: 20rem;
     padding-bottom: 9rem;
     color: var(--white);
     font-family: var(--montserrat);
+    height: 200vh;
 }
 
 .destinos h2 {
@@ -217,14 +219,17 @@ main .hero {
 .destinos .container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 2rem;
+    width: 100%;
 }
 
 .destinos .destinos-location {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    width: 100%;
+    width: 50%;
     height: 200px;
 }
 
@@ -232,9 +237,8 @@ main .hero {
 
 .destino-card {
     display: flex;
-    justify-content: center;
     gap: 1rem;
-    width: fit-content;
+    width: 100%;
     height: 200px;
     padding: 1rem;
     border-radius: 1rem;
@@ -252,6 +256,7 @@ main .hero {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 100%;
     height: 100%;
     gap: 1rem;
 }
