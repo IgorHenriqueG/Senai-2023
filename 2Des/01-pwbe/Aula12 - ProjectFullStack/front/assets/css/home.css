@@ -27,7 +27,7 @@
 
 .loading-screen {
     position: fixed;
-    background-color: var(--black);
+    background-color: var(--bg-blue);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -77,9 +77,82 @@
 
 /* Destinos */
 
+.card {
+    position: relative;
+    background-color: var(--bg-blue);
+    border-radius: 10px;
+    width: 70%;
+    height: 300px;
+    overflow: hidden;
+    color: var(--bg-white);
+}
+
+.card img {
+    width: 30%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-info-first {
+    display: flex;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.card-info-first .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-info-first .number {
+    display: flex;
+    gap: 1rem;
+}
+
+.card-info-first .number p {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.card-info-first .number p span {
+    font-weight: bold;
+}
+
+.card-info-first button {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: var(--highlight);
+    color: var(--bg-blue);
+    border: none;
+    border-radius: 10px;
+    padding: .5rem 1rem;
+    font-weight: bold;
+    width: 10%;
+    height: fit-content;
+    cursor: pointer;
+}
+
 .destinos {
     background-color: var(--bg-white);
     padding: 8rem 2rem;
     width: 100vw;
     height: 100vh;
+}
+
+.destinos .container {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 0;
+    font-family: var(--montserrat);
+}
+
+.destinos-list {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
