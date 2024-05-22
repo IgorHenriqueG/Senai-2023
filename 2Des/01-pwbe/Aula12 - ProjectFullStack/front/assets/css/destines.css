@@ -1,0 +1,141 @@
+.main-info {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+    font-family: var(--montserrat);
+}
+
+.main-info .container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 10rem;
+}
+
+.main-info .container .main-image img {
+    width: 500px;
+    border-radius: 10px;
+    border: 1px solid var(--black);
+    box-shadow: 0 0 10px var(--black);
+}
+
+.main-info-text {
+    display: flex;
+    gap: 1.5rem;
+    margin-block: 20px;
+}
+
+.subtitle-place-info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.subtitle-place-info i {
+    color: var(--red);
+}
+
+.right-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right-info .place-description {
+    margin-top: 10px;
+    max-width: 400px;
+    text-align: justify;
+}
+
+.right-info .place-number-info > div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.left-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.left-info button {
+    width: 100%;
+    height: 40px;
+    border: 0;
+    border-radius: 5px;
+    background-color: var(--highlight);
+    color: var(--black);
+    font-size: 20px;
+    font-family: var(--antonio);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* Hotels */
+
+.hotels-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.hotels-container .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.hotels-pt-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.hotels-pt-list img {
+    width: 50%;
+    border-radius: 10px 0 0 10px; 
+}
+
+.hotel-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 120%;
+    justify-content: space-between;
+}
+
+.hotel-card .card-info-first {
+    display: flex;
+    gap: 2rem;
+}
+
+.hotel-card .card-info-first .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hotel-card .card-info-first button {
+    width: 20%;
+    height: 40px;
+    border: 0;
+    border-radius: 5px;
+    background-color: var(--highlight);
+    color: var(--black);
+    font-size: 20px;
+    font-family: var(--antonio);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.card-img {
+    max-width: 500px;
+}

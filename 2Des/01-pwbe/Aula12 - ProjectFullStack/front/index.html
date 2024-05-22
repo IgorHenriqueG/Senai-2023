@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="assets/css/home.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
-<body>
+<body onload="loadItens()">
 
     <div class="loading-screen">
         <div class="container">
@@ -69,16 +69,16 @@
                             <img src="assets/images/rio_janeiro.webp" alt="destino">
                             <div class="text">
                                 <div class="card-title">
-                                    <h3>Rio de Janeiro</h3>
-                                    <p>Rio de Janeiro, Brazil</p>
+                                    <h3 class="destino-title">Rio de Janeiro</h3>
+                                    <p class="destino-location">Rio de Janeiro, Brazil</p>
                                 </div>
 
                                 <div class="number">
-                                    <p><span>5</span> Hoteis</p>
-                                    <p><span>2</span> Pontos Turísticos</p>
+                                    <p><span class="destino-hoteis">5</span> Hoteis</p>
+                                    <p><span class="destino-pontos">2</span> Pontos Turísticos</p>
                                 </div>
                             </div>
-                            <button>Ver</button>
+                            <button class="destino-button">Ver</button>
                         </div>
                     </div>
                 </div>
@@ -125,4 +125,5 @@
 <script src="assets/js/animations/gsap.min.js"></script>
 <script src="assets/js/animations/ScrollTrigger.min.js"></script>
 <script src="assets/js/animations/animation.js"></script>
+<script src="assets/js/home/load.js"></script>
 </html>

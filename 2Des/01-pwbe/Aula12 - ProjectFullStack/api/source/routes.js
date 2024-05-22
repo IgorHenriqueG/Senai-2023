@@ -8,6 +8,7 @@ const telefones = require('./controllers/telefones');
 
 router.post('/destinos', destinos.create);
 router.get('/destinos', destinos.read);
+router.get('/destinos/:id', destinos.readById);
 router.put('/destinos/:id', destinos.update);
 router.delete('/destinos/:id', destinos.del);
 

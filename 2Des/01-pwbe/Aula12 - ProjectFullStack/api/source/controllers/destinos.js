@@ -27,6 +27,24 @@ const read = async (req, res) => {
     res.status(200).json(destinos).end();
 }
 
+const readById = async (req, res) => {
+    const destino = await prisma.destinos.findUnique({
+        where: {
+            id: Number(req.params.id)
+        },
+        include: {
+            hoteis: {
+                include: {
+                    telefones: true
+                }
+            },
+            pontos: true
+        }
+    });
+
+    return res.status(200).json(destino).end();
+}
+
 const update = async (req, res) => {
     const data = req.body;
 
@@ -53,6 +71,7 @@ const del = async (req, res) => {
 module.exports = {
     create,
     read,
+    readById,
     update,
     del
 }
