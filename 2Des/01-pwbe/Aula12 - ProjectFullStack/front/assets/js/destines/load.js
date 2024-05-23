@@ -1,6 +1,9 @@
 const uri = window.location.search;
 const id = new URLSearchParams(uri).get("id");
 
+const head = document.querySelector("head");
+const siteTitle = document.querySelector("title");
+
 const uri2 = "http://localhost:3000/destinos/" + id;
 const card = document.querySelector(".model");
 const hotelList = document.querySelector(".hotels-pt-list");
@@ -41,7 +44,6 @@ const descriptions = [
     "É uma das cidades mais arborizadas do país.",
 ];
 
-console.log(uri2);
 
 const itens = [];
 
@@ -60,6 +62,7 @@ function loadItens() {
 }
 
 function loadDestinos() {
+    siteTitle.innerHTML = "Destinos - " + itens[0].nome;
     const mainImage = document.querySelector(".main-image").querySelector("img");
     mainImage.src = "../assets/images/randomImages/" + images[Math.floor(Math.random() * images.length)];
 

@@ -38,15 +38,21 @@ function loadDestinos() {
         clone.querySelector(".destino-title").innerHTML = item.nome;
         clone.querySelector(".destino-location").innerHTML = item.nome + ", " + "Brazil";
 
+        const formattedDate = new Date(item.data);
+        const options = {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        };
+        const formattedDateString = formattedDate.toLocaleDateString('pt-BR', options);
+        clone.querySelector(".destino-date").innerHTML = formattedDateString;
+
         clone.querySelector(".destino-hoteis").innerHTML = item.hoteis.length;
         clone.querySelector(".destino-pontos").innerHTML = item.pontos.length;
 
         clone.querySelector(".destino-button").addEventListener("click", () => {
             window.location.href = "pages/destine.html?id=" + item.id;
         });
-
-        
-
         destinosList.appendChild(clone);
     });
 }
