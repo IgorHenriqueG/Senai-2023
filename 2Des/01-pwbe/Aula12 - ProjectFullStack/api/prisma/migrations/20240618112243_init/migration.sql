@@ -44,10 +44,10 @@ CREATE TABLE `Telefones` (
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- AddForeignKey
-ALTER TABLE `Pontos_Turisticos` ADD CONSTRAINT `Pontos_Turisticos_id_destino_fkey` FOREIGN KEY (`id_destino`) REFERENCES `Destinos`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE `Pontos_Turisticos` ADD CONSTRAINT `Pontos_Turisticos_id_destino_fkey` FOREIGN KEY (`id_destino`) REFERENCES `Destinos`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE `Hoteis` ADD CONSTRAINT `Hoteis_id_destino_fkey` FOREIGN KEY (`id_destino`) REFERENCES `Destinos`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE `Hoteis` ADD CONSTRAINT `Hoteis_id_destino_fkey` FOREIGN KEY (`id_destino`) REFERENCES `Destinos`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE `Telefones` ADD CONSTRAINT `Telefones_id_hotel_fkey` FOREIGN KEY (`id_hotel`) REFERENCES `Hoteis`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE `Telefones` ADD CONSTRAINT `Telefones_id_hotel_fkey` FOREIGN KEY (`id_hotel`) REFERENCES `Hoteis`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;

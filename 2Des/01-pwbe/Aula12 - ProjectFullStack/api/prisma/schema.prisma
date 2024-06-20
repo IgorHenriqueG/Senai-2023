@@ -30,7 +30,7 @@ model Pontos_Turisticos {
   valor Decimal? @db.Decimal(10, 2) @default(0)
 
   id_destino Int
-  destinos Destinos @relation(fields: [id_destino], references: [id])
+  destinos Destinos @relation(fields: [id_destino], references: [id], onDelete: Cascade, onUpdate: Cascade)
 }
 
 model Hoteis {
@@ -42,12 +42,12 @@ model Hoteis {
   telefones Telefones[]
   site String? @db.VarChar(255)
   id_destino Int
-  destinos Destinos @relation(fields: [id_destino], references: [id])
+  destinos Destinos @relation(fields: [id_destino], references: [id], onDelete: Cascade, onUpdate: Cascade)
 }
 
 model Telefones {
   id Int @id @default(autoincrement())
   id_hotel Int
   telefone String? @db.VarChar(20) @unique
-  hotel Hoteis @relation(fields: [id_hotel], references: [id])
+  hotel Hoteis @relation(fields: [id_hotel], references: [id], onDelete: Cascade, onUpdate: Cascade)
 }
